@@ -1,0 +1,67 @@
+---
+import type { Locale } from '@/i18n/utils';
+import { t } from '@/i18n/utils';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const i = t(locale);
+---
+
+<footer class="bg-brand-black text-brand-white py-16 md:py-20">
+  <div class="container">
+    <div class="grid md:grid-cols-3 gap-12 mb-12">
+      <!-- Brand -->
+      <div>
+        <div class="text-2xl font-extrabold tracking-tight mb-4">JP Rentals</div>
+        <p class="text-sm text-brand-400 leading-relaxed max-w-xs mb-6">
+          {i.footer.description}
+        </p>
+        <div class="flex items-center gap-2 text-sm text-brand-500">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+          {i.footer.location}
+        </div>
+      </div>
+
+      <!-- Navigation -->
+      <div>
+        <h4 class="text-sm font-semibold text-brand-400 mb-4">
+          {i.footer.links_title}
+        </h4>
+        <nav class="flex flex-col gap-3">
+          <a href="#servicios" class="text-sm text-brand-400 hover:text-white transition-colors">{i.nav.services}</a>
+          <a href="#equipos" class="text-sm text-brand-400 hover:text-white transition-colors">{i.nav.equipment}</a>
+          <a href="#contacto" class="text-sm text-brand-400 hover:text-white transition-colors">{i.nav.contact}</a>
+        </nav>
+      </div>
+
+      <!-- Sister brands -->
+      <div>
+        <h4 class="text-sm font-semibold text-brand-400 mb-4">
+          {i.footer.sisters_title}
+        </h4>
+        <p class="text-sm text-brand-500 mb-4 leading-relaxed">
+          {i.footer.sisters_subtitle}
+        </p>
+        <div class="flex flex-col gap-3">
+          <a href="https://nasacero.com" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-sm text-brand-400 hover:text-white transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+            Nasacero — Corte de acero CNC
+          </a>
+          <a href="https://nacionaldeanclas.com" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-sm text-brand-400 hover:text-white transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+            Nacional de Anclas — Anclajes de cimentación
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom -->
+    <div class="pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4">
+      <p class="text-xs text-brand-600">{i.footer.legal}</p>
+      <a href={locale === 'es' ? '/privacidad' : '/en/privacy'} class="text-xs text-brand-600 hover:text-brand-400 transition-colors">{i.footer.privacy}</a>
+    </div>
+  </div>
+</footer>

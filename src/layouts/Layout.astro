@@ -1,0 +1,160 @@
+---
+import '@/styles/global.css';
+import type { Locale } from '@/i18n/utils';
+import { t, getAlternateUrl } from '@/i18n/utils';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const i = t(locale);
+const alternateLocale: Locale = locale === 'es' ? 'en' : 'es';
+const alternateUrl = getAlternateUrl(Astro.url, alternateLocale);
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
+
+// Schema.org LocalBusiness structured data
+const schemaData = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "JP Rentals",
+  "description": i.meta.description,
+  "url": "https://jprentals.mx",
+  "telephone": "+528116007864",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Monterrey",
+    "addressRegion": "Nuevo León",
+    "addressCountry": "MX"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "25.6866",
+    "longitude": "-100.3161"
+  },
+  "areaServed": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {
+      "@type": "GeoCoordinates",
+      "latitude": "25.6866",
+      "longitude": "-100.3161"
+    },
+    "geoRadius": "40000"
+  },
+  "serviceType": [
+    "Industrial Crane Rental",
+    "Heavy Machinery Transport",
+    "Industrial Rigging Services"
+  ],
+  "priceRange": "$$",
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+    "opens": "07:00",
+    "closes": "19:00"
+  },
+  "sameAs": []
+};
+
+// Service schema
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Industrial Crane Rental and Machinery Transport",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "JP Rentals"
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Monterrey"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Industrial Services",
+    "itemListElement": i.services.items.map((svc, idx) => ({
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": svc.title,
+        "description": svc.description
+      }
+    }))
+  }
+};
+---
+
+<!DOCTYPE html>
+<html lang={locale === 'es' ? 'es-MX' : 'en-US'} dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="generator" content={Astro.generator} />
+
+  <!-- Primary Meta Tags -->
+  <title>{i.meta.title}</title>
+  <meta name="description" content={i.meta.description} />
+  <meta name="keywords" content={i.meta.keywords} />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Canonical & Hreflang -->
+  <link rel="canonical" href={canonicalUrl.href} />
+  <link rel="alternate" hreflang="es" href={new URL(locale === 'es' ? Astro.url.pathname : getAlternateUrl(Astro.url, 'es'), Astro.site).href} />
+  <link rel="alternate" hreflang="en" href={new URL(locale === 'en' ? Astro.url.pathname : getAlternateUrl(Astro.url, 'en'), Astro.site).href} />
+  <link rel="alternate" hreflang="x-default" href={new URL('/', Astro.site).href} />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content={i.meta.title} />
+  <meta property="og:description" content={i.meta.description} />
+  <meta property="og:url" content={canonicalUrl.href} />
+  <meta property="og:site_name" content="JP Rentals" />
+  <meta property="og:locale" content={locale === 'es' ? 'es_MX' : 'en_US'} />
+  <meta property="og:locale:alternate" content={locale === 'es' ? 'en_US' : 'es_MX'} />
+  <meta property="og:image" content={new URL('/images/og-image.jpg', Astro.site).href} />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="JP Rentals — Flota de grúas industriales en Monterrey, México" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={i.meta.title} />
+  <meta name="twitter:description" content={i.meta.description} />
+  <meta name="twitter:image" content={new URL('/images/og-image.jpg', Astro.site).href} />
+  <meta name="twitter:image:alt" content="JP Rentals — Grúas industriales y transporte de maquinaria en Monterrey" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
+  <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
+</head>
+<body class="overflow-x-hidden">
+  <slot />
+
+  <!-- Scroll animation observer -->
+  <script>
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+    );
+
+    document.querySelectorAll('.fade-in').forEach((el) => {
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>

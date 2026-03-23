@@ -1,0 +1,133 @@
+---
+import type { Locale } from '@/i18n/utils';
+import { t, waLink } from '@/i18n/utils';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const i = t(locale);
+---
+
+<section class="relative min-h-screen flex items-center bg-brand-black text-brand-white overflow-hidden">
+  <!-- Background image with zoom-in animation -->
+  <div class="absolute inset-0 z-0 hero-bg">
+    <img
+      src="/images/jp-rentals-flota-1.webp"
+      alt="Flota de grúas industriales JP Rentals en patio industrial Monterrey con Sierra Madre al fondo"
+      title="JP Rentals — Renta de grúas industriales y transporte de maquinaria en Monterrey"
+      class="w-full h-full object-cover"
+      fetchpriority="high"
+      decoding="async"
+    />
+    <div class="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/75 to-brand-black/55"></div>
+  </div>
+
+  <!-- Decorative element -->
+  <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-white/[0.02] to-transparent pointer-events-none"></div>
+
+  <div class="container relative z-10 pt-32 pb-20 md:pt-40 md:pb-32 flex flex-col items-center text-center">
+    <div class="max-w-3xl w-full">
+
+      <!-- Title — each line reveals upward -->
+      <h1 class="text-5xl sm:text-6xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.1] mb-6 text-white">
+        <span class="hero-clip-wrap"><span class="hero-line-1 block">{i.hero.title_1}</span></span>
+        <span class="hero-clip-wrap"><span class="hero-line-2 block">{i.hero.title_2}</span></span>
+        <span class="hero-clip-wrap"><span class="hero-line-3 block text-white/70">{i.hero.title_3}</span></span>
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="hero-rise-1 text-lg md:text-xl text-white/85 max-w-2xl mx-auto mb-10 leading-relaxed">
+        {i.hero.subtitle}
+      </p>
+
+      <!-- CTAs -->
+      <div class="hero-rise-2 flex flex-col sm:flex-row gap-4 mb-12 justify-center">
+        <a href={waLink(i.contact.wa_message)} target="_blank" rel="noopener" class="btn-wa !py-4 !px-8 !text-base justify-center">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.553 4.12 1.525 5.857L.058 23.708l5.989-1.572A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.82c-1.964 0-3.834-.529-5.47-1.529l-.393-.233-3.554.934.948-3.467-.255-.406A9.813 9.813 0 012.18 12c0-5.422 4.398-9.82 9.82-9.82 5.422 0 9.82 4.398 9.82 9.82 0 5.422-4.398 9.82-9.82 9.82z"/></svg>
+          {i.hero.cta_primary}
+        </a>
+        <a href="#equipos" class="btn-secondary !border-white/30 !text-white hover:!bg-white hover:!text-brand-black justify-center">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          {i.hero.cta_secondary}
+        </a>
+      </div>
+
+      <!-- Trust signals -->
+      <div class="hero-rise-3 flex flex-wrap justify-center gap-x-8 gap-y-3 text-sm text-white/70">
+        <span class="flex items-center gap-2">
+          <svg class="w-4 h-4 text-white/60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+          {i.hero.trust_1}
+        </span>
+        <span class="flex items-center gap-2">
+          <svg class="w-4 h-4 text-white/60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+          {i.hero.trust_2}
+        </span>
+        <span class="flex items-center gap-2">
+          <svg class="w-4 h-4 text-white/60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+          {i.hero.trust_3}
+        </span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ── Keyframes ── */
+  @keyframes hero-zoom {
+    from { transform: scale(1.07); }
+    to   { transform: scale(1); }
+  }
+  @keyframes hero-line-up {
+    from { transform: translateY(105%); }
+    to   { transform: translateY(0); }
+  }
+  @keyframes hero-rise {
+    from { opacity: 0; transform: translateY(22px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes hero-fade {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+
+  /* ── Easing shorthand ── */
+  :root { --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1); }
+
+  /* ── Background zoom ── */
+  .hero-bg {
+    animation: hero-zoom 1.6s var(--ease-out-expo) both;
+  }
+
+  /* ── Line-reveal wrapper (clips overflow so text slides up into view) ── */
+  .hero-clip-wrap {
+    display: block;
+    overflow: hidden;
+    line-height: 1.1;
+    padding-bottom: 0.05em; /* prevents descender clipping */
+  }
+
+  /* ── Each title line, staggered ── */
+  .hero-line-1 {
+    animation: hero-line-up 0.7s var(--ease-out-expo) 0.05s both;
+  }
+  .hero-line-2 {
+    animation: hero-line-up 0.7s var(--ease-out-expo) 0.18s both;
+  }
+  .hero-line-3 {
+    animation: hero-line-up 0.7s var(--ease-out-expo) 0.31s both;
+  }
+
+  /* ── Subtitle, CTAs, trust signals ── */
+  .hero-rise-1 {
+    animation: hero-rise 0.55s var(--ease-out-expo) 0.55s both;
+  }
+  .hero-rise-2 {
+    animation: hero-rise 0.55s var(--ease-out-expo) 0.7s both;
+  }
+  .hero-rise-3 {
+    animation: hero-fade 0.5s ease 0.9s both;
+  }
+</style>

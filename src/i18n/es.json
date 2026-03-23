@@ -1,0 +1,137 @@
+{
+  "meta": {
+    "title": "JP Rentals | Grúas industriales y transporte en Monterrey",
+    "description": "Movimiento de maquinaria industrial, flete local con tráiler y renta de grúas de 8 a 50 toneladas en Monterrey y área metropolitana. Cotiza en minutos.",
+    "keywords": "renta de grúas industriales monterrey, transporte de maquinaria industrial, maniobras industriales monterrey, flete maquinaria pesada, grúas industriales monterrey"
+  },
+  "nav": {
+    "services": "Servicios",
+    "equipment": "Equipos",
+    "about": "Nosotros",
+    "contact": "Contacto",
+    "cta": "Cotizar ahora"
+  },
+  "hero": {
+    "badge": "Grúas industriales y transporte de maquinaria",
+    "title_1": "Movemos tu",
+    "title_2": "maquinaria",
+    "title_3": "en Monterrey",
+    "subtitle": "Renta de grúas industriales de 8 a 50 toneladas, flete local con tráiler y maniobras especializadas para la industria. Cotiza en minutos.",
+    "cta_primary": "Solicitar cotización",
+    "cta_secondary": "Ver nuestros equipos",
+    "trust_1": "30+ años en la industria",
+    "trust_2": "Parte de Grupo NASA",
+    "trust_3": "Cotización en <1 hora"
+  },
+  "services": {
+    "label": "Servicios",
+    "title": "Servicios especializados para la industria",
+    "subtitle": "Soluciones de maquinaria pesada para plantas industriales, proyectos de construcción y manufactura en Monterrey y área metropolitana.",
+    "items": [
+      {
+        "title": "Movimiento de maquinaria industrial",
+        "description": "Trasladamos y posicionamos tu maquinaria pesada con grúas de 8 a 50 toneladas. Servicio puerta a puerta para plantas industriales, naves y proyectos de construcción en toda el área metropolitana.",
+        "features": ["Grúas de 8 a 50 toneladas", "Carga y descarga incluida", "Maniobras en espacios reducidos", "Operadores certificados"],
+        "wa_message": "Hola JP Rentals, me interesa el servicio de movimiento de maquinaria industrial. ¿Me pueden cotizar?",
+        "icon": "crane"
+      },
+      {
+        "title": "Flete local con tráiler",
+        "description": "Transporte de carga pesada hasta 30 toneladas con servicio de carga y descarga incluido. Tráiler Howo con grúa articulada para operación completa puerta a puerta.",
+        "features": ["Tráiler hasta 30 toneladas", "Mismo día disponible", "Plataforma extensible 60m", "Área metropolitana completa"],
+        "wa_message": "Hola JP Rentals, necesito un flete local de maquinaria pesada. ¿Me pueden cotizar?",
+        "icon": "truck"
+      },
+      {
+        "title": "Renta de grúa por mes",
+        "description": "Grúas industriales disponibles para renta mensual directamente en tu planta. Ideal para proyectos de construcción, montajes industriales y operaciones continuas.",
+        "features": ["Renta diaria, semanal o mensual", "Diversas capacidades disponibles", "Posicionada en tu planta", "Sin inversión en equipo propio"],
+        "wa_message": "Hola JP Rentals, me interesa la renta mensual de una grúa industrial. ¿Qué opciones tienen?",
+        "icon": "calendar"
+      }
+    ],
+    "cta": "Cotizar este servicio"
+  },
+  "equipment": {
+    "label": "Equipos",
+    "title": "Flota de equipo industrial",
+    "subtitle": "Contamos con una flota completa de grúas industriales y vehículos de carga pesada para cualquier maniobra en planta, obra o proyecto de construcción.",
+    "categories": {
+      "cranes": "Grúas industriales",
+      "vehicles": "Vehículos de carga"
+    },
+    "items": [
+      { "name": "Grúa convencional", "capacity": "50 Toneladas", "qty": 1, "category": "cranes", "desc": "Para maniobras industriales de gran escala y montajes pesados.", "img": "/images/grua-50t.webp", "imgAlt": "Grúa convencional de 50 toneladas JP Rentals en patio industrial Monterrey" },
+      { "name": "Grúa convencional", "capacity": "22 Toneladas", "qty": 1, "category": "cranes", "desc": "Versatilidad para proyectos industriales medianos.", "img": "/images/grua-22t.webp", "imgAlt": "Grúa convencional de 22 toneladas JP Rentals en nave industrial Monterrey" },
+      { "name": "Grúa convencional", "capacity": "18 Toneladas", "qty": 2, "category": "cranes", "desc": "Ideal para maniobras en planta y espacios industriales.", "img": "/images/grua-18t.webp", "imgAlt": "Grúa convencional de 18 toneladas JP Rentals disponible para renta en Monterrey" },
+      { "name": "Grúa convencional", "capacity": "15 Toneladas", "qty": 1, "category": "cranes", "desc": "Maniobras ligeras en naves y construcción.", "img": "/images/grua-15t.webp", "imgAlt": "Grúa convencional de 15 toneladas JP Rentals para maniobras industriales Monterrey" },
+      { "name": "Grúa articulada", "capacity": "8 Toneladas", "qty": 2, "category": "cranes", "desc": "Perfecta para carga/descarga y espacios reducidos.", "img": "/images/grua-articulada-8t.webp", "imgAlt": "Grúa articulada de 8 toneladas JP Rentals para carga y descarga industrial" },
+      { "name": "Tráiler Howo", "capacity": "30 Toneladas", "qty": 1, "category": "vehicles", "desc": "Transporte de maquinaria pesada en área metropolitana.", "img": "/images/trailer-howo.webp", "imgAlt": "Tráiler Howo de 30 toneladas JP Rentals transporte de maquinaria Monterrey" },
+      { "name": "Plataforma extensible", "capacity": "30T / 60m", "qty": 1, "category": "vehicles", "desc": "Para cargas de gran longitud y maquinaria sobredimensionada.", "img": "/images/plataforma-extensible.webp", "imgAlt": "Plataforma extensible 60 metros JP Rentals para carga sobredimensionada Monterrey" },
+      { "name": "Camión Chevrolet", "capacity": "3.5 Toneladas", "qty": 1, "category": "vehicles", "desc": "Cargas ligeras y apoyo logístico en obra.", "img": "/images/camion-chevrolet.webp", "imgAlt": "Camión Chevrolet de carga JP Rentals apoyo logístico industrial Monterrey" },
+      { "name": "Camión Ram", "capacity": "3.5 Toneladas", "qty": 1, "category": "vehicles", "desc": "Transporte de herramienta y equipo complementario.", "img": "/images/camion-ram.webp", "imgAlt": "Camión Ram de carga JP Rentals transporte de herramienta industrial Monterrey" }
+    ],
+    "cta": "¿Necesitas uno de estos equipos?",
+    "cta_button": "Cotiza ahora"
+  },
+  "about": {
+    "label": "Nosotros",
+    "title": "Por qué las empresas confían en JP Rentals",
+    "subtitle": "Somos parte de Grupo NASA, con más de 30 años en la industria del acero y la construcción en Monterrey.",
+    "items": [
+      {
+        "title": "Respaldados por Grupo NASA",
+        "description": "JP Rentals forma parte de Grupo NASA, el mismo grupo detrás de Nasacero y Nacional de Anclas. Más de 30 años sirviendo a la industria pesada en Monterrey.",
+        "icon": "building"
+      },
+      {
+        "title": "Flota disponible para tu proyecto",
+        "description": "Contamos con grúas industriales de 8 a 50 toneladas, tráiler de 30 toneladas y plataforma extensible para cualquier maniobra en planta, obra o construcción.",
+        "icon": "truck"
+      },
+      {
+        "title": "Respuesta en menos de 1 hora",
+        "description": "Cotizamos rápido porque sabemos que tu operación no puede esperar. Envíanos tu necesidad por WhatsApp y te respondemos con precio y disponibilidad.",
+        "icon": "clock"
+      },
+      {
+        "title": "Experiencia local real",
+        "description": "Conocemos Monterrey. Sabemos las rutas, los accesos industriales y las maniobras que cada zona requiere. Operamos en toda el área metropolitana.",
+        "icon": "map"
+      }
+    ],
+    "stats": [
+      { "value": "30+", "label": "Años en la industria" },
+      { "value": "7", "label": "Grúas industriales" },
+      { "value": "<1h", "label": "Tiempo de respuesta" }
+    ]
+  },
+  "contact": {
+    "label": "Contacto",
+    "title": "¿Necesitas mover maquinaria industrial?",
+    "subtitle": "Cuéntanos qué necesitas mover y te respondemos en menos de 1 hora.",
+    "form": {
+      "name": "Nombre",
+      "company": "Empresa",
+      "phone": "Teléfono",
+      "service": "Tipo de servicio",
+      "service_options": ["Movimiento de maquinaria", "Flete local con tráiler", "Renta mensual de grúa", "Otro"],
+      "message": "Describe brevemente tu necesidad",
+      "submit": "Enviar mensaje"
+    },
+    "or": "O escríbenos directo por WhatsApp",
+    "wa_button": "Abrir WhatsApp",
+    "wa_message": "Hola JP Rentals, me gustaría cotizar un servicio. ¿Me pueden ayudar?",
+    "schedule": "Lunes a sábado · 7:00 AM - 7:00 PM",
+    "response_time": "Tiempo de respuesta promedio: menos de 1 hora"
+  },
+  "footer": {
+    "description": "Renta de grúas industriales y transporte de maquinaria pesada en Monterrey y área metropolitana.",
+    "links_title": "Navegación",
+    "sisters_title": "Grupo empresarial",
+    "sisters_subtitle": "Más de 30 años en la industria del acero y construcción en Monterrey.",
+    "legal": "© 2026 JP Rentals. Todos los derechos reservados.",
+    "location": "Monterrey, Nuevo León, México",
+    "privacy": "Aviso de privacidad"
+  }
+}

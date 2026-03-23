@@ -1,0 +1,137 @@
+{
+  "meta": {
+    "title": "JP Rentals | Industrial Crane Rental in Monterrey",
+    "description": "Industrial machinery moving, local hauling with trailer, and crane rental from 8 to 50 tons in Monterrey metropolitan area. Get a quote in minutes.",
+    "keywords": "industrial crane rental monterrey, machinery transport mexico, industrial rigging monterrey, heavy machinery hauling, crane rental monterrey mexico"
+  },
+  "nav": {
+    "services": "Services",
+    "equipment": "Equipment",
+    "about": "About",
+    "contact": "Contact",
+    "cta": "Get a Quote"
+  },
+  "hero": {
+    "badge": "Industrial Cranes & Machinery Transport",
+    "title_1": "We move your",
+    "title_2": "machinery",
+    "title_3": "in Monterrey",
+    "subtitle": "Industrial crane rental from 8 to 50 tons, local hauling with trailer, and specialized rigging for manufacturing and construction. Get a quote in minutes via WhatsApp.",
+    "cta_primary": "Request a Quote",
+    "cta_secondary": "View Our Equipment",
+    "trust_1": "30+ years in industry",
+    "trust_2": "Part of Grupo NASA",
+    "trust_3": "Quote in <1 hour"
+  },
+  "services": {
+    "label": "Services",
+    "title": "Specialized services for industry",
+    "subtitle": "Heavy machinery solutions for industrial plants, construction projects, and manufacturing operations across the Monterrey metropolitan area.",
+    "items": [
+      {
+        "title": "Industrial machinery moving",
+        "description": "We move and position your heavy machinery with cranes from 8 to 50 tons. Door-to-door service for industrial plants, warehouses, and construction sites across the metropolitan area.",
+        "features": ["8 to 50 ton cranes", "Loading & unloading included", "Tight space rigging", "Certified operators"],
+        "wa_message": "Hello JP Rentals, I'm interested in your industrial machinery moving service. Can you provide a quote?",
+        "icon": "crane"
+      },
+      {
+        "title": "Local hauling with trailer",
+        "description": "Heavy cargo transport up to 30 tons with loading and unloading service included. Howo trailer with articulated crane for complete door-to-door operation.",
+        "features": ["Trailer up to 30 tons", "Same-day available", "60m extendable platform", "Full metro area coverage"],
+        "wa_message": "Hello JP Rentals, I need local hauling for heavy machinery. Can you provide a quote?",
+        "icon": "truck"
+      },
+      {
+        "title": "Monthly crane rental",
+        "description": "Industrial cranes available for monthly rental directly at your plant. Ideal for construction projects, industrial assemblies, and continuous operations.",
+        "features": ["Daily, weekly, or monthly rental", "Various capacities available", "Positioned at your plant", "No equipment investment needed"],
+        "wa_message": "Hello JP Rentals, I'm interested in monthly industrial crane rental. What options do you have?",
+        "icon": "calendar"
+      }
+    ],
+    "cta": "Quote this service"
+  },
+  "equipment": {
+    "label": "Equipment",
+    "title": "Industrial equipment fleet",
+    "subtitle": "We have a complete fleet of industrial cranes and heavy cargo vehicles for any rigging operation at your plant, site, or construction project.",
+    "categories": {
+      "cranes": "Industrial cranes",
+      "vehicles": "Cargo vehicles"
+    },
+    "items": [
+      { "name": "Conventional crane", "capacity": "50 Tons", "qty": 1, "category": "cranes", "desc": "For large-scale industrial rigging and heavy assemblies.", "img": "/images/grua-50t.webp", "imgAlt": "JP Rentals 50-ton conventional crane at industrial yard in Monterrey" },
+      { "name": "Conventional crane", "capacity": "22 Tons", "qty": 1, "category": "cranes", "desc": "Versatility for medium industrial projects.", "img": "/images/grua-22t.webp", "imgAlt": "JP Rentals 22-ton conventional crane for industrial rigging in Monterrey" },
+      { "name": "Conventional crane", "capacity": "18 Tons", "qty": 2, "category": "cranes", "desc": "Ideal for in-plant rigging and industrial spaces.", "img": "/images/grua-18t.webp", "imgAlt": "JP Rentals 18-ton conventional crane available for rental in Monterrey" },
+      { "name": "Conventional crane", "capacity": "15 Tons", "qty": 1, "category": "cranes", "desc": "Light rigging for warehouses and construction.", "img": "/images/grua-15t.webp", "imgAlt": "JP Rentals 15-ton conventional crane for industrial rigging Monterrey" },
+      { "name": "Articulated crane", "capacity": "8 Tons", "qty": 2, "category": "cranes", "desc": "Perfect for loading/unloading and tight spaces.", "img": "/images/grua-articulada-8t.webp", "imgAlt": "JP Rentals 8-ton articulated crane for loading and unloading operations" },
+      { "name": "Howo trailer", "capacity": "30 Tons", "qty": 1, "category": "vehicles", "desc": "Heavy machinery transport in metro area.", "img": "/images/trailer-howo.webp", "imgAlt": "JP Rentals Howo 30-ton trailer for heavy machinery transport Monterrey" },
+      { "name": "Extendable platform", "capacity": "30T / 60m", "qty": 1, "category": "vehicles", "desc": "For oversized loads and long machinery.", "img": "/images/plataforma-extensible.webp", "imgAlt": "JP Rentals extendable platform 60 meters for oversized loads Monterrey" },
+      { "name": "Chevrolet truck", "capacity": "3.5 Tons", "qty": 1, "category": "vehicles", "desc": "Light loads and jobsite logistics support.", "img": "/images/camion-chevrolet.webp", "imgAlt": "JP Rentals Chevrolet work truck for industrial logistics Monterrey" },
+      { "name": "Ram truck", "capacity": "3.5 Tons", "qty": 1, "category": "vehicles", "desc": "Tool and supplementary equipment transport.", "img": "/images/camion-ram.webp", "imgAlt": "JP Rentals Ram truck for tool and equipment transport Monterrey" }
+    ],
+    "cta": "Need any of this equipment?",
+    "cta_button": "Get a Quote"
+  },
+  "about": {
+    "label": "About",
+    "title": "Why companies trust JP Rentals",
+    "subtitle": "We are part of Grupo NASA, with over 30 years in the steel and construction industry in Monterrey.",
+    "items": [
+      {
+        "title": "Backed by Grupo NASA",
+        "description": "JP Rentals is part of Grupo NASA, the same group behind Nasacero and Nacional de Anclas. Over 30 years serving heavy industry in Monterrey.",
+        "icon": "building"
+      },
+      {
+        "title": "Fleet ready for your project",
+        "description": "We have industrial cranes from 8 to 50 tons, a 30-ton trailer, and extendable platform for any rigging operation at your plant, site, or construction project.",
+        "icon": "truck"
+      },
+      {
+        "title": "Response in under 1 hour",
+        "description": "We quote fast because we know your operation can't wait. Send us your need via WhatsApp and we'll respond with price and availability.",
+        "icon": "clock"
+      },
+      {
+        "title": "Real local expertise",
+        "description": "We know Monterrey. We know the routes, the industrial access points, and the rigging each zone requires. We operate across the entire metro area.",
+        "icon": "map"
+      }
+    ],
+    "stats": [
+      { "value": "30+", "label": "Years in industry" },
+      { "value": "7", "label": "Industrial cranes" },
+      { "value": "<1h", "label": "Response time" }
+    ]
+  },
+  "contact": {
+    "label": "Contact",
+    "title": "Need to move industrial machinery?",
+    "subtitle": "Tell us what you need to move and we'll respond in under 1 hour.",
+    "form": {
+      "name": "Name",
+      "company": "Company",
+      "phone": "Phone",
+      "service": "Service type",
+      "service_options": ["Machinery moving", "Local hauling with trailer", "Monthly crane rental", "Other"],
+      "message": "Briefly describe your need",
+      "submit": "Send message"
+    },
+    "or": "Or message us directly on WhatsApp",
+    "wa_button": "Open WhatsApp",
+    "wa_message": "Hello JP Rentals, I'd like to request a quote for your services. Can you help?",
+    "schedule": "Monday to Saturday · 7:00 AM - 7:00 PM",
+    "response_time": "Average response time: under 1 hour"
+  },
+  "footer": {
+    "description": "Industrial crane rental and heavy machinery transport in Monterrey metropolitan area.",
+    "links_title": "Navigation",
+    "sisters_title": "Business group",
+    "sisters_subtitle": "Over 30 years in the steel and construction industry in Monterrey.",
+    "legal": "© 2026 JP Rentals. All rights reserved.",
+    "location": "Monterrey, Nuevo León, México",
+    "privacy": "Privacy policy"
+  }
+}

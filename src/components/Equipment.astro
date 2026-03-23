@@ -1,0 +1,98 @@
+---
+import type { Locale } from '@/i18n/utils';
+import { t, waLink } from '@/i18n/utils';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const i = t(locale);
+
+const cranes = i.equipment.items.filter(item => item.category === 'cranes');
+const vehicles = i.equipment.items.filter(item => item.category === 'vehicles');
+---
+
+<section id="equipos" class="section-padding bg-brand-50">
+  <div class="container">
+    <!-- Section header -->
+    <div class="mb-16">
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight mb-4">
+        {i.equipment.title}
+      </h2>
+      <p class="text-lg text-brand-500 max-w-2xl leading-relaxed">
+        {i.equipment.subtitle}
+      </p>
+    </div>
+
+    <!-- Cranes -->
+    <h3 class="text-lg font-bold tracking-tight mb-6 flex items-center gap-2">
+      <span class="w-8 h-8 bg-accent text-white rounded-lg flex items-center justify-center text-xs font-bold">{cranes.length}</span>
+      {i.equipment.categories.cranes}
+    </h3>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-12 stagger-children">
+      {cranes.map((item) => (
+        <div class="fade-in bg-white border border-brand-200 rounded-xl overflow-hidden group hover:border-brand-300 hover:shadow-md transition-all duration-300">
+          <div class="aspect-[4/3] bg-brand-200 relative overflow-hidden">
+            <img
+              src={item.img}
+              alt={item.imgAlt}
+              title={`${item.name} ${item.capacity} — JP Rentals Monterrey`}
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="p-5">
+            <div class="flex items-start justify-between gap-2 mb-2">
+              <h4 class="font-bold text-base">{item.name}</h4>
+              <span class="text-xs font-bold bg-brand-100 text-brand-700 px-2.5 py-1 rounded-md whitespace-nowrap">
+                {item.capacity}
+              </span>
+            </div>
+            <p class="text-sm text-brand-500">{item.desc}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Vehicles -->
+    <h3 class="text-lg font-bold tracking-tight mb-6 flex items-center gap-2">
+      <span class="w-8 h-8 bg-accent text-white rounded-lg flex items-center justify-center text-xs font-bold">{vehicles.length}</span>
+      {i.equipment.categories.vehicles}
+    </h3>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 stagger-children">
+      {vehicles.map((item) => (
+        <div class="fade-in bg-white border border-brand-200 rounded-xl overflow-hidden group hover:border-brand-300 hover:shadow-md transition-all duration-300">
+          <div class="aspect-[4/3] bg-brand-200 relative overflow-hidden">
+            <img
+              src={item.img}
+              alt={item.imgAlt}
+              title={`${item.name} ${item.capacity} — JP Rentals Monterrey`}
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="p-4">
+            <div class="flex items-start justify-between gap-2 mb-1.5">
+              <h4 class="font-bold text-sm">{item.name}</h4>
+              <span class="text-[11px] font-bold bg-brand-100 text-brand-700 px-2 py-0.5 rounded whitespace-nowrap">
+                {item.capacity}
+              </span>
+            </div>
+            <p class="text-xs text-brand-500">{item.desc}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- CTA -->
+    <div class="mt-12 text-center fade-in">
+      <p class="text-lg font-semibold mb-4">{i.equipment.cta}</p>
+      <a href={waLink(i.contact.wa_message)} target="_blank" rel="noopener" class="btn-primary inline-flex">
+        {i.equipment.cta_button}
+      </a>
+    </div>
+  </div>
+</section>

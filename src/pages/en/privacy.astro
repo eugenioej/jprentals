@@ -1,0 +1,154 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import TopBanner from '@/components/TopBanner.astro';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+
+const locale = 'en' as const;
+const lastUpdated = 'March 22, 2026';
+---
+
+<Layout locale={locale}>
+  <div class="fixed top-0 left-0 right-0 z-50">
+    <TopBanner locale={locale} />
+    <Header locale={locale} />
+  </div>
+
+  <main class="pt-40 pb-20 min-h-screen bg-white">
+    <div class="container max-w-3xl">
+
+      <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-2">Privacy Notice</h1>
+      <p class="text-sm text-brand-400 mb-10">Last updated: {lastUpdated}</p>
+
+      <div class="prose prose-neutral max-w-none space-y-8 text-brand-600 leading-relaxed">
+
+        <section>
+          <h2 class="text-xl font-bold text-brand-900 mb-3">1. Data Controller</h2>
+          <p>
+            JP Rentals, a company belonging to Grupo NASA, domiciled in Monterrey, Nuevo León, Mexico,
+            is responsible for the processing of your personal data in accordance with Mexico's
+            <em>Federal Law on Protection of Personal Data Held by Private Parties</em> (LFPDPPP).
+          </p>
+          <p class="mt-2">
+            Privacy contact: <a href="mailto:contacto@jprentals.mx" class="text-accent underline">contacto@jprentals.mx</a>
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-bold text-brand-900 mb-3">2. Personal Data We Collect</h2>
+          <p>We collect only the data necessary to process your service or quote request:</p>
+          <ul class="mt-3 space-y-1 list-disc list-inside">
+            <li>Full name</li>
+            <li>Phone number or WhatsApp</li>
+            <li>Email address</li>
+            <li>Company or organization name</li>
+            <li>Description of the service required</li>
+          </ul>
+          <p class="mt-3">We do not collect sensitive personal data as defined by Article 3 Section VI of the LFPDPPP.</p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-bold text-brand-900 mb-3">3. Purposes of Processing</h2>
+          <p><strong>Primary purposes</strong> (required for the business relationship):</p>
+          <ul class="mt-2 space-y-1 list-disc list-inside">
+            <li>Respond to quote requests for industrial crane rental and machinery transport</li>
+            <li>Coordinate service delivery</li>
+            <li>Issue commercial documents (quotes, invoices, contracts)</li>
+            <li>Post-service follow-up and customer support</li>
+          </ul>
+          <p class="mt-4"><strong>Secondary purposes</strong> (you may opt out):</p>
+          <ul class="mt-2 space-y-1 list-disc list-inside">
+            <li>Sending information about new equipment or services</li>
+            <li>Promotions or discounts for frequent customers</li>
+          </ul>
+          <p class="mt-3 text-sm bg-brand-50 border border-brand-200 rounded-lg p-4">
+            To opt out of secondary purposes, email <a href="mailto:contacto@jprentals.mx" class="text-accent underline">contacto@jprentals.mx</a>
+            with the subject line <strong>"Opt out secondary purposes"</strong>.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-bold text-brand-900 mb-3">4. Data Transfers</h2>
+          <p>
+            JP Rentals does not sell, assign, or transfer your personal data to third parties without
+            your consent, except as provided in Article 37 of the LFPDPPP (competent authority requests,
+            Grupo NASA subsidiaries involved in service delivery, or when required for contract execution).
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-bold text-brand-900 mb-3">5. WhatsApp Communications</h2>
+          <p>
+            This website uses direct WhatsApp links (<code>wa.me</code>) to facilitate contact.
+            When you initiate a WhatsApp conversation, your data is also subject to
+            <a href="https://www.whatsapp.com/legal/privacy-policy" target="_blank" rel="noopener" class="text-accent underline">WhatsApp / Meta's Privacy Policy</a>.
+            JP Rentals uses WhatsApp solely to attend to your service request.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-bold text-brand-900 mb-3">6. Cookies and Tracking</h2>
+          <p>
+            This website may use strictly necessary technical cookies for basic functionality.
+            We do not use advertising tracking cookies or share browsing data with third parties
+            for commercial purposes without your prior consent.
+          </p>
+          <p class="mt-2">
+            If analytics tools (such as Google Analytics) are implemented in the future, this notice
+            will be updated accordingly.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-bold text-brand-900 mb-3">7. Your Rights (ARCO)</h2>
+          <p>
+            You have the right to <strong>Access, Rectify, Cancel, or Object</strong> to the processing
+            of your personal data (ARCO rights), as well as the right to revoke consent and to data
+            portability, in accordance with the LFPDPPP.
+          </p>
+          <p class="mt-3">To exercise your rights, submit a request to:</p>
+          <div class="mt-3 bg-brand-50 border border-brand-200 rounded-lg p-4 space-y-1">
+            <p><strong>Email:</strong> <a href="mailto:contacto@jprentals.mx" class="text-accent underline">contacto@jprentals.mx</a></p>
+            <p><strong>Subject:</strong> "ARCO Rights Request"</p>
+            <p class="text-sm text-brand-500 mt-2">
+              Include: full name, description of the right you wish to exercise, and a copy of
+              your official ID. We will respond within 20 business days.
+            </p>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-bold text-brand-900 mb-3">8. Data Security</h2>
+          <p>
+            JP Rentals implements reasonable administrative, technical, and physical security measures
+            to protect your personal data against damage, loss, alteration, destruction, or unauthorized
+            access by third parties.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-bold text-brand-900 mb-3">9. Changes to This Notice</h2>
+          <p>
+            JP Rentals reserves the right to update this privacy notice at any time. Changes will be
+            posted on this page with the updated date. Continued use of the website or our services
+            after such changes constitutes acceptance of those changes.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-bold text-brand-900 mb-3">10. Regulatory Authority</h2>
+          <p>
+            If you believe your right to personal data protection has been violated, you may file
+            a complaint with the
+            <a href="https://www.inai.org.mx" target="_blank" rel="noopener" class="text-accent underline">
+              National Institute for Transparency, Access to Information and Personal Data Protection (INAI)
+            </a>.
+          </p>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <Footer locale={locale} />
+</Layout>

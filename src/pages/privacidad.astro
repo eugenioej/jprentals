@@ -1,0 +1,159 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import TopBanner from '@/components/TopBanner.astro';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+
+const locale = 'es' as const;
+const lastUpdated = '22 de marzo de 2026';
+---
+
+<Layout locale={locale}>
+  <div class="fixed top-0 left-0 right-0 z-50">
+    <TopBanner locale={locale} />
+    <Header locale={locale} />
+  </div>
+
+  <main class="pt-40 pb-20 min-h-screen bg-white">
+    <div class="container max-w-3xl">
+
+      <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-2">Aviso de Privacidad</h1>
+      <p class="text-sm text-brand-400 mb-10">Última actualización: {lastUpdated}</p>
+
+      <div class="prose prose-neutral max-w-none space-y-8 text-brand-600 leading-relaxed">
+
+        <section>
+          <h2 class="text-xl font-bold text-brand-900 mb-3">1. Responsable del tratamiento</h2>
+          <p>
+            JP Rentals, empresa perteneciente a Grupo NASA, con domicilio en Monterrey, Nuevo León, México,
+            es responsable del tratamiento de sus datos personales conforme a la
+            <em>Ley Federal de Protección de Datos Personales en Posesión de los Particulares</em> (LFPDPPP).
+          </p>
+          <p class="mt-2">
+            Contacto para asuntos de privacidad: <a href="mailto:contacto@jprentals.mx" class="text-accent underline">contacto@jprentals.mx</a>
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-bold text-brand-900 mb-3">2. Datos personales que recabamos</h2>
+          <p>Recabamos únicamente los datos necesarios para atender su solicitud de cotización o contacto:</p>
+          <ul class="mt-3 space-y-1 list-disc list-inside">
+            <li>Nombre completo</li>
+            <li>Número de teléfono o WhatsApp</li>
+            <li>Correo electrónico</li>
+            <li>Nombre de su empresa u organización</li>
+            <li>Descripción del servicio requerido</li>
+          </ul>
+          <p class="mt-3">
+            No recabamos datos sensibles en el sentido del artículo 3, fracción VI de la LFPDPPP.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-bold text-brand-900 mb-3">3. Finalidades del tratamiento</h2>
+          <p><strong>Finalidades primarias</strong> (necesarias para la relación comercial):</p>
+          <ul class="mt-2 space-y-1 list-disc list-inside">
+            <li>Responder a solicitudes de cotización de renta de grúas industriales y transporte de maquinaria</li>
+            <li>Coordinar la prestación de los servicios contratados</li>
+            <li>Emitir documentos comerciales (cotizaciones, facturas, contratos)</li>
+            <li>Dar seguimiento postventa y atención al cliente</li>
+          </ul>
+          <p class="mt-4"><strong>Finalidades secundarias</strong> (puede oponerse a estas):</p>
+          <ul class="mt-2 space-y-1 list-disc list-inside">
+            <li>Envío de información sobre nuevos equipos o servicios disponibles</li>
+            <li>Invitaciones a promociones o descuentos para clientes frecuentes</li>
+          </ul>
+          <p class="mt-3 text-sm bg-brand-50 border border-brand-200 rounded-lg p-4">
+            Si no desea que sus datos sean utilizados para las finalidades secundarias, puede indicarlo
+            enviando un correo a <a href="mailto:contacto@jprentals.mx" class="text-accent underline">contacto@jprentals.mx</a>
+            con el asunto <strong>"Oposición finalidades secundarias"</strong>.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-bold text-brand-900 mb-3">4. Transferencia de datos</h2>
+          <p>
+            JP Rentals no vende, cede ni transfiere sus datos personales a terceros sin su consentimiento,
+            salvo los casos previstos en el artículo 37 de la LFPDPPP (requerimientos de autoridades competentes,
+            empresas subsidiarias del mismo grupo corporativo Grupo NASA para la prestación del servicio contratado,
+            o cuando sea necesario para la ejecución del contrato).
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-bold text-brand-900 mb-3">5. Comunicaciones vía WhatsApp</h2>
+          <p>
+            Este sitio web utiliza enlaces directos a WhatsApp (<code>wa.me</code>) para facilitar el contacto.
+            Al iniciar una conversación por WhatsApp, sus datos quedan sujetos adicionalmente a la
+            <a href="https://www.whatsapp.com/legal/privacy-policy" target="_blank" rel="noopener" class="text-accent underline">Política de Privacidad de WhatsApp / Meta</a>.
+            JP Rentals únicamente utiliza WhatsApp para atender su solicitud de servicio.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-bold text-brand-900 mb-3">6. Cookies y tecnologías de rastreo</h2>
+          <p>
+            Este sitio web puede utilizar cookies técnicas estrictamente necesarias para su funcionamiento.
+            No utilizamos cookies de seguimiento publicitario ni compartimos datos de navegación con terceros
+            con fines comerciales sin su consentimiento previo.
+          </p>
+          <p class="mt-2">
+            Si en el futuro se implementan herramientas de analítica (como Google Analytics), este aviso
+            será actualizado para reflejar dicho uso.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-bold text-brand-900 mb-3">7. Derechos ARCO</h2>
+          <p>
+            Usted tiene derecho a <strong>Acceder, Rectificar, Cancelar u Oponerse</strong> al tratamiento
+            de sus datos personales (derechos ARCO), así como a revocar el consentimiento otorgado y
+            a la portabilidad de sus datos, conforme a la LFPDPPP.
+          </p>
+          <p class="mt-3">Para ejercer sus derechos, envíe una solicitud a:</p>
+          <div class="mt-3 bg-brand-50 border border-brand-200 rounded-lg p-4 space-y-1">
+            <p><strong>Correo:</strong> <a href="mailto:contacto@jprentals.mx" class="text-accent underline">contacto@jprentals.mx</a></p>
+            <p><strong>Asunto:</strong> "Ejercicio de derechos ARCO"</p>
+            <p class="text-sm text-brand-500 mt-2">
+              Incluya: nombre completo, descripción del derecho que desea ejercer y copia de
+              identificación oficial. Responderemos en un plazo máximo de 20 días hábiles.
+            </p>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-bold text-brand-900 mb-3">8. Seguridad de los datos</h2>
+          <p>
+            JP Rentals implementa medidas de seguridad administrativas, técnicas y físicas razonables
+            para proteger sus datos personales contra daño, pérdida, alteración, destrucción o acceso
+            no autorizado por terceros.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-bold text-brand-900 mb-3">9. Cambios al aviso de privacidad</h2>
+          <p>
+            JP Rentals se reserva el derecho de actualizar este aviso de privacidad en cualquier momento.
+            Las modificaciones serán publicadas en esta página con la fecha de última actualización.
+            El uso continuado del sitio web o de nuestros servicios después de dichas modificaciones
+            constituye la aceptación de los cambios.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-bold text-brand-900 mb-3">10. Autoridad reguladora</h2>
+          <p>
+            Si considera que su derecho a la protección de datos personales ha sido vulnerado, puede
+            presentar una queja ante el
+            <a href="https://www.inai.org.mx" target="_blank" rel="noopener" class="text-accent underline">
+              Instituto Nacional de Transparencia, Acceso a la Información y Protección de Datos Personales (INAI)
+            </a>.
+          </p>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <Footer locale={locale} />
+</Layout>
