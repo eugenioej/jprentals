@@ -90,7 +90,7 @@
         "icon": "truck"
       },
       {
-        "title": "Respuesta en menos de 1 hora",
+        "title": "Respuesta rápida",
         "description": "Cotizamos rápido porque sabemos que tu operación no puede esperar. Envíanos tu necesidad por WhatsApp y te respondemos con precio y disponibilidad.",
         "icon": "clock"
       },
@@ -109,7 +109,7 @@
   "contact": {
     "label": "Contacto",
     "title": "¿Necesitas mover maquinaria industrial?",
-    "subtitle": "Cuéntanos qué necesitas mover y te respondemos en menos de 1 hora.",
+    "subtitle": "Cuéntanos qué necesitas mover y te respondemos a la brevedad.",
     "form": {
       "name": "Nombre",
       "company": "Empresa",
@@ -123,7 +123,7 @@
     "wa_button": "Abrir WhatsApp",
     "wa_message": "Hola JP Rentals, me gustaría cotizar un servicio. ¿Me pueden ayudar?",
     "schedule": "Lunes a sábado · 7:00 AM - 7:00 PM",
-    "response_time": "Tiempo de respuesta promedio: menos de 1 hora"
+    "response_time": "Respondemos a la brevedad"
   },
   "footer": {
     "description": "Renta de grúas industriales y transporte de maquinaria pesada en Monterrey y área metropolitana.",

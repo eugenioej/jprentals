@@ -90,7 +90,7 @@
         "icon": "truck"
       },
       {
-        "title": "Response in under 1 hour",
+        "title": "Fast response",
         "description": "We quote fast because we know your operation can't wait. Send us your need via WhatsApp and we'll respond with price and availability.",
         "icon": "clock"
       },
@@ -109,7 +109,7 @@
   "contact": {
     "label": "Contact",
     "title": "Need to move industrial machinery?",
-    "subtitle": "Tell us what you need to move and we'll respond in under 1 hour.",
+    "subtitle": "Tell us what you need to move and we'll get back to you shortly.",
     "form": {
       "name": "Name",
       "company": "Company",
@@ -123,7 +123,7 @@
     "wa_button": "Open WhatsApp",
     "wa_message": "Hello JP Rentals, I'd like to request a quote for your services. Can you help?",
     "schedule": "Monday to Saturday · 7:00 AM - 7:00 PM",
-    "response_time": "Average response time: under 1 hour"
+    "response_time": "We respond promptly"
   },
   "footer": {
     "description": "Industrial crane rental and heavy machinery transport in Monterrey metropolitan area.",
