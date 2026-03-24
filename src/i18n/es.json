@@ -21,7 +21,7 @@
     "cta_secondary": "Ver nuestros equipos",
     "trust_1": "30+ años en la industria",
     "trust_2": "Parte de Grupo NASA",
-    "trust_3": "Cotización en <1 hora"
+    "trust_3": ""
   },
   "services": {
     "label": "Servicios",
@@ -103,7 +103,7 @@
     "stats": [
       { "value": "30+", "label": "Años en la industria" },
       { "value": "7", "label": "Grúas industriales" },
-      { "value": "<1h", "label": "Tiempo de respuesta" }
+      { "value": "MTY", "label": "Área metropolitana" }
     ]
   },
   "contact": {

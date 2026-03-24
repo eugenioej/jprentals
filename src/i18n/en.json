@@ -21,7 +21,7 @@
     "cta_secondary": "View Our Equipment",
     "trust_1": "30+ years in industry",
     "trust_2": "Part of Grupo NASA",
-    "trust_3": "Quote in <1 hour"
+    "trust_3": ""
   },
   "services": {
     "label": "Services",
@@ -103,7 +103,7 @@
     "stats": [
       { "value": "30+", "label": "Years in industry" },
       { "value": "7", "label": "Industrial cranes" },
-      { "value": "<1h", "label": "Response time" }
+      { "value": "MTY", "label": "Metro area coverage" }
     ]
   },
   "contact": {

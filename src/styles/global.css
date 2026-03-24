@@ -48,13 +48,13 @@
   transform: translateY(0);
 }
 
-/* Scroll offset for fixed header + banner */
+/* Scroll offset for fixed header */
 section[id] {
-  scroll-margin-top: 108px; /* banner 36px + header 64px + 8px buffer */
+  scroll-margin-top: 72px; /* header 64px + 8px buffer */
 }
 @media (min-width: 768px) {
   section[id] {
-    scroll-margin-top: 124px; /* banner 36px + header 80px + 8px buffer */
+    scroll-margin-top: 88px; /* header 80px + 8px buffer */
   }
 }
 

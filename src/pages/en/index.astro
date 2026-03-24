@@ -1,6 +1,5 @@
 ---
 import Layout from '@/layouts/Layout.astro';
-import TopBanner from '@/components/TopBanner.astro';
 import Header from '@/components/Header.astro';
 import Hero from '@/components/Hero.astro';
 import Services from '@/components/Services.astro';
@@ -15,7 +14,6 @@ const locale = 'en' as const;
 
 <Layout locale={locale}>
   <div class="fixed top-0 left-0 right-0 z-50">
-    <TopBanner locale={locale} />
     <Header locale={locale} />
   </div>
   <main>
