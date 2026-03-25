@@ -1,0 +1,44 @@
+---
+import InnerLayout from '@/layouts/InnerLayout.astro';
+---
+<InnerLayout locale="en" title="50-Ton Crane Rental in Monterrey | JP Rentals" description="Rent a 50-ton conventional crane in Monterrey for large-scale industrial rigging, heavy assembly, and construction. Operator included. Quote via WhatsApp." canonical="https://jprentals.mx/en/equipment/50-ton-crane" altHref="https://jprentals.mx/equipos/grua-50-toneladas" altLocale="es">
+  <span slot="breadcrumb"><a href="/en/services/industrial-crane-rental" class="hover:text-white/80">Industrial cranes</a> / 50T Crane</span>
+  <div slot="hero">
+    <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight leading-tight mb-4">50-Ton Conventional Crane<br/><span class="text-white/80">in Monterrey</span></h1>
+    <p class="text-lg text-white/90 max-w-2xl">Our highest-capacity crane. Built for large-scale industrial assembly, heavy steel structures, and high-tonnage rigging operations.</p>
+  </div>
+  <section class="py-16 md:py-24">
+    <div class="container max-w-4xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-10 mb-16 items-center">
+        <div class="inner-fade rounded-2xl overflow-hidden aspect-[4/3] bg-brand-100">
+          <img src="/images/grua-50t.webp" alt="50-ton crane JP Rentals Monterrey" width="600" height="450" class="w-full h-full object-cover" loading="eager" />
+        </div>
+        <div class="inner-fade">
+          <h2 class="text-xl font-bold mb-4">Specifications</h2>
+          <dl class="space-y-3">
+            {[['Max capacity','50 tons'],['Type','Telescopic conventional crane'],['Availability','Daily, weekly, monthly rental'],['Service area','Monterrey metro area'],['Operator','Included'],['Company','JP Rentals — Grupo NASA']].map(([k,v]) => (
+              <div class="flex justify-between py-2 border-b border-brand-100"><dt class="text-sm text-brand-600">{k}</dt><dd class="text-sm font-semibold">{v}</dd></div>
+            ))}
+          </dl>
+        </div>
+      </div>
+      <h2 class="text-2xl font-extrabold mb-6 inner-fade">Main applications</h2>
+      <div class="grid md:grid-cols-2 gap-4 mb-12">
+        {['Heavy industrial machinery installation','Steel structure erection','Large equipment positioning','Industrial construction projects','Reactor and tank placement','Infrastructure works at plant'].map(u => (
+          <div class="inner-fade flex items-start gap-3 p-4 bg-brand-50 border border-brand-200 rounded-xl">
+            <svg class="w-5 h-5 text-accent mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+            <span class="text-sm font-medium">{u}</span>
+          </div>
+        ))}
+      </div>
+      <div class="inner-fade bg-brand-50 border border-brand-200 rounded-2xl p-6">
+        <p class="text-sm font-semibold text-brand-600 mb-3">Other cranes available</p>
+        <div class="flex flex-wrap gap-3">
+          {[['22T Crane','/en/equipment/22-ton-crane'],['18T Crane','/en/equipment/18-ton-crane'],['15T Crane','/en/equipment/15-ton-crane'],['8T Articulated','/en/equipment/8-ton-articulated-crane']].map(([l,h]) => (
+            <a href={h} class="text-sm font-medium text-accent hover:underline">→ {l}</a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+</InnerLayout>

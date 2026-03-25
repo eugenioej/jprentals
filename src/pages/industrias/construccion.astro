@@ -1,0 +1,57 @@
+---
+import InnerLayout from '@/layouts/InnerLayout.astro';
+---
+<InnerLayout locale="es" title="Grúas para Construcción en Monterrey | JP Rentals" description="Renta de grúas industriales para proyectos de construcción en Monterrey. Izaje de estructuras, obra civil e industrial. Flota de 8 a 50 toneladas. Cotiza por WhatsApp." canonical="https://jprentals.mx/industrias/construccion" altHref="https://jprentals.mx/en/industries/construction" altLocale="en">
+  <span slot="breadcrumb">Industrias / Construcción</span>
+  <div slot="hero">
+    <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight leading-tight mb-4">Grúas para<br/><span class="text-blue-300">Construcción</span><br/><span class="text-white/80">en Monterrey</span></h1>
+    <p class="text-lg text-white/90 max-w-2xl">Grúas de 8 a 50 toneladas para proyectos de construcción industrial y obra civil en Monterrey. Izaje de estructuras, colocación de elementos prefabricados y apoyo en obra.</p>
+  </div>
+  <section class="py-16 md:py-24">
+    <div class="container max-w-4xl mx-auto">
+      <h2 class="text-2xl font-extrabold mb-3 inner-fade">Grúas para obra e industria</h2>
+      <p class="text-brand-600 mb-10 inner-fade">La construcción en Monterrey demanda equipos de izaje confiables y disponibles. JP Rentals proporciona grúas industriales y operadores con experiencia en proyectos de construcción de todo tipo.</p>
+      <div class="grid md:grid-cols-2 gap-6 mb-16">
+        {[
+          { t: 'Izaje de estructuras metálicas', d: 'Columnas, trabes, marcos y cubiertas metálicas para naves industriales, bodegas y edificios de uso industrial o comercial.' },
+          { t: 'Colocación de prefabricados', d: 'Elementos de concreto prefabricado, losas, trabes y paneles para proyectos de obra civil e industrial.' },
+          { t: 'Montaje de cubiertas', d: 'Instalación de láminas, paneles y cubiertas en naves industriales, bodegas y estructuras de gran formato.' },
+          { t: 'Descarga en obra', d: 'Descarga de materiales pesados directamente en obra: acero, concreto, prefabricados, maquinaria y equipo de construcción.' },
+          { t: 'Renta mensual en obra', d: 'Grúa posicionada en tu obra durante la duración del proyecto para apoyo continuo de izaje.' },
+          { t: 'Transporte de material a obra', d: 'Flete local de material, maquinaria y equipo a cualquier punto de la zona metropolitana de Monterrey.' },
+        ].map(item => (
+          <div class="inner-fade bg-brand-50 border border-brand-200 rounded-xl p-6">
+            <h3 class="font-bold mb-2">{item.t}</h3>
+            <p class="text-sm text-brand-600 leading-relaxed">{item.d}</p>
+          </div>
+        ))}
+      </div>
+      <h2 class="text-2xl font-extrabold mb-6 inner-fade">¿Qué grúa necesito para mi obra?</h2>
+      <div class="space-y-4 mb-16">
+        {[
+          { rango: 'Hasta 8 toneladas', grua: 'Grúa articulada 8T', uso: 'Cargas ligeras, descarga de material, accesos estrechos.', href: '/equipos/grua-articulada-8-toneladas' },
+          { rango: '8 a 15 toneladas', grua: 'Grúa convencional 15T', uso: 'Estructuras ligeras, lámina, paneles y materiales menores.', href: '/equipos/grua-15-toneladas' },
+          { rango: '15 a 22 toneladas', grua: 'Grúa convencional 22T', uso: 'Prefabricados medianos, trabes y columnas de concreto.', href: '/equipos/grua-22-toneladas' },
+          { rango: '22 a 50 toneladas', grua: 'Grúa convencional 50T', uso: 'Estructuras pesadas, grandes prefabricados y montajes de envergadura.', href: '/equipos/grua-50-toneladas' },
+        ].map(g => (
+          <a href={g.href} class="inner-fade flex items-center justify-between p-5 bg-white border border-brand-200 rounded-xl hover:border-accent transition-colors group">
+            <div>
+              <p class="text-xs text-brand-400 mb-0.5">{g.rango}</p>
+              <p class="font-bold">{g.grua}</p>
+              <p class="text-sm text-brand-600">{g.uso}</p>
+            </div>
+            <svg class="w-5 h-5 text-brand-300 group-hover:text-accent transition-colors shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </a>
+        ))}
+      </div>
+      <div class="inner-fade bg-brand-50 border border-brand-200 rounded-2xl p-6">
+        <p class="text-sm font-semibold text-brand-600 mb-3">Servicios relacionados</p>
+        <div class="flex flex-wrap gap-3">
+          {[['Renta de grúas industriales','/servicios/renta-gruas-industriales'],['Maniobras industriales','/servicios/maniobras-industriales'],['Flete local con tráiler','/servicios/flete-local-trailer'],['Grúas para manufactura','/industrias/manufactura']].map(([l,h]) => (
+            <a href={h} class="text-sm font-medium text-accent hover:underline">→ {l}</a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+</InnerLayout>

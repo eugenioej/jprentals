@@ -1,6 +1,5 @@
 ---
 import Layout from '@/layouts/Layout.astro';
-import TopBanner from '@/components/TopBanner.astro';
 import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
 
@@ -10,11 +9,10 @@ const lastUpdated = '22 de marzo de 2026';
 
 <Layout locale={locale}>
   <div class="fixed top-0 left-0 right-0 z-50">
-    <TopBanner locale={locale} />
-    <Header locale={locale} />
+    <Header locale={locale} solid={true} />
   </div>
 
-  <main class="pt-40 pb-20 min-h-screen bg-white">
+  <main class="pt-20 md:pt-24 pb-20 min-h-screen bg-white">
     <div class="container max-w-3xl">
 
       <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-2">Aviso de Privacidad</h1>
@@ -114,7 +112,7 @@ const lastUpdated = '22 de marzo de 2026';
           <div class="mt-3 bg-brand-50 border border-brand-200 rounded-lg p-4 space-y-1">
             <p><strong>Correo:</strong> <a href="mailto:contacto@jprentals.mx" class="text-accent underline">contacto@jprentals.mx</a></p>
             <p><strong>Asunto:</strong> "Ejercicio de derechos ARCO"</p>
-            <p class="text-sm text-brand-500 mt-2">
+            <p class="text-sm text-brand-600 mt-2">
               Incluya: nombre completo, descripción del derecho que desea ejercer y copia de
               identificación oficial. Responderemos en un plazo máximo de 20 días hábiles.
             </p>

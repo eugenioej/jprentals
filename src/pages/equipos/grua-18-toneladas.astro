@@ -1,0 +1,44 @@
+---
+import InnerLayout from '@/layouts/InnerLayout.astro';
+---
+<InnerLayout locale="es" title="Grúa de 18 Toneladas en Monterrey | JP Rentals" description="Renta de grúa convencional de 18 toneladas en Monterrey. Ideal para maniobras en planta y espacios industriales. Cotiza por WhatsApp." canonical="https://jprentals.mx/equipos/grua-18-toneladas" altHref="https://jprentals.mx/en/equipment/18-ton-crane" altLocale="en">
+  <span slot="breadcrumb"><a href="/servicios/renta-gruas-industriales" class="hover:text-white/80">Grúas industriales</a> / Grúa 18T</span>
+  <div slot="hero">
+    <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight leading-tight mb-4">Grúa Convencional <span class="text-blue-300">18 Toneladas</span><br/><span class="text-white/80">en Monterrey</span></h1>
+    <p class="text-lg text-white/90 max-w-2xl">Una de las grúas más solicitadas de nuestra flota. Polivalente para maniobras en planta, carga y descarga de equipos industriales y trabajos en nave.</p>
+  </div>
+  <section class="py-16 md:py-24">
+    <div class="container max-w-4xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-10 mb-16 items-center">
+        <div class="inner-fade rounded-2xl overflow-hidden aspect-[4/3] bg-brand-100">
+          <img src="/images/grua-18t.webp" alt="Grúa convencional 18 toneladas JP Rentals Monterrey" width="600" height="450" class="w-full h-full object-cover" loading="eager" />
+        </div>
+        <div class="inner-fade">
+          <h2 class="text-xl font-bold mb-4">Especificaciones</h2>
+          <dl class="space-y-3">
+            {[['Capacidad máxima','18 toneladas'],['Unidades disponibles','2 grúas'],['Tipo','Grúa convencional'],['Disponibilidad','Renta diaria, semanal, mensual'],['Operador','Incluido'],['Empresa','JP Rentals — Grupo NASA']].map(([k,v]) => (
+              <div class="flex justify-between py-2 border-b border-brand-100"><dt class="text-sm text-brand-600">{k}</dt><dd class="text-sm font-semibold">{v}</dd></div>
+            ))}
+          </dl>
+        </div>
+      </div>
+      <h2 class="text-2xl font-extrabold mb-6 inner-fade">Usos principales</h2>
+      <div class="grid md:grid-cols-2 gap-4 mb-16">
+        {['Maniobras en planta y nave industrial','Carga y descarga de equipos medianos','Montaje de maquinaria de producción','Reubicación de equipos dentro de planta','Apoyo en proyectos de construcción','Trabajos en accesos con espacio limitado'].map(u => (
+          <div class="inner-fade flex items-start gap-3 p-4 bg-brand-50 border border-brand-200 rounded-xl">
+            <svg class="w-5 h-5 text-accent mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+            <span class="text-sm font-medium">{u}</span>
+          </div>
+        ))}
+      </div>
+      <div class="inner-fade bg-brand-50 border border-brand-200 rounded-2xl p-6">
+        <p class="text-sm font-semibold text-brand-600 mb-3">Otras grúas disponibles</p>
+        <div class="flex flex-wrap gap-3">
+          {[['Grúa 50T','/equipos/grua-50-toneladas'],['Grúa 22T','/equipos/grua-22-toneladas'],['Grúa 15T','/equipos/grua-15-toneladas'],['Grúa articulada 8T','/equipos/grua-articulada-8-toneladas']].map(([l,h]) => (
+            <a href={h} class="text-sm font-medium text-accent hover:underline">→ {l}</a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+</InnerLayout>

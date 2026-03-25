@@ -1,0 +1,37 @@
+---
+import InnerLayout from '@/layouts/InnerLayout.astro';
+---
+<InnerLayout locale="en" title="Cranes for Manufacturing Plants in Monterrey | JP Rentals" description="Industrial crane rental for manufacturing plants in Monterrey. CNC machinery, production lines, maquiladoras, and automotive plants. Part of Grupo NASA. Quote via WhatsApp." canonical="https://jprentals.mx/en/industries/manufacturing" altHref="https://jprentals.mx/industrias/manufactura" altLocale="es">
+  <span slot="breadcrumb">Industries / Manufacturing</span>
+  <div slot="hero">
+    <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight leading-tight mb-4">Cranes for<br/><span class="text-blue-300">Manufacturing Plants</span><br/><span class="text-white/80">in Monterrey</span></h1>
+    <p class="text-lg text-white/90 max-w-2xl">We move CNC machinery, production lines, injection equipment, and all types of heavy machinery in manufacturing plants and maquiladoras across the Monterrey metropolitan area.</p>
+  </div>
+  <section class="py-16 md:py-24">
+    <div class="container max-w-4xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-6 mb-16">
+        {[
+          { t: 'Production line installation', d: 'Positioning new machinery on your floor: machining centers, presses, robots, assembly lines — with the right crane for each piece.' },
+          { t: 'Machinery relocation', d: 'Moving equipment within the same plant to reorganize production layouts, expand facilities, or free up space.' },
+          { t: 'Equipment changeover', d: 'Removing old equipment and installing new. We coordinate timing to minimize production downtime.' },
+          { t: 'Import machinery unloading', d: 'When your machinery arrives in a container or import trailer, we unload and position it on the production floor.' },
+          { t: 'Resident crane at plant', d: 'If your plant has continuous rigging operations, we place a crane at your facility for days, weeks, or months.' },
+          { t: 'Inter-plant equipment transport', d: 'Local freight between plants in the same company within the metro area, with loading and unloading included.' },
+        ].map(item => (
+          <div class="inner-fade bg-brand-50 border border-brand-200 rounded-xl p-6">
+            <h3 class="font-bold mb-2">{item.t}</h3>
+            <p class="text-sm text-brand-600 leading-relaxed">{item.d}</p>
+          </div>
+        ))}
+      </div>
+      <div class="inner-fade bg-brand-50 border border-brand-200 rounded-2xl p-6">
+        <p class="text-sm font-semibold text-brand-600 mb-3">Related services</p>
+        <div class="flex flex-wrap gap-3">
+          {[['Industrial crane rental','/en/services/industrial-crane-rental'],['Industrial rigging','/en/services/industrial-rigging'],['Local freight','/en/services/local-freight'],['Cranes for construction','/en/industries/construction']].map(([l,h]) => (
+            <a href={h} class="text-sm font-medium text-accent hover:underline">→ {l}</a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+</InnerLayout>

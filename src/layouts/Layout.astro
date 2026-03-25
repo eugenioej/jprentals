@@ -56,6 +56,74 @@ const schemaData = {
   "sameAs": []
 };
 
+// FAQPage schema
+const faqSchema = locale === 'es' ? {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué capacidades tienen las grúas de JP Rentals?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Contamos con grúas industriales de 8, 15, 18, 22 y 50 toneladas, además de grúa articulada de 8 toneladas. Toda la flota está disponible para renta en Monterrey y área metropolitana." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿En qué zonas de Monterrey operan?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Operamos en toda el área metropolitana de Monterrey: Monterrey, San Pedro, Santa Catarina, Guadalupe, Apodaca, General Escobedo, San Nicolás y zonas industriales aledañas." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo solicito una cotización de grúa industrial?",
+      "acceptedAnswer": { "@type": "Answer", "text": "La forma más rápida es por WhatsApp al +52 81 1600-7864. Cuéntanos el peso de la carga, la maniobra que necesitas y la ubicación, y te respondemos con precio y disponibilidad." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Ofrecen renta mensual de grúas para plantas industriales?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Sí. Tenemos renta diaria, semanal y mensual de grúas industriales. La grúa se posiciona directamente en tu planta para operaciones continuas o proyectos de montaje." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿JP Rentals hace flete de maquinaria pesada?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Sí. Contamos con tráiler Howo de 30 toneladas con grúa articulada incluida para carga y descarga puerta a puerta, y plataforma extensible para cargas de hasta 60 metros de longitud." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Quién es JP Rentals?",
+      "acceptedAnswer": { "@type": "Answer", "text": "JP Rentals es parte de Grupo NASA, grupo industrial con más de 30 años en la industria del acero y la construcción en Monterrey. También somos parte del mismo grupo que Nasacero y Nacional de Anclas." }
+    }
+  ]
+} : {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What crane capacities does JP Rentals offer?",
+      "acceptedAnswer": { "@type": "Answer", "text": "We operate industrial cranes from 8 to 50 tons: 8T articulated, 15T, 18T, 22T, and 50T conventional cranes. All available for rental in Monterrey and the metropolitan area." }
+    },
+    {
+      "@type": "Question",
+      "name": "What areas do you serve in Monterrey?",
+      "acceptedAnswer": { "@type": "Answer", "text": "We cover the entire Monterrey metro area including San Pedro, Santa Catarina, Guadalupe, Apodaca, General Escobedo, San Nicolás, and surrounding industrial zones." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I request a crane rental quote?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The fastest way is via WhatsApp at +52 81 1600-7864. Tell us the load weight, the maneuver needed, and the location — we'll respond with pricing and availability." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer monthly crane rental for industrial plants?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. We offer daily, weekly, and monthly crane rental. The crane is positioned directly at your plant for continuous operations or assembly projects." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you transport heavy machinery?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. We have a 30-ton Howo trailer with an articulated crane for door-to-door loading and unloading, plus an extendable platform for loads up to 60 meters long." }
+    }
+  ]
+};
+
 // Service schema
 const serviceSchema = {
   "@context": "https://schema.org",
@@ -132,9 +200,15 @@ const serviceSchema = {
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+
   <!-- Schema.org Structured Data -->
   <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
   <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
 </head>
 <body class="overflow-x-hidden">
   <slot />

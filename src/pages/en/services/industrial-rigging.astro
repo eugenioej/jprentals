@@ -1,0 +1,37 @@
+---
+import InnerLayout from '@/layouts/InnerLayout.astro';
+---
+<InnerLayout locale="en" title="Industrial Rigging Services in Monterrey | JP Rentals" description="Specialized industrial rigging with cranes from 8 to 50 tons. Machinery installation, removal, and positioning for manufacturing plants in Monterrey. Quote via WhatsApp." canonical="https://jprentals.mx/en/services/industrial-rigging" altHref="https://jprentals.mx/servicios/maniobras-industriales" altLocale="es">
+  <span slot="breadcrumb">Industrial Rigging</span>
+  <div slot="hero">
+    <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight leading-tight mb-4">Industrial Rigging Services<br/><span class="text-white/80">in Monterrey</span></h1>
+    <p class="text-lg text-white/90 max-w-2xl">Machinery installation, removal, and precision positioning with cranes from 8 to 50 tons. Experienced operators for manufacturing plants, warehouses, and construction projects.</p>
+  </div>
+  <section class="py-16 md:py-24">
+    <div class="container max-w-4xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-6 mb-16">
+        {[
+          { t: 'Machinery installation', d: 'Positioning new machinery on production lines, plants, and industrial warehouses with the right crane for each load.' },
+          { t: 'Machinery removal', d: 'Safely removing equipment from its current position for relocation, replacement, or plant reorganization.' },
+          { t: 'Loading & unloading', d: 'Crane-assisted loading and unloading of machinery arriving by truck, container, or flatbed.' },
+          { t: 'Tight-space rigging', d: 'Operations inside warehouses, between installed machinery, and narrow access points requiring precision.' },
+          { t: 'Structure erection', d: 'Lifting and placing beams, structural frames, and metal elements for industrial construction projects.' },
+          { t: 'Crane placement at plant', d: 'We position a crane at your facility for continuous operations during days, weeks, or months.' },
+        ].map(item => (
+          <div class="inner-fade bg-brand-50 border border-brand-200 rounded-xl p-6">
+            <h3 class="font-bold mb-2">{item.t}</h3>
+            <p class="text-sm text-brand-600 leading-relaxed">{item.d}</p>
+          </div>
+        ))}
+      </div>
+      <div class="inner-fade bg-brand-50 border border-brand-200 rounded-2xl p-6">
+        <p class="text-sm font-semibold text-brand-600 mb-3">Related services</p>
+        <div class="flex flex-wrap gap-3">
+          <a href="/en/services/industrial-crane-rental" class="text-sm font-medium text-accent hover:underline">→ Industrial crane rental</a>
+          <a href="/en/services/local-freight" class="text-sm font-medium text-accent hover:underline">→ Local freight with trailer</a>
+          <a href="/en/industries/manufacturing" class="text-sm font-medium text-accent hover:underline">→ Cranes for manufacturing</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</InnerLayout>

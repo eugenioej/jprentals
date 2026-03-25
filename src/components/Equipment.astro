@@ -11,6 +11,11 @@ const i = t(locale);
 
 const cranes = i.equipment.items.filter(item => item.category === 'cranes');
 const vehicles = i.equipment.items.filter(item => item.category === 'vehicles');
+
+// Crane page URLs in order (50T, 22T, 18T, 15T, 8T articulated)
+const craneUrls = locale === 'es'
+  ? ['/equipos/grua-50-toneladas', '/equipos/grua-22-toneladas', '/equipos/grua-18-toneladas', '/equipos/grua-15-toneladas', '/equipos/grua-articulada-8-toneladas']
+  : ['/en/equipment/50-ton-crane', '/en/equipment/22-ton-crane', '/en/equipment/18-ton-crane', '/en/equipment/15-ton-crane', '/en/equipment/8-ton-articulated-crane'];
 ---
 
 <section id="equipos" class="section-padding bg-brand-50">
@@ -20,7 +25,7 @@ const vehicles = i.equipment.items.filter(item => item.category === 'vehicles');
       <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight mb-4">
         {i.equipment.title}
       </h2>
-      <p class="text-lg text-brand-500 max-w-2xl leading-relaxed">
+      <p class="text-lg text-brand-700 max-w-2xl leading-relaxed">
         {i.equipment.subtitle}
       </p>
     </div>
@@ -31,8 +36,8 @@ const vehicles = i.equipment.items.filter(item => item.category === 'vehicles');
       {i.equipment.categories.cranes}
     </h3>
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-12 stagger-children">
-      {cranes.map((item) => (
-        <div class="fade-in bg-white border border-brand-200 rounded-xl overflow-hidden group hover:border-brand-300 hover:shadow-md transition-all duration-300">
+      {cranes.map((item, idx) => (
+        <a href={craneUrls[idx]} class="fade-in bg-white border border-brand-200 rounded-xl overflow-hidden group hover:border-accent hover:shadow-md transition-all duration-300 block">
           <div class="aspect-[4/3] bg-brand-200 relative overflow-hidden">
             <img
               src={item.img}
@@ -41,18 +46,20 @@ const vehicles = i.equipment.items.filter(item => item.category === 'vehicles');
               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               loading="lazy"
               decoding="async"
+              width="400"
+              height="300"
             />
           </div>
           <div class="p-5">
             <div class="flex items-start justify-between gap-2 mb-2">
-              <h4 class="font-bold text-base">{item.name}</h4>
+              <h4 class="font-bold text-base group-hover:text-accent transition-colors">{item.name}</h4>
               <span class="text-xs font-bold bg-brand-100 text-brand-700 px-2.5 py-1 rounded-md whitespace-nowrap">
                 {item.capacity}
               </span>
             </div>
-            <p class="text-sm text-brand-500">{item.desc}</p>
+            <p class="text-sm text-brand-600">{item.desc}</p>
           </div>
-        </div>
+        </a>
       ))}
     </div>
 
@@ -72,6 +79,8 @@ const vehicles = i.equipment.items.filter(item => item.category === 'vehicles');
               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               loading="lazy"
               decoding="async"
+              width="400"
+              height="300"
             />
           </div>
           <div class="p-4">
@@ -81,7 +90,7 @@ const vehicles = i.equipment.items.filter(item => item.category === 'vehicles');
                 {item.capacity}
               </span>
             </div>
-            <p class="text-xs text-brand-500">{item.desc}</p>
+            <p class="text-xs text-brand-600">{item.desc}</p>
           </div>
         </div>
       ))}

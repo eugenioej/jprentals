@@ -4,16 +4,18 @@ import { t, getAlternateUrl, waLink } from '@/i18n/utils';
 
 interface Props {
   locale: Locale;
+  solid?: boolean;
 }
 
-const { locale } = Astro.props;
+const { locale, solid = false } = Astro.props;
 const i = t(locale);
 const altLocale: Locale = locale === 'es' ? 'en' : 'es';
 const altUrl = getAlternateUrl(Astro.url, altLocale);
 const altLabel = locale === 'es' ? 'EN' : 'ES';
+const base = locale === 'es' ? '/' : '/en/';
 ---
 
-<header id="header" class="transition-all duration-300" data-header>
+<header id="header" class:list={["transition-all duration-300", solid ? "bg-white/95 backdrop-blur-lg shadow-sm border-b border-brand-200/50" : ""]} data-header data-solid={solid}>
   <div class="container flex items-center justify-between h-16 md:h-20">
     <!-- Logo -->
     <a href={locale === 'es' ? '/' : '/en/'} class="flex items-center gap-2 shrink-0">
@@ -24,16 +26,16 @@ const altLabel = locale === 'es' ? 'EN' : 'ES';
 
     <!-- Desktop Nav -->
     <nav class="hidden md:flex items-center gap-1">
-      <a href="#servicios" class="nav-link px-4 py-2 text-sm font-medium text-white/90 hover:text-white rounded-lg transition-colors duration-300">
+      <a href={`${base}#servicios`} class="nav-link px-4 py-2 text-sm font-medium text-white/90 hover:text-white rounded-lg transition-colors duration-300">
         {i.nav.services}
       </a>
-      <a href="#equipos" class="nav-link px-4 py-2 text-sm font-medium text-white/90 hover:text-white rounded-lg transition-colors duration-300">
+      <a href={`${base}#equipos`} class="nav-link px-4 py-2 text-sm font-medium text-white/90 hover:text-white rounded-lg transition-colors duration-300">
         {i.nav.equipment}
       </a>
-      <a href="#nosotros" class="nav-link px-4 py-2 text-sm font-medium text-white/90 hover:text-white rounded-lg transition-colors duration-300">
+      <a href={`${base}#nosotros`} class="nav-link px-4 py-2 text-sm font-medium text-white/90 hover:text-white rounded-lg transition-colors duration-300">
         {i.nav.about}
       </a>
-      <a href="#contacto" class="nav-link px-4 py-2 text-sm font-medium text-white/90 hover:text-white rounded-lg transition-colors duration-300">
+      <a href={`${base}#contacto`} class="nav-link px-4 py-2 text-sm font-medium text-white/90 hover:text-white rounded-lg transition-colors duration-300">
         {i.nav.contact}
       </a>
       <a href={altUrl} class="nav-lang px-3 py-2 text-xs font-bold text-white/70 hover:text-white border border-white/30 rounded-md transition-colors duration-300 ml-2">
@@ -60,16 +62,16 @@ const altLabel = locale === 'es' ? 'EN' : 'ES';
   <!-- Mobile Menu -->
   <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-brand-200">
     <div class="container py-4 flex flex-col gap-1">
-      <a href="#servicios" class="px-4 py-3 text-sm font-medium text-brand-600 hover:text-brand-black hover:bg-brand-50 rounded-lg transition-colors mobile-nav-link">
+      <a href={`${base}#servicios`} class="px-4 py-3 text-sm font-medium text-brand-600 hover:text-brand-black hover:bg-brand-50 rounded-lg transition-colors mobile-nav-link">
         {i.nav.services}
       </a>
-      <a href="#equipos" class="px-4 py-3 text-sm font-medium text-brand-600 hover:text-brand-black hover:bg-brand-50 rounded-lg transition-colors mobile-nav-link">
+      <a href={`${base}#equipos`} class="px-4 py-3 text-sm font-medium text-brand-600 hover:text-brand-black hover:bg-brand-50 rounded-lg transition-colors mobile-nav-link">
         {i.nav.equipment}
       </a>
-      <a href="#nosotros" class="px-4 py-3 text-sm font-medium text-brand-600 hover:text-brand-black hover:bg-brand-50 rounded-lg transition-colors mobile-nav-link">
+      <a href={`${base}#nosotros`} class="px-4 py-3 text-sm font-medium text-brand-600 hover:text-brand-black hover:bg-brand-50 rounded-lg transition-colors mobile-nav-link">
         {i.nav.about}
       </a>
-      <a href="#contacto" class="px-4 py-3 text-sm font-medium text-brand-600 hover:text-brand-black hover:bg-brand-50 rounded-lg transition-colors mobile-nav-link">
+      <a href={`${base}#contacto`} class="px-4 py-3 text-sm font-medium text-brand-600 hover:text-brand-black hover:bg-brand-50 rounded-lg transition-colors mobile-nav-link">
         {i.nav.contact}
       </a>
       <a href={waLink(i.contact.wa_message)} target="_blank" rel="noopener" class="btn-wa mt-2 justify-center">
@@ -83,6 +85,7 @@ const altLabel = locale === 'es' ? 'EN' : 'ES';
 <script>
   // Header scroll effect
   const header = document.querySelector('[data-header]') as HTMLElement;
+  const isSolid = header?.dataset.solid === 'true';
   let lastScroll = 0;
 
   const navLinks = document.querySelectorAll('.nav-link') as NodeListOf<HTMLElement>;
@@ -90,24 +93,31 @@ const altLabel = locale === 'es' ? 'EN' : 'ES';
   const navLogo = document.querySelector('.nav-logo') as HTMLElement;
   const menuToggle = document.getElementById('menu-toggle');
 
+  function setSolid() {
+    header.classList.add('bg-white/95', 'backdrop-blur-lg', 'shadow-sm', 'border-b', 'border-brand-200/50');
+    header.classList.remove('bg-transparent');
+    navLinks.forEach(el => { el.classList.remove('text-white/90', 'hover:text-white'); el.classList.add('text-brand-600'); });
+    navLangs.forEach(el => { el.classList.remove('text-white/70', 'hover:text-white', 'border-white/30'); el.classList.add('text-brand-400', 'border-brand-200'); });
+    if (navLogo) { navLogo.classList.remove('text-white'); navLogo.classList.add('text-brand-black'); }
+    if (menuToggle) { menuToggle.classList.remove('text-white'); menuToggle.classList.add('text-brand-black'); }
+  }
+
+  function setTransparent() {
+    header.classList.remove('bg-white/95', 'backdrop-blur-lg', 'shadow-sm', 'border-b', 'border-brand-200/50');
+    header.classList.add('bg-transparent');
+    navLinks.forEach(el => { el.classList.add('text-white/90', 'hover:text-white'); el.classList.remove('text-brand-600'); });
+    navLangs.forEach(el => { el.classList.add('text-white/70', 'hover:text-white', 'border-white/30'); el.classList.remove('text-brand-400', 'border-brand-200'); });
+    if (navLogo) { navLogo.classList.add('text-white'); navLogo.classList.remove('text-brand-black'); }
+    if (menuToggle) { menuToggle.classList.remove('text-brand-black'); menuToggle.classList.add('text-white'); }
+  }
+
   function updateHeader() {
-    const scroll = window.scrollY;
-    if (scroll > 60) {
-      header.classList.add('bg-white/95', 'backdrop-blur-lg', 'shadow-sm', 'border-b', 'border-brand-200/50');
-      header.classList.remove('bg-transparent');
-      navLinks.forEach(el => { el.classList.remove('text-white/90', 'hover:text-white'); el.classList.add('text-brand-600'); });
-      navLangs.forEach(el => { el.classList.remove('text-white/70', 'hover:text-white', 'border-white/30'); el.classList.add('text-brand-400', 'border-brand-200'); });
-      if (navLogo) { navLogo.classList.remove('text-white'); navLogo.classList.add('text-brand-black'); }
-      if (menuToggle) menuToggle.classList.replace('text-white', 'text-brand-black');
+    if (isSolid || window.scrollY > 60) {
+      setSolid();
     } else {
-      header.classList.remove('bg-white/95', 'backdrop-blur-lg', 'shadow-sm', 'border-b', 'border-brand-200/50');
-      header.classList.add('bg-transparent');
-      navLinks.forEach(el => { el.classList.add('text-white/90', 'hover:text-white'); el.classList.remove('text-brand-600'); });
-      navLangs.forEach(el => { el.classList.add('text-white/70', 'hover:text-white', 'border-white/30'); el.classList.remove('text-brand-400', 'border-brand-200'); });
-      if (navLogo) { navLogo.classList.add('text-white'); navLogo.classList.remove('text-brand-black'); }
-      if (menuToggle) menuToggle.classList.replace('text-brand-black', 'text-white');
+      setTransparent();
     }
-    lastScroll = scroll;
+    lastScroll = window.scrollY;
   }
 
   window.addEventListener('scroll', updateHeader, { passive: true });

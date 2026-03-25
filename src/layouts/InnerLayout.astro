@@ -1,0 +1,136 @@
+---
+import '@/styles/global.css';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+import WhatsAppFloat from '@/components/WhatsAppFloat.astro';
+import type { Locale } from '@/i18n/utils';
+import { waLink } from '@/i18n/utils';
+
+interface Props {
+  locale: Locale;
+  title: string;
+  description: string;
+  canonical: string;
+  altHref: string;
+  altLocale: Locale;
+  image?: string;
+  schema?: object;
+}
+
+const { locale, title, description, canonical, altHref, altLocale, image, schema } = Astro.props;
+const ogImage = image ?? '/images/og-image.jpg';
+const waMsg = locale === 'es'
+  ? 'Hola JP Rentals, me gustaría cotizar un servicio. ¿Me pueden ayudar?'
+  : 'Hello JP Rentals, I would like to request a quote. Can you help?';
+---
+
+<!DOCTYPE html>
+<html lang={locale === 'es' ? 'es-MX' : 'en-US'} dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href={canonical} />
+  <link rel="alternate" hreflang={locale} href={canonical} />
+  <link rel="alternate" hreflang={altLocale} href={altHref} />
+  <link rel="alternate" hreflang="x-default" href="https://jprentals.mx/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonical} />
+  <meta property="og:site_name" content="JP Rentals" />
+  <meta property="og:image" content={`https://jprentals.mx${ogImage}`} />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={`https://jprentals.mx${ogImage}`} />
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  {schema && <script type="application/ld+json" set:html={JSON.stringify(schema)} />}
+</head>
+<body class="overflow-x-hidden text-brand-900 bg-white font-sans">
+  <div class="fixed top-0 left-0 right-0 z-50">
+    <Header locale={locale} />
+  </div>
+
+  <!-- Page hero bar -->
+  <div class="pt-16 md:pt-20 bg-brand-black text-white">
+    <div class="container py-12 md:py-16">
+      <!-- Breadcrumb -->
+      <nav class="text-xs text-white/50 mb-4 flex items-center gap-1.5">
+        <a href={locale === 'es' ? '/' : '/en/'} class="hover:text-white/80 transition-colors">
+          {locale === 'es' ? 'Inicio' : 'Home'}
+        </a>
+        <span>/</span>
+        <slot name="breadcrumb" />
+      </nav>
+      <slot name="hero" />
+    </div>
+  </div>
+
+  <!-- Content -->
+  <main>
+    <slot />
+  </main>
+
+  <!-- CTA global -->
+  <section class="py-16 bg-brand-black text-white text-center">
+    <div class="container max-w-2xl">
+      <h2 class="text-2xl md:text-3xl font-extrabold mb-3">
+        {locale === 'es' ? '¿Listo para cotizar?' : 'Ready to get a quote?'}
+      </h2>
+      <p class="text-white/70 mb-8">
+        {locale === 'es'
+          ? 'Escríbenos por WhatsApp con tu necesidad y te respondemos a la brevedad.'
+          : 'Message us on WhatsApp with your need and we\'ll get back to you shortly.'}
+      </p>
+      <a
+        href={waLink(waMsg)}
+        target="_blank"
+        rel="noopener"
+        class="inline-flex items-center gap-3 px-8 py-4 bg-[#25D366] text-white font-semibold rounded-lg hover:bg-[#1fb855] transition-colors text-base"
+      >
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.553 4.12 1.525 5.857L.058 23.708l5.989-1.572A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.82c-1.964 0-3.834-.529-5.47-1.529l-.393-.233-3.554.934.948-3.467-.255-.406A9.813 9.813 0 012.18 12c0-5.422 4.398-9.82 9.82-9.82 5.422 0 9.82 4.398 9.82 9.82 0 5.422-4.398 9.82-9.82 9.82z"/></svg>
+        {locale === 'es' ? 'Cotizar por WhatsApp' : 'Quote via WhatsApp'}
+      </a>
+      <div class="mt-6 text-sm text-white/50">
+        {locale === 'es' ? 'Lunes a sábado · 7:00 AM – 7:00 PM' : 'Monday to Saturday · 7:00 AM – 7:00 PM'}
+      </div>
+    </div>
+  </section>
+
+  <Footer locale={locale} />
+  <WhatsAppFloat locale={locale} />
+
+  <script>
+    document.querySelectorAll('.inner-fade').forEach(el => {
+      const obs = new IntersectionObserver(entries => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('inner-fade-in'); obs.unobserve(e.target); } });
+      }, { threshold: 0.1 });
+      obs.observe(el);
+    });
+  </script>
+
+  <style is:global>
+    .inner-fade { opacity: 0; transform: translateY(20px); transition: opacity 0.5s ease, transform 0.5s ease; }
+    .inner-fade-in { opacity: 1; transform: translateY(0); }
+  </style>
+</body>
+</html>

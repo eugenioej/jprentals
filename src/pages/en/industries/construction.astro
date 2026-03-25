@@ -1,0 +1,37 @@
+---
+import InnerLayout from '@/layouts/InnerLayout.astro';
+---
+<InnerLayout locale="en" title="Cranes for Construction in Monterrey | JP Rentals" description="Industrial crane rental for construction projects in Monterrey. Steel structure erection, prefab placement, and civil works. Fleet from 8 to 50 tons. Quote via WhatsApp." canonical="https://jprentals.mx/en/industries/construction" altHref="https://jprentals.mx/industrias/construccion" altLocale="es">
+  <span slot="breadcrumb">Industries / Construction</span>
+  <div slot="hero">
+    <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight leading-tight mb-4">Cranes for<br/><span class="text-blue-300">Construction</span><br/><span class="text-white/80">in Monterrey</span></h1>
+    <p class="text-lg text-white/90 max-w-2xl">Cranes from 8 to 50 tons for industrial and civil construction projects in Monterrey. Steel structure erection, prefab placement, and on-site support.</p>
+  </div>
+  <section class="py-16 md:py-24">
+    <div class="container max-w-4xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-6 mb-16">
+        {[
+          { t: 'Steel structure erection', d: 'Columns, beams, frames, and metal roofing for industrial buildings, warehouses, and commercial facilities.' },
+          { t: 'Prefab element placement', d: 'Precast concrete elements, slabs, beams, and panels for civil and industrial construction.' },
+          { t: 'Roofing installation', d: 'Placement of metal sheets, panels, and large-format roofing for industrial buildings and warehouses.' },
+          { t: 'On-site unloading', d: 'Crane-assisted unloading of heavy materials directly at the job site: steel, concrete, prefabs, and equipment.' },
+          { t: 'Monthly crane at job site', d: 'Crane positioned at your construction site for the duration of the project for continuous rigging support.' },
+          { t: 'Material transport to site', d: 'Local freight of materials, machinery, and equipment to any location in the Monterrey metro area.' },
+        ].map(item => (
+          <div class="inner-fade bg-brand-50 border border-brand-200 rounded-xl p-6">
+            <h3 class="font-bold mb-2">{item.t}</h3>
+            <p class="text-sm text-brand-600 leading-relaxed">{item.d}</p>
+          </div>
+        ))}
+      </div>
+      <div class="inner-fade bg-brand-50 border border-brand-200 rounded-2xl p-6">
+        <p class="text-sm font-semibold text-brand-600 mb-3">Related services</p>
+        <div class="flex flex-wrap gap-3">
+          {[['Industrial crane rental','/en/services/industrial-crane-rental'],['Industrial rigging','/en/services/industrial-rigging'],['Local freight','/en/services/local-freight'],['Cranes for manufacturing','/en/industries/manufacturing']].map(([l,h]) => (
+            <a href={h} class="text-sm font-medium text-accent hover:underline">→ {l}</a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+</InnerLayout>

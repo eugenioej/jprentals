@@ -9,6 +9,13 @@ interface Props {
 const { locale } = Astro.props;
 const i = t(locale);
 
+// Service page URLs by index (0=maniobras/rigging, 1=flete/freight, 2=renta/crane-rental)
+const serviceUrls = locale === 'es'
+  ? ['/servicios/maniobras-industriales', '/servicios/flete-local-trailer', '/servicios/renta-gruas-industriales']
+  : ['/en/services/industrial-rigging', '/en/services/local-freight-trailer', '/en/services/industrial-crane-rental'];
+
+const learnMoreLabel = locale === 'es' ? 'Ver más' : 'Learn more';
+
 const icons: Record<string, string> = {
   crane: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 21h18M5 21V7l8-4v18M13 21V5l6 3v13M9 9h.01M9 13h.01M9 17h.01M17 9h.01M17 13h.01M17 17h.01"/></svg>`,
   truck: `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M1 3h15v13H1zM16 8h4l3 3v5h-7V8zM5.5 21a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM18.5 21a2.5 2.5 0 100-5 2.5 2.5 0 000 5z"/></svg>`,
@@ -23,7 +30,7 @@ const icons: Record<string, string> = {
       <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight mb-4">
         {i.services.title}
       </h2>
-      <p class="text-lg text-brand-500 max-w-2xl leading-relaxed">
+      <p class="text-lg text-brand-700 max-w-2xl leading-relaxed">
         {i.services.subtitle}
       </p>
     </div>
@@ -41,12 +48,12 @@ const icons: Record<string, string> = {
           <h3 class="text-xl font-bold tracking-tight mb-3">
             {service.title}
           </h3>
-          <p class="text-sm text-brand-500 leading-relaxed mb-6">
+          <p class="text-sm text-brand-600 leading-relaxed mb-6">
             {service.description}
           </p>
 
           <!-- Features -->
-          <ul class="space-y-2 mb-8 flex-grow">
+          <ul class="space-y-2 mb-6 flex-grow">
             {service.features.map((feature) => (
               <li class="flex items-start gap-2 text-sm text-brand-600">
                 <svg class="w-4 h-4 text-accent mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -56,6 +63,12 @@ const icons: Record<string, string> = {
               </li>
             ))}
           </ul>
+
+          <!-- Learn more link -->
+          <a href={serviceUrls[idx]} class="text-sm font-medium text-accent hover:underline mb-4 inline-flex items-center gap-1">
+            {learnMoreLabel}
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </a>
 
           <!-- CTA -->
           <a

@@ -1,0 +1,48 @@
+---
+import InnerLayout from '@/layouts/InnerLayout.astro';
+---
+<InnerLayout locale="es" title="Grúa Articulada 8 Toneladas en Monterrey | JP Rentals" description="Renta de grúa articulada de 8 toneladas en Monterrey. Perfecta para carga y descarga, espacios reducidos y accesos difíciles. Incluida en el tráiler Howo. Cotiza por WhatsApp." canonical="https://jprentals.mx/equipos/grua-articulada-8-toneladas" altHref="https://jprentals.mx/en/equipment/8-ton-articulated-crane" altLocale="en">
+  <span slot="breadcrumb"><a href="/servicios/renta-gruas-industriales" class="hover:text-white/80">Grúas industriales</a> / Grúa articulada 8T</span>
+  <div slot="hero">
+    <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight leading-tight mb-4">Grúa Articulada <span class="text-blue-300">8 Toneladas</span><br/><span class="text-white/80">en Monterrey</span></h1>
+    <p class="text-lg text-white/90 max-w-2xl">Grúa articulada montada en camión, ideal para carga y descarga rápida, accesos difíciles y espacios donde una grúa convencional no entra. También disponible integrada en el tráiler Howo de flete.</p>
+  </div>
+  <section class="py-16 md:py-24">
+    <div class="container max-w-4xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-10 mb-16 items-center">
+        <div class="inner-fade rounded-2xl overflow-hidden aspect-[4/3] bg-brand-100">
+          <img src="/images/grua-articulada-8t.webp" alt="Grúa articulada 8 toneladas JP Rentals Monterrey" width="600" height="450" class="w-full h-full object-cover" loading="eager" />
+        </div>
+        <div class="inner-fade">
+          <h2 class="text-xl font-bold mb-4">Especificaciones</h2>
+          <dl class="space-y-3">
+            {[['Capacidad máxima','8 toneladas'],['Tipo','Grúa articulada (pluma hidráulica)'],['Unidades','2 unidades disponibles'],['Disponibilidad','Renta diaria, semanal, mensual'],['Operador','Incluido en el servicio'],['También disponible','Integrada en tráiler Howo 30T']].map(([k,v]) => (
+              <div class="flex justify-between py-2 border-b border-brand-100"><dt class="text-sm text-brand-600">{k}</dt><dd class="text-sm font-semibold">{v}</dd></div>
+            ))}
+          </dl>
+        </div>
+      </div>
+      <h2 class="text-2xl font-extrabold mb-6 inner-fade">¿Para qué se usa?</h2>
+      <div class="grid md:grid-cols-2 gap-4 mb-12">
+        {['Carga y descarga de camiones y plataformas','Accesos estrechos donde no entra grúa convencional','Trabajos en interiores de nave con limitaciones','Descarga en obra o andén sin grúa fija','Apoyo logístico en proyectos industriales','Flete con carga y descarga en el mismo camión'].map(u => (
+          <div class="inner-fade flex items-start gap-3 p-4 bg-brand-50 border border-brand-200 rounded-xl">
+            <svg class="w-5 h-5 text-accent mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+            <span class="text-sm font-medium">{u}</span>
+          </div>
+        ))}
+      </div>
+      <div class="inner-fade p-6 bg-accent/5 border border-accent/20 rounded-2xl mb-12">
+        <h3 class="font-bold mb-2">¿Incluida en el flete?</h3>
+        <p class="text-sm text-brand-600">La grúa articulada está integrada en nuestro tráiler Howo de 30T para flete local. Si contratas el servicio de flete, ya incluye la grúa articulada para carga en origen y descarga en destino sin costo extra. <a href="/servicios/flete-local-trailer" class="text-accent font-semibold hover:underline">Ver servicio de flete →</a></p>
+      </div>
+      <div class="inner-fade bg-brand-50 border border-brand-200 rounded-2xl p-6">
+        <p class="text-sm font-semibold text-brand-600 mb-3">Otras grúas disponibles</p>
+        <div class="flex flex-wrap gap-3">
+          {[['Grúa 50T','/equipos/grua-50-toneladas'],['Grúa 22T','/equipos/grua-22-toneladas'],['Grúa 18T','/equipos/grua-18-toneladas'],['Grúa 15T','/equipos/grua-15-toneladas']].map(([l,h]) => (
+            <a href={h} class="text-sm font-medium text-accent hover:underline">→ {l}</a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+</InnerLayout>

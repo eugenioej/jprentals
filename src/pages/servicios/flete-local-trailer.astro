@@ -1,0 +1,147 @@
+---
+import InnerLayout from '@/layouts/InnerLayout.astro';
+import { waLink } from '@/i18n/utils';
+
+const wa = waLink('Hola JP Rentals, necesito cotizar un flete local de maquinaria pesada con tráiler. ¿Me pueden ayudar?');
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Flete Local con Tráiler en Monterrey",
+  "provider": { "@type": "LocalBusiness", "name": "JP Rentals", "url": "https://jprentals.mx", "telephone": "+528116007864" },
+  "areaServed": { "@type": "City", "name": "Monterrey" },
+  "description": "Flete local de maquinaria pesada hasta 30 toneladas con tráiler Howo y grúa articulada incluida para carga y descarga puerta a puerta en Monterrey.",
+  "serviceType": "Heavy Machinery Local Freight"
+};
+---
+
+<InnerLayout
+  locale="es"
+  title="Flete Local con Tráiler en Monterrey | JP Rentals"
+  description="Transporte de maquinaria pesada hasta 30 toneladas con tráiler Howo y grúa articulada incluida. Servicio puerta a puerta en Monterrey y área metropolitana. Plataforma extensible disponible."
+  canonical="https://jprentals.mx/servicios/flete-local-trailer"
+  altHref="https://jprentals.mx/en/services/local-freight"
+  altLocale="en"
+  schema={schema}
+>
+  <span slot="breadcrumb">Flete Local con Tráiler</span>
+
+  <div slot="hero">
+    <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight leading-tight mb-4">
+      Flete Local con Tráiler<br />
+      <span class="text-white/80">en Monterrey</span>
+    </h1>
+    <p class="text-lg text-white/90 max-w-2xl">
+      Transporte de maquinaria pesada hasta 30 toneladas con carga y descarga incluida. Tráiler Howo con grúa articulada para servicio completo puerta a puerta en toda el área metropolitana.
+    </p>
+  </div>
+
+  <section class="py-16 md:py-24">
+    <div class="container">
+      <div class="max-w-4xl mx-auto">
+
+        <!-- Equipo disponible -->
+        <h2 class="text-2xl md:text-3xl font-extrabold mb-3 inner-fade">Equipo de transporte</h2>
+        <p class="text-brand-600 mb-10 inner-fade">Flota especializada para transporte de carga pesada y sobredimensionada en Monterrey.</p>
+
+        <div class="grid md:grid-cols-2 gap-6 mb-16">
+          {[
+            { name: 'Tráiler Howo', cap: '30 Toneladas', img: '/images/trailer-howo.webp', features: ['Grúa articulada incluida', 'Carga y descarga en destino', 'Disponible mismo día', 'Área metropolitana completa'] },
+            { name: 'Plataforma extensible', cap: '30T / hasta 60m', img: '/images/plataforma-extensible.webp', features: ['Para cargas sobredimensionadas', 'Longitudes de hasta 60 metros', 'Ideal para vigas y estructuras', 'Equipo especializado'] },
+          ].map(v => (
+            <div class="inner-fade bg-white border border-brand-200 rounded-xl overflow-hidden">
+              <div class="aspect-[16/9] overflow-hidden bg-brand-100">
+                <img src={v.img} alt={`${v.name} JP Rentals flete Monterrey`} width="600" height="338" class="w-full h-full object-cover" loading="lazy" />
+              </div>
+              <div class="p-6">
+                <div class="flex items-center justify-between mb-4">
+                  <h3 class="font-bold text-lg">{v.name}</h3>
+                  <span class="text-xs font-bold bg-accent/10 text-accent px-2 py-1 rounded">{v.cap}</span>
+                </div>
+                <ul class="space-y-2">
+                  {v.features.map(f => (
+                    <li class="flex items-center gap-2 text-sm text-brand-600">
+                      <svg class="w-4 h-4 text-accent shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                      {f}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <!-- Qué incluye -->
+        <div class="grid md:grid-cols-2 gap-8 mb-16">
+          <div class="inner-fade">
+            <h3 class="text-xl font-bold mb-4">¿Qué incluye el servicio?</h3>
+            <ul class="space-y-3 text-brand-600">
+              {['Tráiler con operador especializado', 'Grúa articulada para carga en origen', 'Descarga en el destino con grúa', 'Aseguramiento y fijación de la carga', 'Cobertura en toda el área metropolitana', 'Coordinación logística incluida'].map(i => (
+                <li class="flex items-start gap-2">
+                  <svg class="w-4 h-4 text-accent mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                  {i}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div class="inner-fade">
+            <h3 class="text-xl font-bold mb-4">Tipos de carga que transportamos</h3>
+            <ul class="space-y-3 text-brand-600">
+              {['Maquinaria CNC y equipos de manufactura', 'Generadores y transformadores eléctricos', 'Compresores y equipos de proceso', 'Estructuras metálicas y vigas', 'Equipos de construcción y obra', 'Contenedores y módulos industriales'].map(i => (
+                <li class="flex items-start gap-2">
+                  <svg class="w-4 h-4 text-accent mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                  {i}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        <!-- Cómo funciona -->
+        <h3 class="text-xl font-bold mb-6 inner-fade">Proceso del servicio</h3>
+        <div class="grid md:grid-cols-3 gap-6 mb-16">
+          {[
+            { n: '1', t: 'Solicita cotización', d: 'Dinos el peso, dimensiones de la carga y origen/destino. Respondemos con precio y disponibilidad de fecha.' },
+            { n: '2', t: 'Agendamos la logística', d: 'Coordinamos acceso, permisos si aplica, y confirmamos el equipo adecuado para tu carga.' },
+            { n: '3', t: 'Entrega puerta a puerta', d: 'El equipo llega, carga, transporta y descarga con seguridad. Confirmamos entrega.' },
+          ].map(s => (
+            <div class="inner-fade flex gap-4">
+              <span class="w-9 h-9 rounded-full bg-accent text-white text-sm font-bold flex items-center justify-center shrink-0">{s.n}</span>
+              <div>
+                <h4 class="font-bold mb-1">{s.t}</h4>
+                <p class="text-sm text-brand-600">{s.d}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <!-- FAQ -->
+        <h3 class="text-xl font-bold mb-6 inner-fade">Preguntas frecuentes</h3>
+        <div class="space-y-4 mb-8">
+          {[
+            { q: '¿La grúa articulada está incluida en el flete?', a: 'Sí. El tráiler Howo incluye grúa articulada para carga y descarga en origen y destino, sin costo adicional.' },
+            { q: '¿Cuánto pesa máximo lo que pueden transportar?', a: 'El tráiler Howo tiene capacidad para 30 toneladas. Para cargas mayores o con necesidades especiales, contáctanos y evaluamos con grúa independiente.' },
+            { q: '¿Hacen fletes el mismo día?', a: 'Dependiendo de disponibilidad del equipo, podemos coordinar fletes el mismo día o al día siguiente. Consúltanos por WhatsApp.' },
+            { q: '¿Solo operan en Monterrey?', a: 'El servicio de flete local cubre toda el área metropolitana de Monterrey. Para fletes foráneos, consúltanos.' },
+          ].map(faq => (
+            <details class="inner-fade border border-brand-200 rounded-xl p-5 group">
+              <summary class="font-semibold cursor-pointer list-none flex items-center justify-between gap-4">
+                {faq.q}
+                <svg class="w-4 h-4 text-brand-400 shrink-0 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+              </summary>
+              <p class="mt-3 text-brand-600 text-sm leading-relaxed">{faq.a}</p>
+            </details>
+          ))}
+        </div>
+
+        <div class="inner-fade bg-brand-50 border border-brand-200 rounded-2xl p-6">
+          <p class="text-sm font-semibold text-brand-600 mb-3">Otros servicios</p>
+          <div class="flex flex-wrap gap-3">
+            <a href="/servicios/renta-gruas-industriales" class="text-sm font-medium text-accent hover:underline">→ Renta de grúas industriales</a>
+            <a href="/servicios/maniobras-industriales" class="text-sm font-medium text-accent hover:underline">→ Maniobras industriales</a>
+            <a href="/equipos/grua-articulada-8-toneladas" class="text-sm font-medium text-accent hover:underline">→ Grúa articulada 8T</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</InnerLayout>

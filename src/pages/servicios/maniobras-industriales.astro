@@ -1,0 +1,123 @@
+---
+import InnerLayout from '@/layouts/InnerLayout.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Maniobras Industriales en Monterrey",
+  "provider": { "@type": "LocalBusiness", "name": "JP Rentals", "url": "https://jprentals.mx", "telephone": "+528116007864" },
+  "areaServed": { "@type": "City", "name": "Monterrey" },
+  "description": "Maniobras industriales especializadas con grúas de 8 a 50 toneladas. Montaje, desmontaje, posicionamiento de maquinaria en plantas industriales de Monterrey.",
+  "serviceType": "Industrial Rigging Services"
+};
+---
+
+<InnerLayout
+  locale="es"
+  title="Maniobras Industriales en Monterrey | JP Rentals"
+  description="Maniobras industriales especializadas con grúas de 8 a 50 toneladas. Montaje y desmontaje de maquinaria, posicionamiento en planta y trabajos en espacios reducidos. Monterrey y área metropolitana."
+  canonical="https://jprentals.mx/servicios/maniobras-industriales"
+  altHref="https://jprentals.mx/en/services/industrial-rigging"
+  altLocale="en"
+  schema={schema}
+>
+  <span slot="breadcrumb">Maniobras Industriales</span>
+
+  <div slot="hero">
+    <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight leading-tight mb-4">
+      Maniobras Industriales<br />
+      <span class="text-white/80">en Monterrey</span>
+    </h1>
+    <p class="text-lg text-white/90 max-w-2xl">
+      Posicionamiento, montaje y desmontaje de maquinaria pesada con grúas de 8 a 50 toneladas. Operadores con experiencia en plantas industriales, naves y proyectos de construcción.
+    </p>
+  </div>
+
+  <section class="py-16 md:py-24">
+    <div class="container">
+      <div class="max-w-4xl mx-auto">
+
+        <h2 class="text-2xl md:text-3xl font-extrabold mb-3 inner-fade">Maniobras que realizamos</h2>
+        <p class="text-brand-600 mb-10 inner-fade">Experiencia en todo tipo de maniobras para la industria manufacturera, construcción y plantas industriales en Monterrey.</p>
+
+        <div class="grid md:grid-cols-2 gap-6 mb-16">
+          {[
+            { t: 'Montaje de maquinaria', d: 'Instalación y posicionamiento de maquinaria industrial en líneas de producción, plantas y naves industriales. Grúas adecuadas para el peso exacto.' },
+            { t: 'Desmontaje y relocalización', d: 'Retirada de equipos de su posición actual para traslado o cambio de distribución en planta, con la maniobra segura que requiere cada equipo.' },
+            { t: 'Carga y descarga', d: 'Operaciones de carga en origen y descarga en destino con grúa, para maquinaria que llega en camión, contenedor o plataforma.' },
+            { t: 'Trabajo en espacios reducidos', d: 'Maniobras en interiores de nave, sótanos, entre maquinaria instalada y accesos estrechos donde se requiere precisión.' },
+            { t: 'Izaje de estructuras', d: 'Elevación y colocación de vigas, marcos estructurales y elementos metálicos en proyectos de construcción industrial.' },
+            { t: 'Renta de grúa en planta', d: 'Posicionamos la grúa directamente en tu planta para operaciones continuas durante días, semanas o meses.' },
+          ].map(item => (
+            <div class="inner-fade bg-brand-50 border border-brand-200 rounded-xl p-6">
+              <h3 class="font-bold mb-2">{item.t}</h3>
+              <p class="text-sm text-brand-600 leading-relaxed">{item.d}</p>
+            </div>
+          ))}
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 mb-16">
+          <div class="inner-fade">
+            <h3 class="text-xl font-bold mb-4">Grúas disponibles para maniobras</h3>
+            <div class="space-y-3">
+              {[
+                { cap: '50T', uso: 'Estructuras pesadas y grandes equipos industriales', href: '/equipos/grua-50-toneladas' },
+                { cap: '22T', uso: 'Maquinaria mediana y equipos de manufactura', href: '/equipos/grua-22-toneladas' },
+                { cap: '18T', uso: 'Equipos industriales y maniobras en planta', href: '/equipos/grua-18-toneladas' },
+                { cap: '15T', uso: 'Cargas ligeras y maniobras en espacios reducidos', href: '/equipos/grua-15-toneladas' },
+                { cap: '8T articulada', uso: 'Carga/descarga y accesos difíciles', href: '/equipos/grua-articulada-8-toneladas' },
+              ].map(g => (
+                <a href={g.href} class="flex items-center justify-between p-3 bg-white border border-brand-200 rounded-lg hover:border-accent transition-colors group">
+                  <div>
+                    <span class="font-bold text-sm">{g.cap}</span>
+                    <p class="text-xs text-brand-600">{g.uso}</p>
+                  </div>
+                  <svg class="w-4 h-4 text-brand-300 group-hover:text-accent transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                </a>
+              ))}
+            </div>
+          </div>
+          <div class="inner-fade">
+            <h3 class="text-xl font-bold mb-4">Industrias que atendemos</h3>
+            <ul class="space-y-3 text-brand-600">
+              {['Manufactura y maquila', 'Industria automotriz y autopartes', 'Acero, metal y construcción', 'Generación de energía', 'Alimentos y bebidas', 'Logística y almacenaje', 'Proyectos de infraestructura'].map(i => (
+                <li class="flex items-center gap-2 text-sm">
+                  <svg class="w-4 h-4 text-accent shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" /></svg>
+                  {i}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        <!-- FAQ -->
+        <h3 class="text-xl font-bold mb-6 inner-fade">Preguntas frecuentes</h3>
+        <div class="space-y-4 mb-8">
+          {[
+            { q: '¿Pueden hacer maniobras dentro de una nave industrial?', a: 'Sí. Tenemos experiencia en maniobras en interiores de nave, incluyendo espacios con altura limitada, entre maquinaria instalada y accesos estrechos. Contamos con grúas articuladas ideales para este tipo de trabajo.' },
+            { q: '¿Necesitan visita previa antes de la maniobra?', a: 'Para maniobras complejas sí recomendamos una visita o que nos compartan fotos/videos del sitio para planear correctamente el equipo y la logística. Para maniobras estándar generalmente no es necesario.' },
+            { q: '¿Trabajan en fin de semana?', a: 'Sí. Atendemos de lunes a sábado. Para domingos o días festivos, consúltanos disponibilidad.' },
+            { q: '¿Qué información necesitan para cotizar?', a: 'El peso aproximado de la carga, tipo de maniobra (montaje, desmontaje, carga, etc.), ubicación y fecha tentativa. Con eso podemos darte precio y confirmar disponibilidad.' },
+          ].map(faq => (
+            <details class="inner-fade border border-brand-200 rounded-xl p-5 group">
+              <summary class="font-semibold cursor-pointer list-none flex items-center justify-between gap-4">
+                {faq.q}
+                <svg class="w-4 h-4 text-brand-400 shrink-0 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+              </summary>
+              <p class="mt-3 text-brand-600 text-sm leading-relaxed">{faq.a}</p>
+            </details>
+          ))}
+        </div>
+
+        <div class="inner-fade bg-brand-50 border border-brand-200 rounded-2xl p-6">
+          <p class="text-sm font-semibold text-brand-600 mb-3">Otros servicios</p>
+          <div class="flex flex-wrap gap-3">
+            <a href="/servicios/renta-gruas-industriales" class="text-sm font-medium text-accent hover:underline">→ Renta de grúas industriales</a>
+            <a href="/servicios/flete-local-trailer" class="text-sm font-medium text-accent hover:underline">→ Flete local con tráiler</a>
+            <a href="/industrias/manufactura" class="text-sm font-medium text-accent hover:underline">→ Grúas para manufactura</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</InnerLayout>
