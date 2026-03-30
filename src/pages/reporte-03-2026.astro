@@ -31,9 +31,6 @@ const description = 'Reporte mensual consolidado de presencia digital para Nacio
   <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
 
-  <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
-
   <style>
     * { box-sizing: border-box; }
     body { margin: 0; font-family: 'Inter', system-ui, sans-serif; background: #f5f6f8; color: #1a1a2e; }
@@ -679,22 +676,40 @@ const description = 'Reporte mensual consolidado de presencia digital para Nacio
   <strong>Looma Studio</strong> · Reporte elaborado en marzo 2026 · Uso interno cliente
 </footer>
 
+<script src="https://unpkg.com/lucide@0.383.0/dist/umd/lucide.min.js"></script>
 <script>
-  lucide.createIcons();
+  // Fade-in animation — runs regardless of Lucide
+  function initAnimations() {
+    const elements = document.querySelectorAll('.fade-in');
 
-  // Staggered fade-in on scroll
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
-      if (entry.isIntersecting) {
-        setTimeout(() => {
+    // Fallback: if IntersectionObserver not available, just show everything
+    if (!('IntersectionObserver' in window)) {
+      elements.forEach(el => el.classList.add('visible'));
+      return;
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
           entry.target.classList.add('visible');
-        }, i * 60);
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.08 });
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.05, rootMargin: '0px 0px -30px 0px' });
 
-  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    elements.forEach(el => observer.observe(el));
+
+    // Safety fallback: after 600ms force all visible (in case observer never fires)
+    setTimeout(() => {
+      elements.forEach(el => el.classList.add('visible'));
+    }, 600);
+  }
+
+  // Init Lucide icons, then animations
+  try {
+    lucide.createIcons();
+  } catch(e) {}
+  initAnimations();
 </script>
 
 </body>
