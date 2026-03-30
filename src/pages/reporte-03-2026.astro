@@ -193,6 +193,34 @@ const description = 'Reporte mensual consolidado de presencia digital para Nacio
   </div>
 </header>
 
+<!-- PASSWORD GATE -->
+<div id="gate" style="display:flex;align-items:center;justify-content:center;min-height:100vh;background:#f8fafc;">
+  <div style="background:#fff;border-radius:1rem;box-shadow:0 4px 24px rgba(0,0,0,0.10);padding:2.5rem 2rem;max-width:360px;width:100%;text-align:center;">
+    <div style="font-size:2rem;margin-bottom:0.5rem;">🔒</div>
+    <h2 style="font-family:'Inter',sans-serif;font-size:1.2rem;font-weight:700;color:#111827;margin:0 0 0.4rem;">Reporte Privado</h2>
+    <p style="font-family:'Inter',sans-serif;font-size:0.85rem;color:#6b7280;margin:0 0 1.5rem;">Grupo NASA · Marzo 2026</p>
+    <input id="gate-input" type="password" placeholder="Contraseña" autocomplete="current-password"
+      style="width:100%;box-sizing:border-box;padding:0.65rem 1rem;border:1.5px solid #d1d5db;border-radius:0.5rem;font-size:0.95rem;font-family:'Inter',sans-serif;outline:none;margin-bottom:0.75rem;transition:border-color 0.2s;"
+      onkeydown="if(event.key==='Enter')document.getElementById('gate-btn').click()"
+    />
+    <div id="gate-error" style="font-family:'Inter',sans-serif;font-size:0.8rem;color:#dc2626;margin-bottom:0.75rem;display:none;">Contraseña incorrecta</div>
+    <button id="gate-btn"
+      style="width:100%;background:#003B71;color:#fff;border:none;border-radius:0.5rem;padding:0.7rem 1rem;font-size:0.95rem;font-family:'Inter',sans-serif;font-weight:600;cursor:pointer;"
+      onclick="(function(){
+        const val = document.getElementById('gate-input').value;
+        if(val === 'NASA2026'){
+          sessionStorage.setItem('rpt-auth','1');
+          document.getElementById('gate').style.display='none';
+          document.getElementById('report-content').style.display='block';
+        } else {
+          document.getElementById('gate-error').style.display='block';
+          document.getElementById('gate-input').focus();
+        }
+      })()">Acceder</button>
+  </div>
+</div>
+
+<div id="report-content" style="display:none;">
 <div class="report-wrap">
 
   <!-- RESUMEN EJECUTIVO -->
@@ -749,6 +777,18 @@ const description = 'Reporte mensual consolidado de presencia digital para Nacio
     setTimeout(() => els.forEach(el => el.classList.add('visible')), 500);
   })();
 </script>
+
+<script is:inline>
+  // Check session auth on load
+  (function(){
+    if(sessionStorage.getItem('rpt-auth') === '1'){
+      document.getElementById('gate').style.display = 'none';
+      document.getElementById('report-content').style.display = 'block';
+    }
+  })();
+</script>
+
+</div><!-- /report-content -->
 
 </body>
 </html>
