@@ -7,6 +7,7 @@ export default defineConfig({
   integrations: [
     tailwind(),
     sitemap({
+      filter: (page) => !page.includes('/reporte-'),
       i18n: {
         defaultLocale: 'es',
         locales: {
