@@ -212,24 +212,15 @@ const description = 'Reporte mensual consolidado de presencia digital para Nacio
       </p>
       <div class="exec-grid">
         <div class="exec-card">
-          <div class="exec-card-top">
-            <i data-lucide="anchor" class="icon-sm" style="color:#003B71"></i>
-            <span class="exec-card-brand">Nacional de Anclas</span>
-          </div>
+          <span class="exec-card-brand">Nacional de Anclas</span>
           <div class="exec-card-headline"><strong>38,951</strong> impresiones <strong>(+5.9%)</strong> y <strong>1,020</strong> clics <strong>(+7.7%)</strong>. Liderazgo orgánico consolidado.</div>
         </div>
         <div class="exec-card">
-          <div class="exec-card-top">
-            <i data-lucide="scissors" class="icon-sm" style="color:#475569"></i>
-            <span class="exec-card-brand">Nasacero</span>
-          </div>
+          <span class="exec-card-brand">Nasacero</span>
           <div class="exec-card-headline"><strong>5,539</strong> impresiones <strong>(+1.2%)</strong> y <strong>153</strong> clics <strong>(+27.5%)</strong>. Páginas regionales captando tráfico calificado.</div>
         </div>
         <div class="exec-card">
-          <div class="exec-card-top">
-            <i data-lucide="rocket" class="icon-sm" style="color:#16a34a"></i>
-            <span class="exec-card-brand" style="color:#16a34a;">JP Rentals — Lanzamiento</span>
-          </div>
+          <span class="exec-card-brand" style="color:#16a34a;">JP Rentals — Lanzamiento</span>
           <div class="exec-card-headline">Compramos el dominio, <strong>desarrollamos 24 páginas</strong> bilingües (ES/EN), aplicamos SEO y publicamos en producción.</div>
         </div>
       </div>
@@ -676,7 +667,7 @@ const description = 'Reporte mensual consolidado de presencia digital para Nacio
   <strong>Looma Studio</strong> · Reporte elaborado en marzo 2026 · Uso interno cliente
 </footer>
 
-<script>
+<script is:inline>
   // ── Inline SVG icons — no CDN ─────────────────────────────────────────
   const ICONS = {
     'anchor':             '<circle cx="12" cy="5" r="3"/><line x1="12" y1="22" x2="12" y2="8"/><path d="M5 12H2a10 10 0 0 0 20 0h-3"/>',
@@ -712,18 +703,31 @@ const description = 'Reporte mensual consolidado de presencia digital para Nacio
 
   (function renderIcons() {
     const NS = 'http://www.w3.org/2000/svg';
+    const sizeMap = { 'icon-sm': 14, 'icon-md': 16, 'icon-lg': 20, 'icon-xl': 24 };
     document.querySelectorAll('i[data-lucide]').forEach(el => {
       const paths = ICONS[el.getAttribute('data-lucide')];
       if (!paths) return;
+      const cls = el.className || '';
+      const size = Object.entries(sizeMap).find(([k]) => cls.includes(k))?.[1] ?? 16;
       const svg = document.createElementNS(NS, 'svg');
       svg.setAttribute('viewBox', '0 0 24 24');
+      svg.setAttribute('width', size);
+      svg.setAttribute('height', size);
       svg.setAttribute('fill', 'none');
       svg.setAttribute('stroke', 'currentColor');
       svg.setAttribute('stroke-width', '2');
       svg.setAttribute('stroke-linecap', 'round');
       svg.setAttribute('stroke-linejoin', 'round');
-      if (el.style.cssText) svg.style.cssText = el.style.cssText;
-      svg.className.baseVal = el.className;
+      svg.style.display = 'inline-block';
+      svg.style.verticalAlign = 'middle';
+      svg.style.flexShrink = '0';
+      if (el.style.cssText) {
+        el.style.cssText.split(';').forEach(rule => {
+          const [prop, val] = rule.split(':').map(s => s.trim());
+          if (prop && val) svg.style.setProperty(prop, val);
+        });
+      }
+      svg.className.baseVal = cls;
       svg.innerHTML = paths;
       el.replaceWith(svg);
     });
