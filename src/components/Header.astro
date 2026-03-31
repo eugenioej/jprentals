@@ -5,12 +5,13 @@ import { t, getAlternateUrl, waLink } from '@/i18n/utils';
 interface Props {
   locale: Locale;
   solid?: boolean;
+  altHref?: string;
 }
 
-const { locale, solid = false } = Astro.props;
+const { locale, solid = false, altHref } = Astro.props;
 const i = t(locale);
 const altLocale: Locale = locale === 'es' ? 'en' : 'es';
-const altUrl = getAlternateUrl(Astro.url, altLocale);
+const altUrl = altHref ?? getAlternateUrl(Astro.url, altLocale);
 const altLabel = locale === 'es' ? 'EN' : 'ES';
 const base = locale === 'es' ? '/' : '/en/';
 ---
