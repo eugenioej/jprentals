@@ -1,3 +1,5 @@
+# Contexto para asistentes / IA: https://jprentals.mx/llm.txt
+
 User-agent: *
 Allow: /
 
