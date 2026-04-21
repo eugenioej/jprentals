@@ -1,7 +1,34 @@
 ---
 import InnerLayout from '@/layouts/InnerLayout.astro';
+import EquipmentFAQ from '@/components/equipment/EquipmentFAQ.astro';
+import { buildFaqPageSchema } from '@/lib/faq-schema';
+
+const faqs = [
+  {
+    q: 'What loads or jobs is a 15-ton crane in Monterrey best suited for?',
+    a: 'This crane fits light to medium loads: warehouse rigging, construction support, smaller machinery moves, and jobs where an 18T, 22T, or 50T crane is not required. If weight or reach is near the limit, we may recommend a larger unit.',
+  },
+  {
+    q: 'Is the operator included in the 15-ton crane rental?',
+    a: 'Yes. Rental includes a certified operator for safe operation. JP Rentals supplies the crew; you do not hire the operator separately.',
+  },
+  {
+    q: 'Can you work inside an industrial building or warehouse?',
+    a: 'Yes, when access, headroom, and floor conditions allow. Share photos or a site layout and we confirm whether the 15-ton unit fits or if an articulated or larger crane is better.',
+  },
+  {
+    q: 'What areas do you cover for 15-ton crane rental?',
+    a: 'We mainly serve Monterrey and the metropolitan area (AMM): San Nicolás, Guadalupe, Apodaca, Escobedo, Santa Catarina, San Pedro, and nearby industrial zones. Ask about locations outside the AMM.',
+  },
+  {
+    q: 'How do I get a quote for a 15-ton crane rental?',
+    a: 'WhatsApp +52 81 1600 7864 with approximate weight, type of lift, address, and tentative date. We respond with availability and pricing.',
+  },
+];
+
+const schema = buildFaqPageSchema(faqs);
 ---
-<InnerLayout locale="en" title="15-Ton Crane Rental in Monterrey | JP Rentals" description="Crane rental in Monterrey: 15-ton conventional crane for light rigging in warehouses and construction. Operator included. JP Rentals — Grupo NASA. Quote via WhatsApp." canonical="https://jprentals.mx/en/equipment/15-ton-crane" altHref="https://jprentals.mx/equipos/grua-15-toneladas" altLocale="es">
+<InnerLayout locale="en" title="15-Ton Crane Rental in Monterrey | JP Rentals" description="Crane rental in Monterrey: 15-ton conventional crane for light rigging in warehouses and construction. Operator included. JP Rentals — Grupo NASA. Quote via WhatsApp." canonical="https://jprentals.mx/en/equipment/15-ton-crane" altHref="https://jprentals.mx/equipos/grua-15-toneladas" altLocale="es" schema={schema}>
   <span slot="breadcrumb"><a href="/en/services/industrial-crane-rental" class="hover:text-white/80">Industrial crane rental</a> / 15T Crane</span>
   <div slot="hero">
     <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight leading-tight mb-4">15-Ton Crane Rental<br/><span class="text-white/80">in Monterrey</span></h1>
@@ -24,6 +51,7 @@ import InnerLayout from '@/layouts/InnerLayout.astro';
           </dl>
         </div>
       </div>
+      <EquipmentFAQ title="FAQ — 15-ton crane rental in Monterrey" faqs={faqs} />
       <div class="inner-fade bg-brand-50 border border-brand-200 rounded-2xl p-6">
         <p class="text-sm font-semibold text-brand-600 mb-3">Other cranes available</p>
         <div class="flex flex-wrap gap-3">

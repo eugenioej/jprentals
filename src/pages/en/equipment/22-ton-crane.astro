@@ -1,7 +1,34 @@
 ---
 import InnerLayout from '@/layouts/InnerLayout.astro';
+import EquipmentFAQ from '@/components/equipment/EquipmentFAQ.astro';
+import { buildFaqPageSchema } from '@/lib/faq-schema';
+
+const faqs = [
+  {
+    q: 'What industrial projects use a 22-ton crane?',
+    a: 'Mid-size manufacturing: CNC centers, presses, process equipment, transformers, and plant machinery that exceeds 15–18T capacity but does not yet require a 50-ton crane. Also common for mid-weight industrial construction lifts.',
+  },
+  {
+    q: 'Does 22-ton crane rental in Monterrey include an operator?',
+    a: 'Yes. A certified operator is included with every JP Rentals crane rental with operation.',
+  },
+  {
+    q: 'Can you move heavy machinery between bays inside the same plant?',
+    a: 'Yes, when the travel path is feasible—we review aisle width, doors, and obstructions. We pick the right crane and lift plan for the weight and geometry.',
+  },
+  {
+    q: 'Do you only work in Monterrey and the AMM?',
+    a: 'Our core service is Greater Monterrey. For sites outside the metropolitan area, ask about availability and equipment mobilization cost.',
+  },
+  {
+    q: 'What information do you need to quote a 22-ton crane rental?',
+    a: 'Approximate weight and dimensions, origin/destination of the lift if applicable, address, and preferred timing. Quote via WhatsApp +52 81 1600 7864.',
+  },
+];
+
+const schema = buildFaqPageSchema(faqs);
 ---
-<InnerLayout locale="en" title="22-Ton Crane Rental in Monterrey | JP Rentals" description="Crane rental in Monterrey: 22-ton conventional crane for mid-size industrial projects and CNC machinery moves. Operator included. JP Rentals — Grupo NASA. Quote via WhatsApp." canonical="https://jprentals.mx/en/equipment/22-ton-crane" altHref="https://jprentals.mx/equipos/grua-22-toneladas" altLocale="es">
+<InnerLayout locale="en" title="22-Ton Crane Rental in Monterrey | JP Rentals" description="Crane rental in Monterrey: 22-ton conventional crane for mid-size industrial projects and CNC machinery moves. Operator included. JP Rentals — Grupo NASA. Quote via WhatsApp." canonical="https://jprentals.mx/en/equipment/22-ton-crane" altHref="https://jprentals.mx/equipos/grua-22-toneladas" altLocale="es" schema={schema}>
   <span slot="breadcrumb"><a href="/en/services/industrial-crane-rental" class="hover:text-white/80">Industrial crane rental</a> / 22T Crane</span>
   <div slot="hero">
     <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight leading-tight mb-4">22-Ton Crane Rental<br/><span class="text-white/80">in Monterrey</span></h1>
@@ -24,6 +51,7 @@ import InnerLayout from '@/layouts/InnerLayout.astro';
           </dl>
         </div>
       </div>
+      <EquipmentFAQ title="FAQ — 22-ton crane rental in Monterrey" faqs={faqs} />
       <div class="inner-fade bg-brand-50 border border-brand-200 rounded-2xl p-6">
         <p class="text-sm font-semibold text-brand-600 mb-3">Other cranes available</p>
         <div class="flex flex-wrap gap-3">

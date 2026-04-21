@@ -1,7 +1,34 @@
 ---
 import InnerLayout from '@/layouts/InnerLayout.astro';
+import EquipmentFAQ from '@/components/equipment/EquipmentFAQ.astro';
+import { buildFaqPageSchema } from '@/lib/faq-schema';
+
+const faqs = [
+  {
+    q: '¿Para qué cargas o maniobras conviene rentar una grúa de 15 toneladas en Monterrey?',
+    a: 'La grúa de 15 toneladas es adecuada para cargas y maniobras ligeras a medianas: material en obra, apoyo en bodega, maquinaria de menor peso y trabajos donde no hace falta la capacidad de una grúa de 18, 22 o 50 toneladas. Si el peso o el alcance están al límite, te recomendamos evaluar el siguiente tonelaje.',
+  },
+  {
+    q: '¿El operador está incluido en la renta de la grúa de 15 toneladas?',
+    a: 'Sí. El servicio de renta incluye operador certificado para maniobra segura. Lo coordinamos directamente con JP Rentals; no necesitas contratar operador por separado.',
+  },
+  {
+    q: '¿Pueden operar la grúa de 15T dentro de una nave industrial o bodega?',
+    a: 'Sí, cuando las condiciones de acceso, altura libre y piso lo permiten. Nos comparten fotos o plano del sitio y confirmamos si esta grúa es la adecuada o si conviene una articulada u otra capacidad.',
+  },
+  {
+    q: '¿En qué zona operan con renta de grúa de 15 toneladas?',
+    a: 'Nuestro servicio principal cubre Monterrey y el Área Metropolitana (AMM): San Nicolás, Guadalupe, Apodaca, Escobedo, Santa Catarina, San Pedro y zonas industriales aledañas. Para ubicaciones fuera del AMM, consúltanos disponibilidad.',
+  },
+  {
+    q: '¿Cómo pido cotización de renta de grúa de 15 toneladas?',
+    a: 'Por WhatsApp al +52 81 1600 7864. Indica peso aproximado de la carga, tipo de maniobra, dirección y fecha tentativa. Te respondemos con disponibilidad y precio.',
+  },
+];
+
+const schema = buildFaqPageSchema(faqs);
 ---
-<InnerLayout locale="es" title="Renta de Grúa de 15 Toneladas en Monterrey | JP Rentals" description="Renta de grúa convencional de 15 toneladas en Monterrey. Para maniobras ligeras en naves, obra y construcción. Cotiza por WhatsApp." canonical="https://jprentals.mx/equipos/grua-15-toneladas" altHref="https://jprentals.mx/en/equipment/15-ton-crane" altLocale="en">
+<InnerLayout locale="es" title="Renta de Grúa de 15 Toneladas en Monterrey | JP Rentals" description="Renta de grúa convencional de 15 toneladas en Monterrey. Para maniobras ligeras en naves, obra y construcción. Cotiza por WhatsApp." canonical="https://jprentals.mx/equipos/grua-15-toneladas" altHref="https://jprentals.mx/en/equipment/15-ton-crane" altLocale="en" schema={schema}>
   <span slot="breadcrumb"><a href="/servicios/renta-gruas-industriales" class="hover:text-white/80">Renta de grúas industriales</a> / Grúa 15T</span>
   <div slot="hero">
     <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight leading-tight mb-4">Renta de Grúa Convencional <span class="text-blue-300">15 Toneladas</span><br/><span class="text-white/80">en Monterrey</span></h1>
@@ -31,6 +58,10 @@ import InnerLayout from '@/layouts/InnerLayout.astro';
           </div>
         ))}
       </div>
+      <EquipmentFAQ
+        title="Preguntas frecuentes — grúa de 15 toneladas en Monterrey"
+        faqs={faqs}
+      />
       <div class="inner-fade bg-brand-50 border border-brand-200 rounded-2xl p-6">
         <p class="text-sm font-semibold text-brand-600 mb-3">Otras grúas disponibles</p>
         <div class="flex flex-wrap gap-3">

@@ -1,7 +1,34 @@
 ---
 import InnerLayout from '@/layouts/InnerLayout.astro';
+import EquipmentFAQ from '@/components/equipment/EquipmentFAQ.astro';
+import { buildFaqPageSchema } from '@/lib/faq-schema';
+
+const faqs = [
+  {
+    q: '¿En qué se diferencia una grúa articulada de 8 toneladas de una grúa convencional?',
+    a: 'La articulada montada en camión es ágil para carga y descarga y accesos estrechos donde una convencional no entra o no alcanza posicionarse. La convencional suele usarse para mayor alcance y cargas en obra abierta. Según tu maniobra te indicamos cuál conviene.',
+  },
+  {
+    q: '¿Para qué tipo de maniobras se renta la grúa articulada de 8T en Monterrey?',
+    a: 'Descarga en andén, apoyo en obra con espacio limitado, trabajos en nave con restricción de altura o radio, y carga/descarga de camión cuando se busca tiempo de ciclo rápido.',
+  },
+  {
+    q: '¿Está incluida la grúa articulada en el servicio de flete con tráiler Howo?',
+    a: 'Sí. Va integrada en nuestro tráiler Howo para flete local: al contratar el servicio de flete, la grúa articulada cubre carga en origen y descarga en destino sin costo extra de ese componente. Detalle del servicio en la página de flete local con tráiler.',
+  },
+  {
+    q: '¿El operador va incluido en la renta?',
+    a: 'Sí, el operador certificado forma parte del servicio de renta de la grúa articulada.',
+  },
+  {
+    q: '¿Cómo cotizo renta de grúa articulada de 8 toneladas?',
+    a: 'WhatsApp al +52 81 1600 7864: describe el peso, si hay acceso complicado y la ubicación en el AMM. Te confirmamos disponibilidad y precio.',
+  },
+];
+
+const schema = buildFaqPageSchema(faqs);
 ---
-<InnerLayout locale="es" title="Renta de Grúa Articulada de 8 Toneladas en Monterrey | JP Rentals" description="Renta de grúa articulada de 8 toneladas en Monterrey. Perfecta para carga y descarga, espacios reducidos y accesos difíciles. Incluida en el tráiler Howo. Cotiza por WhatsApp." canonical="https://jprentals.mx/equipos/grua-articulada-8-toneladas" altHref="https://jprentals.mx/en/equipment/8-ton-articulated-crane" altLocale="en">
+<InnerLayout locale="es" title="Renta de Grúa Articulada de 8 Toneladas en Monterrey | JP Rentals" description="Renta de grúa articulada de 8 toneladas en Monterrey. Perfecta para carga y descarga, espacios reducidos y accesos difíciles. Incluida en el tráiler Howo. Cotiza por WhatsApp." canonical="https://jprentals.mx/equipos/grua-articulada-8-toneladas" altHref="https://jprentals.mx/en/equipment/8-ton-articulated-crane" altLocale="en" schema={schema}>
   <span slot="breadcrumb"><a href="/servicios/renta-gruas-industriales" class="hover:text-white/80">Renta de grúas industriales</a> / Grúa articulada 8T</span>
   <div slot="hero">
     <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight leading-tight mb-4">Renta de Grúa Articulada <span class="text-blue-300">8 Toneladas</span><br/><span class="text-white/80">en Monterrey</span></h1>
@@ -35,6 +62,7 @@ import InnerLayout from '@/layouts/InnerLayout.astro';
         <h3 class="font-bold mb-2">¿Incluida en el flete?</h3>
         <p class="text-sm text-brand-600">La grúa articulada está integrada en nuestro tráiler Howo de 30T para flete local. Si contratas el servicio de flete, ya incluye la grúa articulada para carga en origen y descarga en destino sin costo extra. <a href="/servicios/flete-local-trailer" class="text-accent font-semibold hover:underline">Ver servicio de flete →</a></p>
       </div>
+      <EquipmentFAQ title="Preguntas frecuentes — grúa articulada de 8 toneladas en Monterrey" faqs={faqs} />
       <div class="inner-fade bg-brand-50 border border-brand-200 rounded-2xl p-6">
         <p class="text-sm font-semibold text-brand-600 mb-3">Otras grúas disponibles</p>
         <div class="flex flex-wrap gap-3">

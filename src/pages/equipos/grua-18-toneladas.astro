@@ -1,7 +1,34 @@
 ---
 import InnerLayout from '@/layouts/InnerLayout.astro';
+import EquipmentFAQ from '@/components/equipment/EquipmentFAQ.astro';
+import { buildFaqPageSchema } from '@/lib/faq-schema';
+
+const faqs = [
+  {
+    q: '¿Cuándo es mejor rentar una grúa de 18 toneladas en lugar de una de 15?',
+    a: 'Cuando el peso del equipo o el módulo a izar se acerca al límite de 15 toneladas, o cuando necesitas más alcance y márgenes de seguridad en planta. La de 18T es muy solicitada para maniobras en nave, carga y descarga de equipos industriales y proyectos intermedios sin llegar a 22 o 50 toneladas.',
+  },
+  {
+    q: '¿Disponen de más de una grúa de 18 toneladas para renta?',
+    a: 'Sí. Contamos con dos unidades de grúa convencional de 18 toneladas, lo que nos permite atender varias fechas y coordinar respuesta cuando hay urgencia en el AMM.',
+  },
+  {
+    q: '¿El operador está incluido en la renta de la grúa de 18T?',
+    a: 'Sí. La renta incluye operador capacitado para la maniobra; es parte del servicio de JP Rentals y no se cotiza por separado.',
+  },
+  {
+    q: '¿Pueden realizar maniobras en planta con línea de producción activa?',
+    a: 'Sí, con coordinación previa: definimos ventana de tiempo, zona de seguridad y comunicación con tu equipo de mantenimiento o EHS. Lo planificamos contigo para reducir paro productivo.',
+  },
+  {
+    q: '¿Cómo cotizo la renta de grúa de 18 toneladas en Monterrey?',
+    a: 'Escríbenos por WhatsApp al +52 81 1600 7864 con peso aproximado, tipo de maniobra, ubicación en el AMM y fecha. Te respondemos con disponibilidad y tarifa.',
+  },
+];
+
+const schema = buildFaqPageSchema(faqs);
 ---
-<InnerLayout locale="es" title="Renta de Grúa de 18 Toneladas en Monterrey | JP Rentals" description="Renta de grúa convencional de 18 toneladas en Monterrey. Ideal para maniobras en planta y espacios industriales. Cotiza por WhatsApp." canonical="https://jprentals.mx/equipos/grua-18-toneladas" altHref="https://jprentals.mx/en/equipment/18-ton-crane" altLocale="en">
+<InnerLayout locale="es" title="Renta de Grúa de 18 Toneladas en Monterrey | JP Rentals" description="Renta de grúa convencional de 18 toneladas en Monterrey. Ideal para maniobras en planta y espacios industriales. Cotiza por WhatsApp." canonical="https://jprentals.mx/equipos/grua-18-toneladas" altHref="https://jprentals.mx/en/equipment/18-ton-crane" altLocale="en" schema={schema}>
   <span slot="breadcrumb"><a href="/servicios/renta-gruas-industriales" class="hover:text-white/80">Renta de grúas industriales</a> / Grúa 18T</span>
   <div slot="hero">
     <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight leading-tight mb-4">Renta de Grúa Convencional <span class="text-blue-300">18 Toneladas</span><br/><span class="text-white/80">en Monterrey</span></h1>
@@ -31,6 +58,7 @@ import InnerLayout from '@/layouts/InnerLayout.astro';
           </div>
         ))}
       </div>
+      <EquipmentFAQ title="Preguntas frecuentes — grúa de 18 toneladas en Monterrey" faqs={faqs} />
       <div class="inner-fade bg-brand-50 border border-brand-200 rounded-2xl p-6">
         <p class="text-sm font-semibold text-brand-600 mb-3">Otras grúas disponibles</p>
         <div class="flex flex-wrap gap-3">

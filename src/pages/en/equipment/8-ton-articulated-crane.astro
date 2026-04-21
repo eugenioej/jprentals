@@ -1,7 +1,34 @@
 ---
 import InnerLayout from '@/layouts/InnerLayout.astro';
+import EquipmentFAQ from '@/components/equipment/EquipmentFAQ.astro';
+import { buildFaqPageSchema } from '@/lib/faq-schema';
+
+const faqs = [
+  {
+    q: 'How is an 8-ton articulated crane different from a conventional truck crane?',
+    a: 'The articulated unit on a truck is nimble for loading/unloading and tight spots where a conventional crane cannot set up or reach. Conventional cranes often suit longer reaches and open sites. We recommend the right class for your lift.',
+  },
+  {
+    q: 'What lifts is the 8-ton articulated crane used for in Monterrey?',
+    a: 'Dock unloading, construction with limited space, in-plant work with height or radius limits, and truck loading and unloading when you need fast cycle times.',
+  },
+  {
+    q: 'Is the articulated crane included with the Howo trailer freight service?',
+    a: 'Yes. It is integrated on our Howo for local machinery freight: when you book that service, the articulated crane covers load at origin and unload at destination for that lane. See the local freight service page for scope.',
+  },
+  {
+    q: 'Is an operator included with rental?',
+    a: 'Yes. A certified operator is part of the articulated crane rental.',
+  },
+  {
+    q: 'How do I get a quote for an 8-ton articulated crane rental?',
+    a: 'WhatsApp +52 81 1600 7864 with weight, access constraints, and AMM location—we confirm availability and price.',
+  },
+];
+
+const schema = buildFaqPageSchema(faqs);
 ---
-<InnerLayout locale="en" title="8-Ton Articulated Crane Rental in Monterrey | JP Rentals" description="Crane rental in Monterrey: 8-ton articulated truck crane for loading/unloading and tight-access jobs. Operator included. JP Rentals — Grupo NASA. Quote via WhatsApp." canonical="https://jprentals.mx/en/equipment/8-ton-articulated-crane" altHref="https://jprentals.mx/equipos/grua-articulada-8-toneladas" altLocale="es">
+<InnerLayout locale="en" title="8-Ton Articulated Crane Rental in Monterrey | JP Rentals" description="Crane rental in Monterrey: 8-ton articulated truck crane for loading/unloading and tight-access jobs. Operator included. JP Rentals — Grupo NASA. Quote via WhatsApp." canonical="https://jprentals.mx/en/equipment/8-ton-articulated-crane" altHref="https://jprentals.mx/equipos/grua-articulada-8-toneladas" altLocale="es" schema={schema}>
   <span slot="breadcrumb"><a href="/en/services/industrial-crane-rental" class="hover:text-white/80">Industrial crane rental</a> / 8T Articulated Crane</span>
   <div slot="hero">
     <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight leading-tight mb-4">8-Ton Articulated Crane Rental<br/><span class="text-white/80">in Monterrey</span></h1>
@@ -24,6 +51,7 @@ import InnerLayout from '@/layouts/InnerLayout.astro';
           </dl>
         </div>
       </div>
+      <EquipmentFAQ title="FAQ — 8-ton articulated crane rental in Monterrey" faqs={faqs} />
       <div class="inner-fade bg-brand-50 border border-brand-200 rounded-2xl p-6">
         <p class="text-sm font-semibold text-brand-600 mb-3">Other cranes available</p>
         <div class="flex flex-wrap gap-3">

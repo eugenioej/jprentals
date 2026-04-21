@@ -1,7 +1,34 @@
 ---
 import InnerLayout from '@/layouts/InnerLayout.astro';
+import EquipmentFAQ from '@/components/equipment/EquipmentFAQ.astro';
+import { buildFaqPageSchema } from '@/lib/faq-schema';
+
+const faqs = [
+  {
+    q: 'When should I rent an 18-ton crane instead of a 15-ton?',
+    a: 'When load weight or outreach is closer to the limit of a 15-ton unit, or you need more safety margins in the plant. The 18-ton crane is popular for in-plant work, loading and unloading, and mid-size jobs before stepping up to 22T or 50T.',
+  },
+  {
+    q: 'Do you have more than one 18-ton crane available?',
+    a: 'Yes. We operate two conventional 18-ton units so we can cover multiple dates and respond faster when you need service in the metro area.',
+  },
+  {
+    q: 'Is the operator included in the 18-ton crane rental?',
+    a: 'Yes. Rental includes a trained operator as part of JP Rentals’ standard service.',
+  },
+  {
+    q: 'Can you lift while a production line is running?',
+    a: 'With advance coordination: we align on time windows, safety zones, and communication with your maintenance or EHS team to keep downtime minimal.',
+  },
+  {
+    q: 'How do I quote an 18-ton crane rental in Monterrey?',
+    a: 'WhatsApp +52 81 1600 7864 with approximate weight, lift type, AMM address, and date. We reply with availability and rate.',
+  },
+];
+
+const schema = buildFaqPageSchema(faqs);
 ---
-<InnerLayout locale="en" title="18-Ton Crane Rental in Monterrey | JP Rentals" description="Crane rental in Monterrey: 18-ton conventional crane for plant operations and loading/unloading. Operator included. JP Rentals — Grupo NASA. Quote via WhatsApp." canonical="https://jprentals.mx/en/equipment/18-ton-crane" altHref="https://jprentals.mx/equipos/grua-18-toneladas" altLocale="es">
+<InnerLayout locale="en" title="18-Ton Crane Rental in Monterrey | JP Rentals" description="Crane rental in Monterrey: 18-ton conventional crane for plant operations and loading/unloading. Operator included. JP Rentals — Grupo NASA. Quote via WhatsApp." canonical="https://jprentals.mx/en/equipment/18-ton-crane" altHref="https://jprentals.mx/equipos/grua-18-toneladas" altLocale="es" schema={schema}>
   <span slot="breadcrumb"><a href="/en/services/industrial-crane-rental" class="hover:text-white/80">Industrial crane rental</a> / 18T Crane</span>
   <div slot="hero">
     <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight leading-tight mb-4">18-Ton Crane Rental<br/><span class="text-white/80">in Monterrey</span></h1>
@@ -24,6 +51,7 @@ import InnerLayout from '@/layouts/InnerLayout.astro';
           </dl>
         </div>
       </div>
+      <EquipmentFAQ title="FAQ — 18-ton crane rental in Monterrey" faqs={faqs} />
       <div class="inner-fade bg-brand-50 border border-brand-200 rounded-2xl p-6">
         <p class="text-sm font-semibold text-brand-600 mb-3">Other cranes available</p>
         <div class="flex flex-wrap gap-3">

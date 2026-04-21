@@ -1,7 +1,34 @@
 ---
 import InnerLayout from '@/layouts/InnerLayout.astro';
+import EquipmentFAQ from '@/components/equipment/EquipmentFAQ.astro';
+import { buildFaqPageSchema } from '@/lib/faq-schema';
+
+const faqs = [
+  {
+    q: 'When do I need a 50-ton crane instead of a smaller unit?',
+    a: 'When load weight, outreach, or site conditions require higher capacity: large industrial equipment, heavy steel structures, major plant lifts, or jobs that cannot be done safely with cranes under ~22 tons. Share load data and we advise.',
+  },
+  {
+    q: 'Is the 50-ton crane used for both civil and industrial construction in Monterrey?',
+    a: 'Yes. We deploy it for industrial construction, steel erection, large plant lifts, and heavy rigging within the metro area, with basic lift planning and site review when needed.',
+  },
+  {
+    q: 'Is the operator included with 50-ton crane rental?',
+    a: 'Yes. Rental includes an experienced operator; coordination is directly with JP Rentals — Grupo NASA.',
+  },
+  {
+    q: 'Do you conduct a site visit before the lift?',
+    a: 'For complex lifts—tight access, long radius, or many variables—often yes. We can start with photos and drawings and schedule a visit when it makes sense.',
+  },
+  {
+    q: 'How do I request a quote for a 50-ton crane rental?',
+    a: 'WhatsApp +52 81 1600 7864 with load description, estimated weight, AMM location, and date. We respond with equipment availability and pricing.',
+  },
+];
+
+const schema = buildFaqPageSchema(faqs);
 ---
-<InnerLayout locale="en" title="50-Ton Crane Rental in Monterrey | JP Rentals" description="Crane rental in Monterrey: 50-ton conventional crane for large-scale industrial rigging, heavy assembly, and construction. Operator included. Quote via WhatsApp." canonical="https://jprentals.mx/en/equipment/50-ton-crane" altHref="https://jprentals.mx/equipos/grua-50-toneladas" altLocale="es">
+<InnerLayout locale="en" title="50-Ton Crane Rental in Monterrey | JP Rentals" description="Crane rental in Monterrey: 50-ton conventional crane for large-scale industrial rigging, heavy assembly, and construction. Operator included. Quote via WhatsApp." canonical="https://jprentals.mx/en/equipment/50-ton-crane" altHref="https://jprentals.mx/equipos/grua-50-toneladas" altLocale="es" schema={schema}>
   <span slot="breadcrumb"><a href="/en/services/industrial-crane-rental" class="hover:text-white/80">Industrial crane rental</a> / 50T Crane</span>
   <div slot="hero">
     <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight leading-tight mb-4">50-Ton Crane Rental<br/><span class="text-white/80">in Monterrey</span></h1>
@@ -31,6 +58,7 @@ import InnerLayout from '@/layouts/InnerLayout.astro';
           </div>
         ))}
       </div>
+      <EquipmentFAQ title="FAQ — 50-ton crane rental in Monterrey" faqs={faqs} />
       <div class="inner-fade bg-brand-50 border border-brand-200 rounded-2xl p-6">
         <p class="text-sm font-semibold text-brand-600 mb-3">Other cranes available</p>
         <div class="flex flex-wrap gap-3">

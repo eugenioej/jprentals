@@ -1,7 +1,34 @@
 ---
 import InnerLayout from '@/layouts/InnerLayout.astro';
+import EquipmentFAQ from '@/components/equipment/EquipmentFAQ.astro';
+import { buildFaqPageSchema } from '@/lib/faq-schema';
+
+const faqs = [
+  {
+    q: '¿Cuándo necesito rentar una grúa de 50 toneladas y no una de menor capacidad?',
+    a: 'Cuando el peso del conjunto a izar, el alcance requerido o las condiciones de obra exigen mayor capacidad: grandes equipos industriales, estructuras metálicas pesadas, montajes de envergadura o cargas que no pueden manejarse de forma segura con grúas de 22 toneladas o menos. Si hay duda, comparte datos y te asesoramos.',
+  },
+  {
+    q: '¿La grúa de 50T sirve para obra civil e industrial en Monterrey?',
+    a: 'Sí. La utilizamos en construcción industrial, montaje de estructuras, plantas e izajes de gran tonelaje dentro del AMM, siempre con estudio básico de maniobra y condiciones de sitio.',
+  },
+  {
+    q: '¿El operador forma parte de la renta de la grúa de 50 toneladas?',
+    a: 'Sí. La renta incluye operador especializado; la coordinación es directa con JP Rentals — Grupo NASA.',
+  },
+  {
+    q: '¿Realizan visita al sitio antes de la maniobra?',
+    a: 'En izajes complejos o con muchas variables (acceso, radio, obstáculos) suele ser recomendable. Podemos definirlo al cotizar según fotos, planos o visita cuando aplique.',
+  },
+  {
+    q: '¿Cómo solicito cotización de renta de grúa de 50 toneladas?',
+    a: 'Contacto por WhatsApp al +52 81 1600 7864 con descripción de la carga, peso estimado, lugar dentro del AMM y fecha. Respondemos con disponibilidad de equipo y propuesta económica.',
+  },
+];
+
+const schema = buildFaqPageSchema(faqs);
 ---
-<InnerLayout locale="es" title="Renta de Grúa de 50 Toneladas en Monterrey | JP Rentals" description="Renta de grúa convencional de 50 toneladas en Monterrey. Para montajes industriales de gran escala, estructuras pesadas y maniobras en planta. Cotiza por WhatsApp." canonical="https://jprentals.mx/equipos/grua-50-toneladas" altHref="https://jprentals.mx/en/equipment/50-ton-crane" altLocale="en">
+<InnerLayout locale="es" title="Renta de Grúa de 50 Toneladas en Monterrey | JP Rentals" description="Renta de grúa convencional de 50 toneladas en Monterrey. Para montajes industriales de gran escala, estructuras pesadas y maniobras en planta. Cotiza por WhatsApp." canonical="https://jprentals.mx/equipos/grua-50-toneladas" altHref="https://jprentals.mx/en/equipment/50-ton-crane" altLocale="en" schema={schema}>
   <span slot="breadcrumb"><a href="/servicios/renta-gruas-industriales" class="hover:text-white/80">Renta de grúas industriales</a> / Grúa 50T</span>
   <div slot="hero">
     <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight leading-tight mb-4">Renta de Grúa Convencional <span class="text-blue-300">50 Toneladas</span><br/><span class="text-white/80">en Monterrey</span></h1>
@@ -34,6 +61,7 @@ import InnerLayout from '@/layouts/InnerLayout.astro';
           </div>
         ))}
       </div>
+      <EquipmentFAQ title="Preguntas frecuentes — grúa de 50 toneladas en Monterrey" faqs={faqs} />
       <div class="inner-fade bg-brand-50 border border-brand-200 rounded-2xl p-6">
         <p class="text-sm font-semibold text-brand-600 mb-3">Otras grúas disponibles</p>
         <div class="flex flex-wrap gap-3">
