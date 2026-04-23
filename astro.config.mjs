@@ -13,13 +13,14 @@ export default defineConfig({
         locales: {
           es: 'es-MX',
           en: 'en-US',
+          it: 'it-IT',
         },
       },
     }),
   ],
   i18n: {
     defaultLocale: 'es',
-    locales: ['es', 'en'],
+    locales: ['es', 'en', 'it'],
     routing: {
       prefixDefaultLocale: false,
     },

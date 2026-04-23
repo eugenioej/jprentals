@@ -1,0 +1,91 @@
+{
+  "services": [
+    {
+      "slug": "estructura-metalica",
+      "metaTitle": "JP Rentals | Estructura metálica para industria",
+      "metaDescription": "Diseño asistido, detallado, fabricación e instalación de estructura metálica para naves y plantas industriales en México.",
+      "heroImage": "/images/home-rebrand/casos/kontar-ii/IMG20250512184521.webp",
+      "heroImageAlt": "Estructura metálica de nave industrial en montaje, vista de cerchas y arriostramientos.",
+      "gallery": [
+        {
+          "src": "/images/home-rebrand/casos/mod-4/IMG20240723152344.webp",
+          "alt": "Armado de estructura metálica de nave multi-tenant en obra."
+        },
+        {
+          "src": "/images/home-rebrand/casos/daye-hoffsan/IMG_20230926_145238.webp",
+          "alt": "Estructura de nave y entre pisos: acero y losacero en planta."
+        }
+      ],
+      "eyebrow": "Qué hacemos",
+      "title": "Estructura metálica",
+      "lead": "Diseño asistido, detallado, fabricación e instalación con control de calidad y normativa aplicable a naves e industria.",
+      "paragraphs": [
+        "Acompañamos el proyecto desde el criterio estructural y el detallado hasta la fabricación y el montaje en obra, con enfoque en plazos, seguridad y documentación alineada a lo que exige cada cliente y cada sitio.",
+        "Nuestro alcance típico incluye porticos, cerchas, arriostramientos, mesanines y estructuras de soporte para equipos o recorridos de grúa, siempre coordinando con otras disciplinas y con el avance de obra."
+      ],
+      "bullets": [
+        "Detallado y fabricación bajo criterios de calidad y trazabilidad.",
+        "Montaje, alineación y conexiones según proyecto y normativa aplicable.",
+        "Coordinación con cubierta, fachada y instalaciones para cerrar el volumen."
+      ]
+    },
+    {
+      "slug": "lamina-acabado-envolvente",
+      "metaTitle": "JP Rentals | Lámina y acabado de envolvente",
+      "metaDescription": "Cubiertas, fachadas y muros en lámina comercial (KR-18, R101 y similares) con cierre en obra para naves industriales.",
+      "heroImage": "/images/home-rebrand/casos/coca-cola/IMG20251220215456.webp",
+      "heroImageAlt": "Cubierta y cerramiento en lámina sobre estructura de nave industrial.",
+      "gallery": [
+        {
+          "src": "/images/home-rebrand/casos/kandelium/IMG20260113180910.webp",
+          "alt": "Colocación de lámina en fachada y muros de planta industrial."
+        },
+        {
+          "src": "/images/home-rebrand/casos/motomex-cedis-1/IMG_20221213_073612.webp",
+          "alt": "Avance de cubierta KR-18 y cerramiento de envolvente en CEDIS."
+        }
+      ],
+      "eyebrow": "Qué hacemos",
+      "title": "Lámina y acabado de envolvente",
+      "lead": "Cubiertas en perfiles comerciales (p. ej. KR-18), fachada y muros en R u otro criterio de diseño, con cierre en obra.",
+      "paragraphs": [
+        "Ejecutamos la envolvente como sistema integrado: pendientes, fijaciones, sellos y encuentros con estructura, para reducir filtraciones y detalles pendientes al final de obra.",
+        "Trabajamos con perfiles y acabados definidos en proyecto (incluidos esquemas tipo KR-18 en cubierta y R101 u otras soluciones en paramentos), respetando colores, recubrimientos y criterios de ventilación cuando apliquen."
+      ],
+      "bullets": [
+        "Cubierta en perfil comercial y solape acorde a fabricante y proyecto.",
+        "Fachadas y muros en R u otra geometría según especificación.",
+        "Remates, limates, flashings y detalles de encuentro en obra."
+      ]
+    },
+    {
+      "slug": "reparacion-refuerzo-entre-pisos",
+      "metaTitle": "JP Rentals | Reparación, refuerzo y entre pisos",
+      "metaDescription": "Intervención en estructura existente, mezzanines, losacero y adecuaciones con el menor impacto a la operación de planta.",
+      "heroImage": "/images/home-rebrand/casos/mod-4/IMG20240710155435.webp",
+      "heroImageAlt": "Intervención y armado de estructura en obra existente, vista interior de nave.",
+      "gallery": [
+        {
+          "src": "/images/home-rebrand/casos/daye-hoffsan/IMG_20230914_173742.webp",
+          "alt": "Estructura de entre pisos y losacero en integración con nave industrial."
+        },
+        {
+          "src": "/images/home-rebrand/casos/kontar-ii/IMG20241222144438.webp",
+          "alt": "Montaje y adecuación estructural en planta de gran superficie."
+        }
+      ],
+      "eyebrow": "Qué hacemos",
+      "title": "Reparación, refuerzo y entre pisos",
+      "lead": "Intervención en estructura existente, mezzanines, losacero y adecuaciones con el menor freno a operación posible.",
+      "paragraphs": [
+        "En plantas en operación priorizamos ventanas de trabajo seguras, secuencias de montaje y comunicación clara con producción, para integrar refuerzos, soportes o nuevos niveles sin comprometer la continuidad del negocio.",
+        "Los entre pisos y soluciones tipo losacero se abordan con verificación de cargas, apoyos y detallado de conexiones, dejando listo el soporte para acabados y instalaciones."
+      ],
+      "bullets": [
+        "Refuerzo y reparación de elementos existentes según diagnóstico y proyecto.",
+        "Mezzanines y entre pisos, incluida losacero cuando corresponda.",
+        "Adecuaciones estructurales coordinadas con mantenimiento y operación."
+      ]
+    }
+  ]
+}

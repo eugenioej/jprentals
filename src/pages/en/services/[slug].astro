@@ -1,0 +1,39 @@
+---
+import RebrandLayout from '@/layouts/RebrandLayout.astro';
+import RebrandHeader from '@/components/rebrand/RebrandHeader.astro';
+import RebrandFooter from '@/components/rebrand/RebrandFooter.astro';
+import RebrandServiceDetailPage from '@/components/rebrand/services/RebrandServiceDetailPage.astro';
+import { getRebrandHomeCopy, rebrandHomeLinks } from '@/i18n/rebrand/home';
+import { getRebrandServices, type RebrandServiceDetail } from '@/i18n/rebrand/services';
+
+const lang = 'en' as const;
+
+export function getStaticPaths() {
+  return getRebrandServices('en').map((service) => ({
+    params: { slug: service.slug },
+    props: { service },
+  }));
+}
+
+interface Props {
+  service: RebrandServiceDetail;
+}
+
+const { service } = Astro.props;
+const copy = getRebrandHomeCopy(lang);
+const links = rebrandHomeLinks.en;
+const canonical = new URL(Astro.url.pathname, Astro.site ?? 'https://jprentals.mx').href;
+---
+
+<RebrandLayout
+  lang={lang}
+  copy={copy}
+  title={service.metaTitle}
+  description={service.metaDescription}
+  canonical={canonical}
+  noAlternates={true}
+>
+  <RebrandHeader copy={copy} lang={lang} />
+  <RebrandServiceDetailPage copy={copy} service={service} lang={lang} />
+  <RebrandFooter copy={copy} links={links} lang={lang} />
+</RebrandLayout>

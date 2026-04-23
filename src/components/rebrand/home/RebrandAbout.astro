@@ -1,0 +1,45 @@
+---
+import type { RebrandHomeCopy } from '@/i18n/rebrand/home';
+
+interface Props {
+  copy: RebrandHomeCopy;
+}
+
+const { copy } = Astro.props;
+const a = copy.about;
+---
+
+<section
+  id="nosotros"
+  class="border-b border-jpr2-navy/10 bg-gradient-to-b from-jpr2-crema via-white to-jpr2-crema/90 py-16 md:py-20"
+  aria-labelledby="about-title"
+>
+  <div class="container max-w-6xl">
+    <div class="jpr2-surface jpr2-fade overflow-hidden border border-jpr2-navy/10 p-7 shadow-[0_12px_34px_rgba(10,15,30,0.08)] md:p-10">
+      <div class="grid gap-8 md:grid-cols-[1.15fr_0.85fr] md:gap-10">
+        <div>
+          <p
+            class="inline-flex items-center rounded-full bg-[#C8433A] px-3.5 py-1.5 text-[0.67rem] font-extrabold uppercase tracking-[0.2em] text-white"
+          >
+            {a.eyebrow}
+          </p>
+          <h2 id="about-title" class="mt-4 text-2xl font-extrabold leading-tight text-jpr2-navy md:text-4xl">
+            {a.title}
+          </h2>
+          <p class="mt-4 text-sm leading-relaxed text-jpr2-ink/85 md:text-base">{a.body1}</p>
+          <p class="mt-3 text-sm leading-relaxed text-jpr2-ink/80 md:text-base">{a.body2}</p>
+        </div>
+
+        <aside class="rounded-xl border border-jpr2-navy/10 overflow-hidden bg-jpr2-midnight">
+          <img
+            src="/images/about-us.webp"
+            alt={a.imageAlt}
+            class="h-full w-full object-cover min-h-[300px] md:min-h-[420px]"
+            loading="lazy"
+            decoding="async"
+          />
+        </aside>
+      </div>
+    </div>
+  </div>
+</section>

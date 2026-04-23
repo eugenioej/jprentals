@@ -1,0 +1,63 @@
+---
+import type { RebrandHomeCopy } from '@/i18n/rebrand/home';
+
+interface Props {
+  copy: RebrandHomeCopy;
+}
+
+const { copy } = Astro.props;
+const g = copy.group;
+---
+
+<section
+  id="grupo"
+  class="relative overflow-hidden border-b border-white/10 bg-jpr2-midnight py-14 md:py-18"
+  aria-labelledby="grupo-title"
+>
+  <div
+    class="jpr2-grupo-bg absolute inset-0"
+    style="background-image: url('/images/grupo-nasa.webp'); background-size: cover; background-position: center;"
+    aria-hidden="true"
+  />
+  <div
+    class="absolute inset-0 bg-[linear-gradient(180deg,rgba(5,9,18,0.52)_0%,rgba(5,9,18,0.58)_45%,rgba(5,9,18,0.72)_100%)]"
+    aria-hidden="true"
+  />
+
+  <div class="container relative z-10 max-w-6xl">
+    <div
+      class="jpr2-fade relative overflow-hidden rounded-2xl border border-white/20 bg-black/88 px-6 py-10 text-center shadow-[0_20px_56px_rgba(5,9,18,0.65)] backdrop-blur-md md:px-10 md:py-14"
+    >
+      <h2 id="grupo-title" class="mx-auto max-w-3xl text-2xl font-extrabold text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.55)] md:text-3xl">
+        {g.title}
+      </h2>
+      <p class="mx-auto mt-3 max-w-3xl text-sm leading-relaxed text-white/95 drop-shadow-[0_1px_6px_rgba(0,0,0,0.55)] md:text-base">
+        {g.intro}
+      </p>
+
+      <div class="mx-auto mt-7 grid max-w-4xl gap-4 md:grid-cols-2">
+        <a
+          href="https://nacionaldeanclas.com"
+          target="_blank"
+          rel="noopener"
+          class="rounded-xl border border-white/30 bg-black/45 p-5 text-left text-white backdrop-blur-[1px] transition-colors hover:bg-black/55"
+        >
+          <h3 class="text-base font-bold text-white">{g.nacionalTitle}</h3>
+          <p class="mt-1 text-xs text-white/85">{g.nacionalUrl}</p>
+          <p class="mt-3 text-sm text-white/95">{g.nacionalBody}</p>
+        </a>
+
+        <a
+          href="https://nasacero.com"
+          target="_blank"
+          rel="noopener"
+          class="rounded-xl border border-white/30 bg-black/45 p-5 text-left text-white backdrop-blur-[1px] transition-colors hover:bg-black/55"
+        >
+          <h3 class="text-base font-bold text-white">{g.nasaceroTitle}</h3>
+          <p class="mt-1 text-xs text-white/85">{g.nasaceroUrl}</p>
+          <p class="mt-3 text-sm text-white/95">{g.nasaceroBody}</p>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

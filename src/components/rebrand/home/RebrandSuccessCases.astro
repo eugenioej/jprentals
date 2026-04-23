@@ -1,0 +1,257 @@
+---
+import { getSuccessCasePath, type RebrandHomeCopy, type RebrandLang } from '@/i18n/rebrand/home';
+
+function encodeUrlPath(p: string): string {
+  return `/${p.split('/').filter(Boolean).map(encodeURIComponent).join('/')}`;
+}
+
+interface Props {
+  copy: RebrandHomeCopy;
+  lang: RebrandLang;
+}
+
+const { copy, lang } = Astro.props;
+const { successCases: sc } = copy;
+const car = {
+  prev: sc.carousel?.prev ?? 'Anterior',
+  next: sc.carousel?.next ?? 'Siguiente',
+  roleDescription: sc.carousel?.roleDescription ?? 'Carrusel de imágenes',
+};
+---
+
+<section
+  id="casos"
+  class="scroll-mt-24 border-b border-white/10 bg-jpr2-midnight py-16 md:py-24"
+  aria-labelledby="casos-title"
+>
+  <div class="container max-w-6xl">
+    <h2
+      id="casos-title"
+      class="jpr2-fade text-2xl font-extrabold text-jpr2-crema md:text-3xl"
+    >
+      {sc.title}
+    </h2>
+    {sc.subtitle && (
+      <p class="jpr2-fade mt-2 max-w-3xl text-sm leading-relaxed text-jpr2-crema/75 md:text-base">
+        {sc.subtitle}
+      </p>
+    )}
+
+    <div
+      class="jpr2-fade mt-12 grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-x-8 md:gap-y-12 lg:gap-x-10"
+    >
+      {
+        sc.items.map((item, i) => {
+          const hasMany = item.images.length > 1;
+          return (
+            <article
+              class="jpr2-surface jpr2-fade flex h-full flex-col overflow-hidden p-5 shadow-sm sm:p-6"
+              style={`transition-delay: ${(i % 2) * 30 + Math.floor(i / 2) * 40}ms`}
+            >
+              <div class="min-h-0 flex-1 space-y-3">
+                <p class="text-xs font-bold uppercase tracking-widest text-jpr2-coral">
+                  {item.year} · {item.client}
+                </p>
+                <h3 class="text-lg font-bold leading-snug text-jpr2-navy sm:text-xl">{item.title}</h3>
+                <p class="text-sm leading-relaxed text-jpr2-ink/80 md:text-sm">{item.scope}</p>
+                <div class="pt-1">
+                  <a
+                    href={getSuccessCasePath(item, lang)}
+                    class="group inline-flex items-center gap-2 text-sm font-semibold text-jpr2-coral transition-colors hover:text-jpr2-navy"
+                  >
+                    {sc.viewProject}
+                    <svg
+                      class="h-4 w-4 transition-transform duration-200 ease-out group-hover:translate-x-1"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      aria-hidden="true"
+                    >
+                      <path d="M5 12h14" />
+                      <path d="m13 6 6 6-6 6" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+
+              <div
+                class="relative mt-5"
+                data-jpr2-carousel
+                role="region"
+                aria-label={item.client + ' — ' + item.title}
+                aria-roledescription={car.roleDescription}
+              >
+                {hasMany ? (
+                  <>
+                    <div class="overflow-hidden rounded-lg border border-jpr2-navy/8 bg-white shadow-[0_4px_20px_rgba(10,15,30,0.07)]">
+                      <ul
+                        class="jpr2-carousel__track flex w-full snap-x snap-mandatory overflow-x-auto scroll-smooth"
+                        data-jpr2-track
+                      >
+                        {item.images.map((src, j) => {
+                          const safe = encodeUrlPath(src);
+                          const eager = i === 0 && j === 0;
+                          return (
+                            <li
+                              class="relative min-w-0 flex-[0_0_100%] snap-start"
+                              data-jpr2-slide
+                            >
+                              <div class="aspect-[4/3] w-full sm:aspect-[3/2]">
+                                <img
+                                  src={safe}
+                                  width={960}
+                                  height={640}
+                                  class="h-full w-full object-cover"
+                                  alt={item.imageAlt + (item.images.length > 1 ? ` — ${j + 1}` : '')}
+                                  loading={eager ? 'eager' : 'lazy'}
+                                  decoding="async"
+                                />
+                              </div>
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    </div>
+                    <div
+                      class="pointer-events-none absolute inset-y-0 left-0 z-10 flex w-10 items-center sm:w-12"
+                    >
+                      <div class="pointer-events-auto w-full bg-gradient-to-r from-white via-white/85 to-transparent pl-0.5 pr-2 pt-0 pb-0 sm:pl-1">
+                        <button
+                          type="button"
+                          class="jpr2-carousel__arrow"
+                          data-jpr2-carousel-prev
+                          aria-label={car.prev}
+                        >
+                          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <path d="M15 18l-6-6 6-6" />
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                    <div
+                      class="pointer-events-none absolute inset-y-0 right-0 z-10 flex w-10 items-center sm:w-12"
+                    >
+                      <div class="pointer-events-auto w-full flex justify-end bg-gradient-to-l from-white via-white/85 to-transparent pl-2 pr-0.5 sm:pr-1">
+                        <button
+                          type="button"
+                          class="jpr2-carousel__arrow"
+                          data-jpr2-carousel-next
+                          aria-label={car.next}
+                        >
+                          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <path d="M9 18l6-6-6-6" />
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="mt-2.5 flex flex-wrap items-center justify-center gap-1.5">
+                      {item.images.map((_, di) => (
+                        <button
+                          type="button"
+                          class="jpr2-carousel__dot h-1.5 min-h-[0.25rem] cursor-pointer rounded-full border-0 p-0 transition-all duration-200"
+                          data-jpr2-carousel-dot
+                          data-index={di}
+                          aria-label={String(di + 1) + ' / ' + String(item.images.length)}
+                          aria-pressed={di === 0 ? 'true' : 'false'}
+                        />
+                      ))}
+                    </div>
+                  </>
+                ) : (
+                  <div class="overflow-hidden rounded-lg border border-jpr2-navy/8 bg-white shadow-sm">
+                    <div class="aspect-[4/3] w-full sm:aspect-[3/2]">
+                      <img
+                        src={encodeUrlPath(item.images[0] as string)}
+                        width={960}
+                        height={640}
+                        class="h-full w-full object-cover"
+                        alt={item.imageAlt}
+                        loading={i === 0 ? 'eager' : 'lazy'}
+                        decoding="async"
+                      />
+                    </div>
+                  </div>
+                )}
+              </div>
+            </article>
+          );
+        })
+      }
+    </div>
+  </div>
+</section>
+
+<script is:inline>
+  (function () {
+    function syncTrack(track, dots) {
+      var w = track.clientWidth;
+      if (w < 1 || !dots || !dots.length) return;
+      var i = Math.round(track.scrollLeft / w);
+      var n = track.querySelectorAll("[data-jpr2-slide]").length;
+      if (i < 0) i = 0;
+      if (i > n - 1) i = n - 1;
+      for (var d = 0; d < dots.length; d++) {
+        dots[d].setAttribute("aria-pressed", d === i ? "true" : "false");
+      }
+    }
+    function bind(root) {
+      if (root.getAttribute("data-jpr2-bound")) return;
+      var track = root.querySelector("[data-jpr2-track]");
+      if (!track) {
+        root.setAttribute("data-jpr2-bound", "1");
+        return;
+      }
+      var prev = root.querySelector("[data-jpr2-carousel-prev]");
+      var next = root.querySelector("[data-jpr2-carousel-next]");
+      var dotNodes = root.querySelectorAll("[data-jpr2-carousel-dot]");
+      if (!prev || !next) return;
+      var dots = dotNodes;
+      if (dots.length < 2) {
+        root.setAttribute("data-jpr2-bound", "1");
+        return;
+      }
+      root.setAttribute("data-jpr2-bound", "1");
+      function getStep() {
+        return track.clientWidth;
+      }
+      function onScroll() {
+        syncTrack(track, dots);
+      }
+      var raf;
+      function onScrollRaf() {
+        cancelAnimationFrame(raf);
+        raf = requestAnimationFrame(function () {
+          onScroll();
+        });
+      }
+      prev.addEventListener("click", function () {
+        track.scrollBy({ left: -getStep(), behavior: "smooth" });
+      });
+      next.addEventListener("click", function () {
+        track.scrollBy({ left: getStep(), behavior: "smooth" });
+      });
+      for (var i = 0; i < dots.length; i++) {
+        (function (idx) {
+          dots[i].addEventListener("click", function () {
+            track.scrollTo({ left: idx * getStep(), behavior: "smooth" });
+          });
+        })(i);
+      }
+      track.addEventListener("scroll", onScrollRaf, { passive: true });
+      if (typeof ResizeObserver !== "undefined")
+        new ResizeObserver(function () {
+          syncTrack(track, dots);
+        }).observe(track);
+      window.addEventListener("resize", onScrollRaf);
+      onScroll();
+    }
+    function run() {
+      var all = document.querySelectorAll("[data-jpr2-carousel]");
+      for (var j = 0; j < all.length; j++) bind(all[j]);
+    }
+    if (document.readyState === "loading")
+      document.addEventListener("DOMContentLoaded", run, { once: true });
+    else run();
+  })();
+</script>

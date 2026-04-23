@@ -1,0 +1,41 @@
+---
+import RebrandLayout from '@/layouts/RebrandLayout.astro';
+import RebrandHeader from '@/components/rebrand/RebrandHeader.astro';
+import RebrandFooter from '@/components/rebrand/RebrandFooter.astro';
+import RebrandProjectDetailPage from '@/components/rebrand/projects/RebrandProjectDetailPage.astro';
+import {
+  getRebrandHomeCopy,
+  getSuccessCaseBySlug,
+  getSuccessCaseSlug,
+  rebrandHomeLinks,
+} from '@/i18n/rebrand/home';
+
+export function getStaticPaths() {
+  const copy = getRebrandHomeCopy('en');
+  return copy.successCases.items.map((item) => ({
+    params: { slug: getSuccessCaseSlug(item) },
+  }));
+}
+
+const slug = Astro.params.slug!;
+const lang = 'en' as const;
+const copy = getRebrandHomeCopy(lang);
+const item = getSuccessCaseBySlug(slug, lang)!;
+const links = rebrandHomeLinks.en;
+const canonical = new URL(Astro.url.pathname, Astro.site ?? 'https://jprentals.mx').href;
+const title = `JP Rentals | ${item.title}`;
+const description = `${item.scope} ${copy.successCases.labels.location}: ${item.location}. ${copy.successCases.labels.area}: ${item.area}.`;
+---
+
+<RebrandLayout
+  lang={lang}
+  copy={copy}
+  title={title}
+  description={description}
+  canonical={canonical}
+  noAlternates={true}
+>
+  <RebrandHeader copy={copy} lang={lang} />
+  <RebrandProjectDetailPage copy={copy} lang={lang} item={item} />
+  <RebrandFooter copy={copy} links={links} lang={lang} />
+</RebrandLayout>

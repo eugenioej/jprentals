@@ -1,0 +1,91 @@
+---
+import '@/styles/rebrand-home.css';
+import type { RebrandHomeCopy, RebrandLang } from '@/i18n/rebrand/home';
+import { rebrandHomeAbsoluteUrl } from '@/i18n/rebrand/home';
+
+interface Props {
+  lang: RebrandLang;
+  copy: RebrandHomeCopy;
+  title?: string;
+  description?: string;
+  canonical?: string;
+  noAlternates?: boolean;
+}
+
+const { lang, copy, title, description, canonical, noAlternates = false } = Astro.props;
+const origin = Astro.site?.origin ?? 'https://jprentals.mx';
+const es = rebrandHomeAbsoluteUrl(origin, 'es');
+const en = rebrandHomeAbsoluteUrl(origin, 'en');
+const it = rebrandHomeAbsoluteUrl(origin, 'it');
+const canonicalUrl = canonical ?? rebrandHomeAbsoluteUrl(origin, lang);
+const htmlLang = lang === 'es' ? 'es-MX' : lang === 'en' ? 'en-US' : 'it-IT';
+const heroLcpImage = '/images/home-rebrand/casos/coca-cola/IMG20251005080401.webp';
+const pageTitle = title ?? copy.meta.title;
+const pageDescription = description ?? copy.meta.description;
+---
+
+<!DOCTYPE html>
+<html lang={htmlLang} class="rebrand-home">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pageTitle}</title>
+    <meta name="description" content={pageDescription} />
+    <meta name="keywords" content={copy.meta.keywords} />
+    <meta name="robots" content="index, follow" />
+
+    <link rel="canonical" href={canonicalUrl} />
+    {!noAlternates && (
+      <>
+        <link rel="alternate" hreflang="es" href={es} />
+        <link rel="alternate" hreflang="en" href={en} />
+        <link rel="alternate" hreflang="it" href={it} />
+        <link rel="alternate" hreflang="x-default" href={es} />
+      </>
+    )}
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={pageDescription} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:site_name" content="JP Rentals" />
+    <meta property="og:locale" content={lang === 'es' ? 'es_MX' : lang === 'en' ? 'en_US' : 'it_IT'} />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={pageDescription} />
+
+    <link rel="preload" as="image" href={heroLcpImage} fetchpriority="high" />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WCLSZSWQM3"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'G-WCLSZSWQM3');
+    </script>
+  </head>
+  <body class="rebrand-home min-h-screen antialiased text-jpr2-ink">
+    <slot />
+    <script is:inline>
+      const o = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) e.target.classList.add('jpr2-visible');
+          });
+        },
+        { threshold: 0.1, rootMargin: '0px 0px -32px 0px' }
+      );
+      document.querySelectorAll('.jpr2-fade').forEach((el) => o.observe(el));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+---
+import type { RebrandHomeCopy } from '@/i18n/rebrand/home';
+
+interface Props {
+  copy: RebrandHomeCopy;
+}
+
+function encodeUrlPath(p: string): string {
+  return `/${p.split('/').filter(Boolean).map(encodeURIComponent).join('/')}`;
+}
+
+const { copy } = Astro.props;
+// Selección visual de casos para fondo animado del hero.
+const heroBgImages = [
+  '/images/home-rebrand/casos/coca-cola/IMG20251005080401.webp',
+  '/images/home-rebrand/casos/kandelium/IMG20260116115504.webp',
+  '/images/home-rebrand/casos/kontar-ii/IMG20250716111914.webp',
+  '/images/home-rebrand/casos/mod-4/IMG20240731173330.webp',
+  '/images/home-rebrand/casos/daye-hoffsan/IMG_20230926_145238.webp',
+  '/images/home-rebrand/casos/motomex-cedis-1/IMG_20221213_073612.webp',
+];
+const heroBg = heroBgImages.map(encodeUrlPath);
+---
+
+<section class="rebrand-hero-mesh jpr2-hero-frame relative overflow-hidden flex items-center" aria-labelledby="rebrand-hero-h1">
+  <div class="jpr2-hero-bg absolute inset-0" aria-hidden="true">
+    {
+      heroBg.map((src, idx) => (
+        <img
+          src={idx === 0 ? src : 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=='}
+          alt=""
+          class="jpr2-hero-bg__slide"
+          data-src={idx === 0 ? undefined : src}
+          loading={idx === 0 ? 'eager' : 'lazy'}
+          fetchpriority={idx === 0 ? 'high' : 'low'}
+          decoding={idx === 0 ? 'sync' : 'async'}
+          style={`animation-delay: ${idx * 6}s;`}
+        />
+      ))
+    }
+  </div>
+
+  <div class="jpr2-hero-veil absolute inset-0 pointer-events-none" />
+
+  <div
+    class="absolute inset-0 opacity-[0.07] pointer-events-none"
+    style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"
+  />
+
+  <div class="container relative z-10 flex w-full max-w-6xl flex-col items-center justify-center gap-0 text-center">
+    <p class="jpr2-eyebrow jpr2-fade mb-5 mx-auto inline-flex items-center rounded-full bg-[#C8433A] border border-[#d95a51] px-4 py-2 text-[0.66rem] text-white shadow-[0_10px_30px_rgba(200,67,58,0.45)]" style="color:#fff;">
+      {copy.hero.eyebrow}
+    </p>
+    <h1
+      id="rebrand-hero-h1"
+      class="jpr2-fade text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight text-jpr2-crema mx-auto max-w-4xl"
+      style="animation-delay: 0.05s"
+    >
+      {copy.hero.headline}
+    </h1>
+    <p
+      class="jpr2-fade mt-6 text-base md:text-lg text-jpr2-crema/85 mx-auto max-w-2xl leading-relaxed"
+    >
+      {copy.hero.sub}
+    </p>
+  </div>
+</section>
+
+
+<script is:inline>
+  (() => {
+    const hydrateHeroSlides = () => {
+      document.querySelectorAll('.jpr2-hero-bg__slide[data-src]').forEach((img) => {
+        const src = img.getAttribute('data-src');
+        if (!src) return;
+        img.setAttribute('src', src);
+        img.removeAttribute('data-src');
+      });
+    };
+
+    const schedule = () => {
+      if ('requestIdleCallback' in window) {
+        window.requestIdleCallback(hydrateHeroSlides, { timeout: 1800 });
+      } else {
+        setTimeout(hydrateHeroSlides, 1200);
+      }
+    };
+
+    if (document.readyState === 'complete') schedule();
+    else window.addEventListener('load', schedule, { once: true });
+  })();
+</script>

@@ -1,0 +1,89 @@
+---
+import type { RebrandHomeCopy, RebrandLang } from '@/i18n/rebrand/home';
+import { rebrandHomePath } from '@/i18n/rebrand/home';
+
+type LinkBlock = (typeof import('@/i18n/rebrand/home'))['rebrandHomeLinks'][RebrandLang];
+
+interface Props {
+  copy: RebrandHomeCopy;
+  links: LinkBlock;
+  lang: RebrandLang;
+}
+
+const { copy, links, lang } = Astro.props;
+const home = rebrandHomePath(lang);
+---
+
+<footer
+  class="mt-0 border-t-2 border-jpr2-mustard/30 bg-jpr2-midnight text-jpr2-crema shadow-[0_-8px_40px_rgba(0,0,0,0.2)]"
+>
+  <div class="container max-w-6xl py-14">
+    {copy.footer.itNote && (
+      <p class="text-sm text-jpr2-crema/80 mb-8 max-w-2xl leading-relaxed jpr2-fade">
+        {copy.footer.itNote}
+      </p>
+    )}
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 mb-12">
+      <div>
+        <div class="text-xl font-extrabold tracking-tight mb-3">{copy.header.logo}</div>
+        <p class="text-sm text-jpr2-crema/75 leading-relaxed max-w-sm">
+          {copy.footer.description}
+        </p>
+        <div class="mt-5 space-y-1.5 text-sm">
+          {
+            copy.cta.emails.map((e) => (
+              <a
+                class="block font-medium text-jpr2-mustard/95 break-all hover:underline"
+                href={`mailto:${e.address}`}
+              >
+                {e.address}
+              </a>
+            ))
+          }
+        </div>
+        <a
+          href={links.legacyHome}
+          class="mt-3 block text-sm text-jpr2-crema/70 hover:text-jpr2-mustard hover:underline"
+        >
+          {copy.footer.legacy}
+        </a>
+      </div>
+
+      <div>
+        <h4 class="text-xs font-bold uppercase tracking-widest text-jpr2-crema/50 mb-4">
+          {copy.footer.services}
+        </h4>
+        <a href={links.industryPage} class="text-sm text-jpr2-crema/80 hover:text-jpr2-mustard transition-colors">
+          {copy.footer.servicesLink}
+        </a>
+        {lang === 'it' && (
+          <p class="text-xs text-jpr2-crema/50 mt-4 max-w-xs">
+            Sito:{' '}
+            <a class="underline hover:text-jpr2-mustard" href={rebrandHomePath('es')}>
+              ES
+            </a>
+            {' · '}
+            <a class="underline hover:text-jpr2-mustard" href={rebrandHomePath('en')}>
+              EN
+            </a>
+          </p>
+        )}
+      </div>
+
+      <div>
+        <h4 class="text-xs font-bold uppercase tracking-widest text-jpr2-crema/50 mb-4">Legal</h4>
+        <a href={links.privacidad} class="text-sm text-jpr2-crema/80 hover:text-jpr2-mustard block">
+          {copy.footer.legal}
+        </a>
+      </div>
+    </div>
+
+    <p class="text-center text-xs text-jpr2-crema/45">
+      © {new Date().getFullYear()} JP Rentals ·
+      <a class="hover:text-jpr2-mustard" href={home}>
+        {lang === 'en' ? 'Home' : lang === 'it' ? 'Home' : 'Inicio'}
+      </a>
+    </p>
+  </div>
+</footer>

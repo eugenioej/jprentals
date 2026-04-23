@@ -1,28 +1,5 @@
 ---
-import Layout from '@/layouts/Layout.astro';
-import Header from '@/components/Header.astro';
-import Hero from '@/components/Hero.astro';
-import Services from '@/components/Services.astro';
-import Equipment from '@/components/Equipment.astro';
-import About from '@/components/About.astro';
-import Contact from '@/components/Contact.astro';
-import Footer from '@/components/Footer.astro';
-import WhatsAppFloat from '@/components/WhatsAppFloat.astro';
-
-const locale = 'es' as const;
+import RebrandHomePage from '@/components/rebrand/RebrandHomePage.astro';
 ---
 
-<Layout locale={locale}>
-  <div class="fixed top-0 left-0 right-0 z-50">
-    <Header locale={locale} />
-  </div>
-  <main>
-    <Hero locale={locale} />
-    <Services locale={locale} />
-    <Equipment locale={locale} />
-    <About locale={locale} />
-    <Contact locale={locale} />
-  </main>
-  <Footer locale={locale} />
-  <WhatsAppFloat locale={locale} />
-</Layout>
+<RebrandHomePage lang="es" />

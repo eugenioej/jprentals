@@ -1,0 +1,35 @@
+---
+import RebrandLayout from '@/layouts/RebrandLayout.astro';
+import RebrandHeader from '@/components/rebrand/RebrandHeader.astro';
+import RebrandFooter from '@/components/rebrand/RebrandFooter.astro';
+import RebrandHero from '@/components/rebrand/home/RebrandHero.astro';
+import RebrandStats from '@/components/rebrand/home/RebrandStats.astro';
+import RebrandAbout from '@/components/rebrand/home/RebrandAbout.astro';
+import RebrandSuccessCases from '@/components/rebrand/home/RebrandSuccessCases.astro';
+import RebrandOffer from '@/components/rebrand/home/RebrandOffer.astro';
+import RebrandGroup from '@/components/rebrand/home/RebrandGroup.astro';
+import RebrandCta from '@/components/rebrand/home/RebrandCta.astro';
+import { getRebrandHomeCopy, rebrandHomeLinks, type RebrandLang } from '@/i18n/rebrand/home';
+
+interface Props {
+  lang: RebrandLang;
+}
+
+const { lang } = Astro.props;
+const copy = getRebrandHomeCopy(lang);
+const links = rebrandHomeLinks[lang];
+---
+
+<RebrandLayout lang={lang} copy={copy}>
+  <RebrandHeader copy={copy} lang={lang} />
+  <main>
+    <RebrandHero copy={copy} />
+    <RebrandStats copy={copy} />
+    <RebrandAbout copy={copy} />
+    <RebrandSuccessCases copy={copy} lang={lang} />
+    <RebrandOffer copy={copy} lang={lang} />
+    <RebrandGroup copy={copy} />
+    <RebrandCta copy={copy} />
+  </main>
+  <RebrandFooter copy={copy} links={links} lang={lang} />
+</RebrandLayout>

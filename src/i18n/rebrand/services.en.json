@@ -1,0 +1,91 @@
+{
+  "services": [
+    {
+      "slug": "estructura-metalica",
+      "metaTitle": "JP Rentals | Steel structures for industry",
+      "metaDescription": "Assisted design, detailing, fabrication, and erection of steel structures for industrial buildings across Mexico.",
+      "heroImage": "/images/home-rebrand/casos/kontar-ii/IMG20250512184521.webp",
+      "heroImageAlt": "Industrial warehouse steel frame under erection: trusses and bracing.",
+      "gallery": [
+        {
+          "src": "/images/home-rebrand/casos/mod-4/IMG20240723152344.webp",
+          "alt": "Steel frame assembly for a multi-tenant industrial building on site."
+        },
+        {
+          "src": "/images/home-rebrand/casos/daye-hoffsan/IMG_20230926_145238.webp",
+          "alt": "Warehouse structure and mezzanine levels: steel and Losacero decking."
+        }
+      ],
+      "eyebrow": "What we do",
+      "title": "Steel structure",
+      "lead": "Assisted design, detailing, fabrication, and erection with quality control and applicable codes for warehouses and industry.",
+      "paragraphs": [
+        "We support the project from structural criteria and shop detailing through fabrication and site erection, with emphasis on schedule, safety, and documentation aligned to each client and site.",
+        "Our typical scope includes frames, trusses, bracing, mezzanines, and support steel for equipment or crane runways, coordinated with other disciplines and construction progress."
+      ],
+      "bullets": [
+        "Detailing and fabrication with traceability and quality criteria.",
+        "Erection, alignment, and connections per project and applicable standards.",
+        "Coordination with roof, façade, and MEP to close the building volume."
+      ]
+    },
+    {
+      "slug": "lamina-acabado-envolvente",
+      "metaTitle": "JP Rentals | Roof and envelope cladding",
+      "metaDescription": "Roofs, façades, and wall systems in commercial profiles (KR-18, R101, and similar) with field closure for industrial buildings.",
+      "heroImage": "/images/home-rebrand/casos/coca-cola/IMG20251220215456.webp",
+      "heroImageAlt": "Metal roof and wall cladding over an industrial steel frame.",
+      "gallery": [
+        {
+          "src": "/images/home-rebrand/casos/kandelium/IMG20260113180910.webp",
+          "alt": "Sheet installation on façades and walls of an industrial plant."
+        },
+        {
+          "src": "/images/home-rebrand/casos/motomex-cedis-1/IMG_20221213_073612.webp",
+          "alt": "KR-18 roof progress and envelope closure on a distribution center."
+        }
+      ],
+      "eyebrow": "What we do",
+      "title": "Roof and envelope",
+      "lead": "Commercial profiles (e.g. KR-18), façade and wall R panels or as per design, with field closure.",
+      "paragraphs": [
+        "We execute the envelope as an integrated system: slopes, fasteners, seals, and transitions to structure to reduce leaks and punch-list items at handover.",
+        "We work with profiles and finishes defined in the project (including KR-18-type roof layouts and R101 or other wall solutions), respecting coatings and ventilation criteria where applicable."
+      ],
+      "bullets": [
+        "Commercial roof profile and lap per manufacturer and design.",
+        "Façades and walls in R or other geometry per specification.",
+        "Flashings, trims, and field joint details."
+      ]
+    },
+    {
+      "slug": "reparacion-refuerzo-entre-pisos",
+      "metaTitle": "JP Rentals | Retrofit, strengthening, and mezzanines",
+      "metaDescription": "Work on existing structures, mezzanines, Losacero, and upgrades with minimal impact on plant operations.",
+      "heroImage": "/images/home-rebrand/casos/mod-4/IMG20240710155435.webp",
+      "heroImageAlt": "Structural work inside an existing warehouse shell.",
+      "gallery": [
+        {
+          "src": "/images/home-rebrand/casos/daye-hoffsan/IMG_20230914_173742.webp",
+          "alt": "Mezzanine structure and Losacero integrated with the main building."
+        },
+        {
+          "src": "/images/home-rebrand/casos/kontar-ii/IMG20241222144438.webp",
+          "alt": "Structural erection and fit-out on a large-footprint facility."
+        }
+      ],
+      "eyebrow": "What we do",
+      "title": "Retrofit, strengthening, and mezzanines",
+      "lead": "Interventions on existing structures, mezzanines, Losacero, and upgrades with minimal disruption to operations.",
+      "paragraphs": [
+        "On operating plants we prioritize safe work windows, erection sequencing, and clear communication with production to add strengthening, supports, or new levels without compromising business continuity.",
+        "Mezzanines and Losacero-type solutions are engineered with load checks, supports, and connection detailing, ready for finishes and services."
+      ],
+      "bullets": [
+        "Strengthening and repair of existing members per assessment and design.",
+        "Mezzanines and intermediate floors, including Losacero where applicable.",
+        "Structural upgrades coordinated with maintenance and operations."
+      ]
+    }
+  ]
+}

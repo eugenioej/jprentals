@@ -1,0 +1,271 @@
+{
+  "meta": {
+    "title": "JP Rentals | Estructura metálica y laminado para obra industrial",
+    "description": "Diseño, fabricación e instalación de estructura metálica, cubiertas y laminado para naves e industria en todo México. Grupo NASA.",
+    "keywords": "estructura metálica, cubierta, lámina KR-18, R101, servicio nacional, México, industria, JP Rentals"
+  },
+  "header": {
+    "logo": "JP Rentals"
+  },
+  "nav": {
+    "success": "Casos de Éxito",
+    "offer": "Oferta",
+    "contact": "Contacto",
+    "services": "Servicios",
+    "language": "Idioma"
+  },
+  "lang": {
+    "es": "ES",
+    "en": "EN",
+    "it": "IT"
+  },
+  "contact": {
+    "email": "info@nasacero.com",
+    "mailtoSubject": "Consulta — estructura y laminado (JP Rentals / Nasacero)",
+    "mailtoBody": "Buen día:\n\nDeseo información sobre un proyecto de estructura o laminado.\n\nProyecto o ubicación: \nAlcance aproximado: \n\nGracias."
+  },
+  "hero": {
+    "eyebrow": "Estructura · Laminado · Acero",
+    "headline": "Ingeniería de estructura y laminado para industria e inversión a nivel nacional",
+    "sub": "Coordinamos suministro, fabricación y montaje con criterio de plazos, calidad y documentación. Casos con naves, cubiertas, fachadas y refuerzo en distintas plantas y estados.",
+    "emailCta": "Escribir por correo",
+    "contactAnchor": "Bloque de contacto"
+  },
+  "stats": {
+    "items": [
+      {
+        "value": "15+",
+        "label": "Años de operación"
+      },
+      {
+        "value": "15 400 m²",
+        "label": "Cubierta destacada (referencia de proyecto)"
+      },
+      {
+        "value": "Cobertura MX",
+        "label": "Atención y ejecución a nivel nacional"
+      }
+    ]
+  },
+  "successCases": {
+    "title": "Casos de éxito",
+    "viewProject": "Ver proyecto",
+    "subtitle": "",
+    "carousel": {
+      "prev": "Imagen anterior",
+      "next": "Imagen siguiente",
+      "roleDescription": "Carrusel de imágenes"
+    },
+    "labels": {
+      "location": "Ubicación",
+      "client": "Cliente",
+      "area": "Superficie",
+      "steel": "Estructura metálica (aprox.)"
+    },
+    "items": [
+      {
+        "year": "2026",
+        "id": "coca-cola-fleteo-2026",
+        "client": "Coca-Cola (Arca Continental)",
+        "title": "Estructura para cubierta de fleteo",
+        "location": "Monterrey, N.L.",
+        "area": "3 500 m²",
+        "steel": "370 t",
+        "scope": "Suministro, fabricación y montaje de estructura metálica en área de fleteo; cubierta en lámina KR-18; lámina R101 en fachada y contrafachada.",
+        "imageAlt": "Coca-Cola Arca Continental: estructura y cubierta de fleteo, Monterrey",
+        "images": [
+          "/images/home-rebrand/casos/coca-cola/IMG20251005080401.webp",
+          "/images/home-rebrand/casos/coca-cola/IMG20251220215456.webp",
+          "/images/home-rebrand/casos/coca-cola/IMG20260217025912.webp"
+        ]
+      },
+      {
+        "year": "2026",
+        "id": "kandelium-2026",
+        "client": "Kandelium",
+        "title": "Estructura y laminación (área de escamado y empaque)",
+        "location": "Carretera a García, N.L.",
+        "area": "972 m²",
+        "steel": "79 t",
+        "scope": "Fabricación y montaje de estructura metálica; colocación de cubierta KR-18 y lámina R101 en fachadas.",
+        "imageAlt": "Kandelium: estructura y laminado en planta, García",
+        "images": [
+          "/images/home-rebrand/casos/kandelium/IMG20251230182121.webp",
+          "/images/home-rebrand/casos/kandelium/IMG20260105181827.webp",
+          "/images/home-rebrand/casos/kandelium/IMG20260113180910.webp",
+          "/images/home-rebrand/casos/kandelium/IMG20260115124253.webp",
+          "/images/home-rebrand/casos/kandelium/IMG20260116102639.webp",
+          "/images/home-rebrand/casos/kandelium/IMG20260116110303.webp",
+          "/images/home-rebrand/casos/kandelium/IMG20260116115504.webp",
+          "/images/home-rebrand/casos/kandelium/IMG20260120183001.webp"
+        ]
+      },
+      {
+        "year": "2025",
+        "id": "motomex-kontar-ii-2025",
+        "client": "Motomex (nave CEDIS II) — Nave Kontar II",
+        "title": "Estructura y laminación para CEDIS II",
+        "location": "WTC Parque Industrial La Pila, San Luis Potosí",
+        "area": "15 400 m²",
+        "steel": "580 t",
+        "scope": "Suministro, fabricación y montaje de estructura de nave, cubierta KR-18 y fachada R101.",
+        "imageAlt": "Nave CEDIS Motomex, San Luis Potosí: estructura y cubierta",
+        "images": [
+          "/images/home-rebrand/casos/kontar-ii/IMG20241010154818.webp",
+          "/images/home-rebrand/casos/kontar-ii/IMG20241011174153.webp",
+          "/images/home-rebrand/casos/kontar-ii/IMG20241222144438.webp",
+          "/images/home-rebrand/casos/kontar-ii/IMG20250110180327.webp",
+          "/images/home-rebrand/casos/kontar-ii/IMG20250512184521.webp",
+          "/images/home-rebrand/casos/kontar-ii/IMG20250520124113.webp",
+          "/images/home-rebrand/casos/kontar-ii/IMG20250716111914.webp"
+        ]
+      },
+      {
+        "year": "2024",
+        "id": "nave-mod-4-2024",
+        "client": "Nave Mod 4",
+        "title": "Nave industrial multi-tenant",
+        "location": "Guadalupe, N.L.",
+        "area": "5 773 m²",
+        "steel": "46 t",
+        "scope": "Fabricación y montaje de estructura metálica de nave multi-tenant.",
+        "imageAlt": "Nave Mod 4: estructura multi-tenant, Guadalupe",
+        "images": [
+          "/images/home-rebrand/casos/mod-4/IMG20240710155435.webp",
+          "/images/home-rebrand/casos/mod-4/IMG20240723152344.webp",
+          "/images/home-rebrand/casos/mod-4/IMG20240726104048.webp",
+          "/images/home-rebrand/casos/mod-4/IMG20240731173330.webp"
+        ]
+      },
+      {
+        "year": "2023",
+        "id": "daye-hoffsan-2023",
+        "client": "Parque Industrial Hoffsan (proyecto Daye)",
+        "title": "Estructura de nave y entre pisos",
+        "location": "Salinas Victoria, N.L.",
+        "area": "7 950 m²",
+        "steel": "332 t",
+        "scope": "Fabricación y montaje de estructura de la nave principal, mesanines de oficinas y losacero 15 en entre pisos.",
+        "imageAlt": "Parque Industrial Hoffsan Daye: nave y mezzanines",
+        "images": [
+          "/images/home-rebrand/casos/daye-hoffsan/IMG_20230914_173610.webp",
+          "/images/home-rebrand/casos/daye-hoffsan/IMG_20230914_173742.webp",
+          "/images/home-rebrand/casos/daye-hoffsan/IMG_20230918_145934.webp",
+          "/images/home-rebrand/casos/daye-hoffsan/IMG_20230926_145238.webp"
+        ]
+      },
+      {
+        "year": "2025",
+        "id": "motomex-cedis-i-2025",
+        "client": "Motomex (nave CEDIS I)",
+        "title": "Estructura y laminación CEDIS I",
+        "location": "WTC Parque Industrial La Pila, San Luis Potosí",
+        "area": "3 840 m²",
+        "steel": "90 t",
+        "scope": "Suministro, fabricación y montaje de estructura, cubierta KR-18 y fachada R101.",
+        "imageAlt": "Nave CEDIS I Motomex: estructura y cubierta",
+        "images": [
+          "/images/home-rebrand/casos/motomex-cedis-1/IMG_20221122_181730.webp",
+          "/images/home-rebrand/casos/motomex-cedis-1/IMG_20221213_073612.webp"
+        ]
+      }
+    ]
+  },
+  "offer": {
+    "title": "Qué hacemos",
+    "subtitle": "",
+    "detailLinkLabel": "Conocer el servicio",
+    "items": [
+      {
+        "slug": "estructura-metalica",
+        "title": "Estructura metálica",
+        "body": "Diseño asistido, detallado, fabricación e instalación con control de calidad y normativa aplicable a naves e industria."
+      },
+      {
+        "slug": "lamina-acabado-envolvente",
+        "title": "Lámina y acabado de envolvente",
+        "body": "Cubiertas en perfiles comerciales (p. ej. KR-18), fachada y muros en R u otro criterio de diseño, con cierre en obra."
+      },
+      {
+        "slug": "reparacion-refuerzo-entre-pisos",
+        "title": "Reparación, refuerzo y entre pisos",
+        "body": "Intervención en estructura existente, mezzanines, losacero y adecuaciones con el menor freno a operación posible."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Contacto",
+    "intro": "Canales directos para atención nacional. Oficina base en Monterrey, N.L.",
+    "labels": {
+      "phone": "Teléfono",
+      "email": "Correo",
+      "office": "Oficinas"
+    },
+    "phones": [
+      {
+        "name": "Nacional de Anclas",
+        "display": "+52 81 8259 1644",
+        "href": "tel:+528182591644"
+      },
+      {
+        "name": "Nasacero / JP Rentals",
+        "display": "+52 81 1600 7864",
+        "href": "tel:+528116007864"
+      }
+    ],
+    "emails": [
+      {
+        "address": "info@nacionaldeanclas.com"
+      },
+      {
+        "address": "info@nasacero.com"
+      }
+    ],
+    "addressLines": [
+      "Anastacio Bustamante 1030 / 1048 Poniente",
+      "Bella Vista, Monterrey, N.L.",
+      "C.P. 64410"
+    ],
+    "mapLink": "Abrir en Google Maps"
+  },
+  "footer": {
+    "description": "Estructura metálica y sistemas de cubierta / envolvente con ejecución nacional en México. Grupo NASA.",
+    "services": "Más en el sitio",
+    "servicesLink": "Obra industrial y montaje",
+    "legal": "Aviso de privacidad",
+    "legacy": "Vista clásica del sitio",
+    "itNote": ""
+  },
+  "about": {
+    "eyebrow": "Acerca de nosotros",
+    "title": "JP Rentals es referente nacional en estructura metálica y laminado industrial",
+    "body1": "Ejecutamos proyectos con visión de negocio, precisión técnica y disciplina operativa. Nuestro enfoque combina ingeniería, fabricación y montaje para entregar obras de alto impacto, con estándares exigentes de calidad, seguridad y cumplimiento.",
+    "body2": "Más que contratistas, somos un socio estratégico para empresas que necesitan resultados sólidos en plazos reales. Por eso, organizaciones industriales en todo México confían en JP Rentals para proyectos estructurales críticos.",
+    "imageAlt": "JP Rentals en operación de estructura y laminado"
+  },
+  "group": {
+    "title": "JP Rentals forma parte de Grupo NASA",
+    "intro": "Mismo estándar de ejecución, fabricación y control de calidad, con capacidades complementarias dentro del grupo.",
+    "nacionalTitle": "Nacional de Anclas",
+    "nacionalUrl": "nacionaldeanclas.com",
+    "nacionalBody": "Anclas de cimentación para proyectos estructurales.",
+    "nasaceroTitle": "Nasacero",
+    "nasaceroUrl": "nasacero.com",
+    "nasaceroBody": "Corte especializado de acero: plasma, láser, oxicorte y guillotina."
+  },
+  "projectPage": {
+    "backToCases": "Volver a casos de éxito",
+    "detailsTitle": "Generales del proyecto",
+    "galleryTitle": "Galería del proyecto",
+    "galleryHint": "Haz clic en cualquier imagen para verla en grande.",
+    "openImageAria": "Abrir imagen {n} en pantalla completa",
+    "lightboxAria": "Galería de imágenes en pantalla completa",
+    "lightboxClose": "Cerrar galería",
+    "lightboxPrev": "Imagen anterior",
+    "lightboxNext": "Imagen siguiente",
+    "lightboxCaption": "Imagen {current} de {total}"
+  },
+  "servicePage": {
+    "backToOffer": "Volver a Qué hacemos"
+  }
+}

@@ -1,0 +1,267 @@
+{
+  "meta": {
+    "title": "JP Rentals | Strutture in acciaio e involucro per l’industria",
+    "description": "Progettazione, fabbricazione e installazione di strutture in acciaio, coperture e involucri per capannoni e industria in tutto il Messico. Grupo NASA.",
+    "keywords": "struttura metallica, involucro, KR-18, R101, copertura nazionale, Messico, industria, JP Rentals"
+  },
+  "header": {
+    "logo": "JP Rentals"
+  },
+  "nav": {
+    "success": "Casi di successo",
+    "offer": "Offerta",
+    "contact": "Contatti",
+    "services": "Servizi",
+    "language": "Lingua"
+  },
+  "lang": {
+    "es": "ES",
+    "en": "EN",
+    "it": "IT"
+  },
+  "contact": {
+    "email": "info@nasacero.com",
+    "mailtoSubject": "Richiesta — struttura e coperture (JP Rentals / Nasacero)",
+    "mailtoBody": "Salve,\n\nVorrei informazioni su un progetto di struttura o coperture.\n\nProgetto o località: \nAmbito indicativo: \n\nGrazie."
+  },
+  "hero": {
+    "eyebrow": "Struttura · Involucro · Acciaio",
+    "headline": "Ingegneria di strutture in acciaio e involucro per industria e investimenti a livello nazionale",
+    "sub": "Coordiniamo fornitura, fabbricazione e montaggio con attenzione a tempi, qualità e documentazione. Casi con capannoni, coperture, facciate e interventi strutturali in diversi impianti e stati.",
+    "emailCta": "Scrivere per email",
+    "contactAnchor": "Contatto in pagina"
+  },
+  "stats": {
+    "items": [
+      {
+        "value": "15+",
+        "label": "Anni di attività"
+      },
+      {
+        "value": "15 400 m²",
+        "label": "Copertura riferimento (progetto)"
+      },
+      {
+        "value": "Messico",
+        "label": "Copertura ed esecuzione nazionali"
+      }
+    ]
+  },
+  "successCases": {
+    "title": "Casi di successo",
+    "viewProject": "Vedi progetto",
+    "subtitle": "",
+    "carousel": {
+      "prev": "Immagine precedente",
+      "next": "Immagine successiva",
+      "roleDescription": "Carosello di immagini"
+    },
+    "labels": {
+      "location": "Località",
+      "client": "Cliente",
+      "area": "Superficie",
+      "steel": "Struttura in acciaio (circa)"
+    },
+    "items": [
+      {
+        "year": "2026",
+        "id": "coca-cola-fleteo-2026",
+        "client": "Coca-Cola (Arca Continental)",
+        "title": "Struttura per copertura del magazzino fletaggio",
+        "location": "Monterrey, N.L.",
+        "area": "3.500 m²",
+        "steel": "370 t",
+        "scope": "Fornitura, lavorazione e montaggio; copertura KR-18; rivestimenti R101 in facciata e controfacciata.",
+        "imageAlt": "Coca-Cola Arca Continental: copertura magazzino, Monterrey",
+        "images": [
+          "/images/home-rebrand/casos/coca-cola/IMG20251005080401.webp",
+          "/images/home-rebrand/casos/coca-cola/IMG20251220215456.webp",
+          "/images/home-rebrand/casos/coca-cola/IMG20260217025912.webp"
+        ]
+      },
+      {
+        "year": "2026",
+        "id": "kandelium-2026",
+        "client": "Kandelium",
+        "title": "Struttura e rivestimento (zona scaglia e imballo)",
+        "location": "Carretera a García, N.L.",
+        "area": "972 m²",
+        "steel": "79 t",
+        "scope": "Lavorazione e posa strutturale; copertura KR-18 e pannellatura R101.",
+        "imageAlt": "Kandelium: struttura, García",
+        "images": [
+          "/images/home-rebrand/casos/kandelium/IMG20251230182121.webp",
+          "/images/home-rebrand/casos/kandelium/IMG20260105181827.webp",
+          "/images/home-rebrand/casos/kandelium/IMG20260113180910.webp",
+          "/images/home-rebrand/casos/kandelium/IMG20260115124253.webp",
+          "/images/home-rebrand/casos/kandelium/IMG20260116102639.webp",
+          "/images/home-rebrand/casos/kandelium/IMG20260116110303.webp",
+          "/images/home-rebrand/casos/kandelium/IMG20260116115504.webp",
+          "/images/home-rebrand/casos/kandelium/IMG20260120183001.webp"
+        ]
+      },
+      {
+        "year": "2025",
+        "id": "motomex-kontar-ii-2025",
+        "client": "Motomex (CEDIS II) — Nave Kontar II",
+        "title": "Struttura e chiusure CEDIS II",
+        "location": "WTC parco industriale La Pila, San Luis Potosí",
+        "area": "15.400 m²",
+        "steel": "580 t",
+        "scope": "Fornitura, fabbricazione, montaggio; copertina KR-18 e facciate R101.",
+        "imageAlt": "Motomex CEDIS, San Luis Potosí: struttura e copertura",
+        "images": [
+          "/images/home-rebrand/casos/kontar-ii/IMG20241010154818.webp",
+          "/images/home-rebrand/casos/kontar-ii/IMG20241011174153.webp",
+          "/images/home-rebrand/casos/kontar-ii/IMG20241222144438.webp",
+          "/images/home-rebrand/casos/kontar-ii/IMG20250110180327.webp",
+          "/images/home-rebrand/casos/kontar-ii/IMG20250512184521.webp",
+          "/images/home-rebrand/casos/kontar-ii/IMG20250520124113.webp",
+          "/images/home-rebrand/casos/kontar-ii/IMG20250716111914.webp"
+        ]
+      },
+      {
+        "year": "2024",
+        "id": "nave-mod-4-2024",
+        "client": "Nave Mod 4",
+        "title": "Capannone multi-tenant",
+        "location": "Guadalupe, N.L.",
+        "area": "5.773 m²",
+        "steel": "46 t",
+        "scope": "Fabbricazione e posa strutturale per capannone multi-tenant.",
+        "imageAlt": "Nave Mod 4: struttura multi-tenant, Guadalupe",
+        "images": [
+          "/images/home-rebrand/casos/mod-4/IMG20240710155435.webp",
+          "/images/home-rebrand/casos/mod-4/IMG20240723152344.webp",
+          "/images/home-rebrand/casos/mod-4/IMG20240726104048.webp",
+          "/images/home-rebrand/casos/mod-4/IMG20240731173330.webp"
+        ]
+      },
+      {
+        "year": "2023",
+        "id": "daye-hoffsan-2023",
+        "client": "Parque Industrial Hoffsan (progetto Daye)",
+        "title": "Nave principale e soppalchi uffici",
+        "location": "Salinas Victoria, N.L.",
+        "area": "7.950 m²",
+        "steel": "332 t",
+        "scope": "Esecuzione strutturale, soppalchi e Losacero 15 per tra piani.",
+        "imageAlt": "Hoffsan Daye: nave e soppalchi",
+        "images": [
+          "/images/home-rebrand/casos/daye-hoffsan/IMG_20230914_173610.webp",
+          "/images/home-rebrand/casos/daye-hoffsan/IMG_20230914_173742.webp",
+          "/images/home-rebrand/casos/daye-hoffsan/IMG_20230918_145934.webp",
+          "/images/home-rebrand/casos/daye-hoffsan/IMG_20230926_145238.webp"
+        ]
+      },
+      {
+        "year": "2025",
+        "id": "motomex-cedis-i-2025",
+        "client": "Motomex (CEDIS I)",
+        "title": "Struttura e chiusure CEDIS I",
+        "location": "WTC parco industriale La Pila, San Luis Potosí",
+        "area": "3.840 m²",
+        "steel": "90 t",
+        "scope": "Fornitura, fabbricazione, montaggio; KR-18 e R101 in facciata.",
+        "imageAlt": "Motomex CEDIS I: struttura e copertura",
+        "images": [
+          "/images/home-rebrand/casos/motomex-cedis-1/IMG_20221122_181730.webp",
+          "/images/home-rebrand/casos/motomex-cedis-1/IMG_20221213_073612.webp"
+        ]
+      }
+    ]
+  },
+  "offer": {
+    "title": "Cosa facciamo",
+    "subtitle": "",
+    "detailLinkLabel": "Scopri il servizio",
+    "items": [
+      {
+        "slug": "estructura-metalica",
+        "title": "Struttura metallica",
+        "body": "Progettazione assistita, disegno esecutivo, lavorazione e posa in cantiere con controlli qualitativi."
+      },
+      {
+        "slug": "lamina-acabado-envolvente",
+        "title": "Copertura e involucro",
+        "body": "Profili commerciali (p.es. KR-18), fassade e pannellature secondo ipt; chiusure in cantiere."
+      },
+      {
+        "slug": "reparacion-refuerzo-entre-pisos",
+        "title": "Interventi e soppalchi",
+        "body": "Consolidamenti, soppalchi, Losacero 15, adeguamenti con interruzioni minime all’esercizio."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Contatti",
+    "intro": "Canali diretti per assistenza a livello nazionale. Sede a Monterrey, N.L.",
+    "labels": {
+      "phone": "Telefono",
+      "email": "E-mail",
+      "office": "Uffici"
+    },
+    "phones": [
+      {
+        "name": "Nacional de Anclas",
+        "display": "+52 81 8259 1644",
+        "href": "tel:+528182591644"
+      },
+      {
+        "name": "Nasacero / JP Rentals",
+        "display": "+52 81 1600 7864",
+        "href": "tel:+528116007864"
+      }
+    ],
+    "emails": [
+      { "address": "info@nacionaldeanclas.com" },
+      { "address": "info@nasacero.com" }
+    ],
+    "addressLines": [
+      "Anastacio Bustamante 1030 / 1048 Poniente",
+      "Bella Vista, Monterrey, N.L.",
+      "C.P. 64410"
+    ],
+    "mapLink": "Apri in Google Maps"
+  },
+  "footer": {
+    "description": "Strutture in acciaio e sistemi di copertura / involucro con esecuzione nazionale in Messico. Grupo NASA.",
+    "services": "Altro nel sito",
+    "servicesLink": "Cantiere industriale e montaggio",
+    "legal": "Informativa sulla privacy",
+    "legacy": "Vista classica del sito",
+    "itNote": ""
+  },
+  "about": {
+    "eyebrow": "Chi siamo",
+    "title": "JP Rentals è un punto di riferimento nazionale per strutture in acciaio e involucro industriale",
+    "body1": "Realizziamo progetti con visione d’impresa, precisione tecnica e disciplina operativa. Il nostro approccio unisce ingegneria, fabbricazione e montaggio per consegnare opere ad alto impatto, con standard rigorosi di qualità, sicurezza e rispetto dei tempi.",
+    "body2": "Più di un appaltatore, siamo un partner strategico per le aziende che cercano risultati solidi su tempistiche reali. Per questo organizzazioni industriali in tutto il Messico si affidano a JP Rentals per progetti strutturali critici.",
+    "imageAlt": "JP Rentals in cantiere per strutture e involucro"
+  },
+  "group": {
+    "title": "JP Rentals fa parte di Grupo NASA",
+    "intro": "Stessi standard di esecuzione, fabbricazione e controllo qualità, con capacità complementari all’interno del gruppo.",
+    "nacionalTitle": "Nacional de Anclas",
+    "nacionalUrl": "nacionaldeanclas.com",
+    "nacionalBody": "Ancoraggi per fondazioni in progetti strutturali.",
+    "nasaceroTitle": "Nasacero",
+    "nasaceroUrl": "nasacero.com",
+    "nasaceroBody": "Taglio specializzato dell’acciaio: plasma, laser, ossitaglio e ghigliottina."
+  },
+  "projectPage": {
+    "backToCases": "Torna ai casi di successo",
+    "detailsTitle": "Dati generali del progetto",
+    "galleryTitle": "Galleria del progetto",
+    "galleryHint": "Fai clic su un’immagine per ingrandirla.",
+    "openImageAria": "Apri immagine {n} a schermo intero",
+    "lightboxAria": "Galleria a schermo intero",
+    "lightboxClose": "Chiudi galleria",
+    "lightboxPrev": "Immagine precedente",
+    "lightboxNext": "Immagine successiva",
+    "lightboxCaption": "Immagine {current} di {total}"
+  },
+  "servicePage": {
+    "backToOffer": "Torna a Cosa facciamo"
+  }
+}

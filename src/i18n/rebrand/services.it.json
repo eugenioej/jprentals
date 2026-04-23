@@ -1,0 +1,91 @@
+{
+  "services": [
+    {
+      "slug": "estructura-metalica",
+      "metaTitle": "JP Rentals | Strutture in acciaio per l’industria",
+      "metaDescription": "Progettazione assistita, disegno esecutivo, fabbricazione e montaggio di strutture in acciaio per capannoni e stabilimenti industriali in Messico.",
+      "heroImage": "/images/home-rebrand/casos/kontar-ii/IMG20250512184521.webp",
+      "heroImageAlt": "Struttura in acciaio di capannone industriale in fase di montaggio: capriate e controventi.",
+      "gallery": [
+        {
+          "src": "/images/home-rebrand/casos/mod-4/IMG20240723152344.webp",
+          "alt": "Montaggio della struttura metallica di un capannone multi-tenant in cantiere."
+        },
+        {
+          "src": "/images/home-rebrand/casos/daye-hoffsan/IMG_20230926_145238.webp",
+          "alt": "Struttura del capannone e tra piani: acciaio e losacero in opera."
+        }
+      ],
+      "eyebrow": "Cosa facciamo",
+      "title": "Struttura metallica",
+      "lead": "Progettazione assistita, disegno esecutivo, fabbricazione e installazione con controllo qualità e normativa applicabile a capannoni e industria.",
+      "paragraphs": [
+        "Affianchiamo il progetto dal criterio strutturale e dal disegno di officina fino alla fabbricazione e al montaggio in cantiere, con attenzione a tempi, sicurezza e documentazione richiesta da cliente e contesto.",
+        "Il nostro ambito tipico comprende telai, capriate, controventature, soppalchi e strutture di supporto per macchinari o vie di gru, sempre in coordinamento con altre discipline e con l’avanzamento dei lavori."
+      ],
+      "bullets": [
+        "Disegno esecutivo e fabbricazione con criteri di qualità e tracciabilità.",
+        "Montaggio, allineamento e unioni secondo progetto e normativa applicabile.",
+        "Coordinamento con copertura, facciata e impianti per chiudere il volume."
+      ]
+    },
+    {
+      "slug": "lamina-acabado-envolvente",
+      "metaTitle": "JP Rentals | Lamiera e finiture dell’involucro",
+      "metaDescription": "Coperture, facciate e tamponamenti in lamiera commerciale (KR-18, R101 e simili) con chiusura in cantiere per capannoni industriali.",
+      "heroImage": "/images/home-rebrand/casos/coca-cola/IMG20251220215456.webp",
+      "heroImageAlt": "Copertura e chiusure in lamiera su struttura di capannone industriale.",
+      "gallery": [
+        {
+          "src": "/images/home-rebrand/casos/kandelium/IMG20260113180910.webp",
+          "alt": "Posa di lamiera su facciata e tamponamenti di stabilimento industriale."
+        },
+        {
+          "src": "/images/home-rebrand/casos/motomex-cedis-1/IMG_20221213_073612.webp",
+          "alt": "Avanzamento copertura KR-18 e chiusura dell’involucro su hub logistico."
+        }
+      ],
+      "eyebrow": "Cosa facciamo",
+      "title": "Lamiera e finiture dell’involucro",
+      "lead": "Coperture in profili commerciali (es. KR-18), facciata e tamponamenti in R o secondo altro criterio di progetto, con chiusura in cantiere.",
+      "paragraphs": [
+        "Eseguiamo l’involucro come sistema integrato: pendenze, fissaggi, sigillature e raccordi con la struttura, per ridurre infiltrazioni e incombenze a fine cantiere.",
+        "Lavoriamo con profili e finiture definiti in progetto (inclusi schemi tipo KR-18 in copertura e R101 o altre soluzioni sui paramenti), rispettando colori, rivestimenti e criteri di ventilazione ove richiesto."
+      ],
+      "bullets": [
+        "Copertura in profilo commerciale e accavallamento secondo fabbricante e progetto.",
+        "Facciate e tamponamenti in R o altra geometria secondo specifica.",
+        "Chiusure, profili di finitura, lamierati e dettagli di giunzione in cantiere."
+      ]
+    },
+    {
+      "slug": "reparacion-refuerzo-entre-pisos",
+      "metaTitle": "JP Rentals | Riparazione, consolidamento e tra piani",
+      "metaDescription": "Interventi su struttura esistente, soppalchi, losacero e adeguamenti con minimo impatto sull’esercizio dello stabilimento.",
+      "heroImage": "/images/home-rebrand/casos/mod-4/IMG20240710155435.webp",
+      "heroImageAlt": "Intervento e montaggio strutturale in edificio esistente, vista interna del capannone.",
+      "gallery": [
+        {
+          "src": "/images/home-rebrand/casos/daye-hoffsan/IMG_20230914_173742.webp",
+          "alt": "Struttura dei tra piani e losacero integrata con il capannone industriale."
+        },
+        {
+          "src": "/images/home-rebrand/casos/kontar-ii/IMG20241222144438.webp",
+          "alt": "Montaggio e adeguamento strutturale in stabilimento ad ampia superficie."
+        }
+      ],
+      "eyebrow": "Cosa facciamo",
+      "title": "Riparazione, consolidamento e tra piani",
+      "lead": "Interventi su struttura esistente, soppalchi, losacero e adeguamenti con il minimo rallentamento dell’operatività.",
+      "paragraphs": [
+        "Negli stabilimenti in esercizio privilegiamo finestre di lavoro sicure, sequenze di montaggio e dialogo con la produzione, per integrare consolidamenti, supporti o nuovi livelli senza compromettere la continuità operativa.",
+        "I tra piani e le soluzioni tipo losacero sono affrontati con verifica dei carichi, appoggi e dettaglio delle connessioni, lasciando pronto il supporto per finiture e impianti."
+      ],
+      "bullets": [
+        "Consolidamento e riparazione degli elementi esistenti secondo diagnosi e progetto.",
+        "Soppalchi e tra piani, incluso losacero ove previsto.",
+        "Adeguamenti strutturali coordinati con manutenzione e operatività."
+      ]
+    }
+  ]
+}

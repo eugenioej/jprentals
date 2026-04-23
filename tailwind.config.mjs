@@ -30,6 +30,19 @@ export default {
           600: '#003B71',
           700: '#002a52',
         },
+        jpr2: {
+          navy: '#1F2D4E',
+          'navy-deep': '#141D33',
+          /** Azul casi negro, mismo tono que navy; ancla bandas oscuras */
+          midnight: '#0A0F1E',
+          'midnight-soft': '#0F182C',
+          mist: '#E6EAF3',
+          coral: '#C8433A',
+          mustard: '#E8B33E',
+          crema: '#F2EFEA',
+          ink: '#2B2B2B',
+          muted: '#5C6478',
+        },
       },
       container: {
         center: true,

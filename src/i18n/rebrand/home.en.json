@@ -1,0 +1,267 @@
+{
+  "meta": {
+    "title": "JP Rentals | Steel structure and cladding for industrial projects",
+    "description": "Design, fabrication, and installation of steel structures, roofs, and cladding for industrial buildings nationwide in Mexico. Grupo NASA.",
+    "keywords": "steel structure, cladding, KR-18, R101, national coverage, Mexico, industrial building, JP Rentals"
+  },
+  "header": {
+    "logo": "JP Rentals"
+  },
+  "nav": {
+    "success": "Success stories",
+    "offer": "What we offer",
+    "contact": "Contact",
+    "services": "Services",
+    "language": "Language"
+  },
+  "lang": {
+    "es": "ES",
+    "en": "EN",
+    "it": "IT"
+  },
+  "contact": {
+    "email": "info@nasacero.com",
+    "mailtoSubject": "Inquiry — structure & decking (JP Rentals / Nasacero)",
+    "mailtoBody": "Hello,\n\nI would like information on a structure or decking project.\n\nProject or location: \nApproximate scope: \n\nThank you."
+  },
+  "hero": {
+    "eyebrow": "Structure · Cladding · Steel",
+    "headline": "Structural steel and cladding engineering for industry and investors nationwide",
+    "sub": "We coordinate supply, fabrication, and erection with a focus on schedule, quality, and documentation. References include warehouses, roofs, façades, and structural work across multiple plants and states.",
+    "emailCta": "Email us",
+    "contactAnchor": "Contact section"
+  },
+  "stats": {
+    "items": [
+      {
+        "value": "15+",
+        "label": "Years in operation"
+      },
+      {
+        "value": "15,400 m²",
+        "label": "Largest roof area (reference project)"
+      },
+      {
+        "value": "MX coverage",
+        "label": "National reach and execution"
+      }
+    ]
+  },
+  "successCases": {
+    "title": "Success stories",
+    "viewProject": "View project",
+    "subtitle": "",
+    "carousel": {
+      "prev": "Previous image",
+      "next": "Next image",
+      "roleDescription": "Image carousel"
+    },
+    "labels": {
+      "location": "Location",
+      "client": "Client",
+      "area": "Floor area",
+      "steel": "Structural steel (approx.)"
+    },
+    "items": [
+      {
+        "year": "2026",
+        "id": "coca-cola-fleteo-2026",
+        "client": "Coca-Cola (Arca Continental)",
+        "title": "Structure for freight warehouse roof",
+        "location": "Monterrey, N.L.",
+        "area": "3,500 m²",
+        "steel": "370 t",
+        "scope": "Supply, fabrication, and erection of the steel frame in the freight area; KR-18 roof deck; R101 wall panels on façade and counter-façade.",
+        "imageAlt": "Coca-Cola Arca Continental: freight roof structure, Monterrey",
+        "images": [
+          "/images/home-rebrand/casos/coca-cola/IMG20251005080401.webp",
+          "/images/home-rebrand/casos/coca-cola/IMG20251220215456.webp",
+          "/images/home-rebrand/casos/coca-cola/IMG20260217025912.webp"
+        ]
+      },
+      {
+        "year": "2026",
+        "id": "kandelium-2026",
+        "client": "Kandelium",
+        "title": "Structure and cladding (scaling & packing area)",
+        "location": "García highway area, N.L.",
+        "area": "972 m²",
+        "steel": "79 t",
+        "scope": "Fabrication and erection; KR-18 roof and R101 wall panels.",
+        "imageAlt": "Kandelium: structure and cladding, García",
+        "images": [
+          "/images/home-rebrand/casos/kandelium/IMG20251230182121.webp",
+          "/images/home-rebrand/casos/kandelium/IMG20260105181827.webp",
+          "/images/home-rebrand/casos/kandelium/IMG20260113180910.webp",
+          "/images/home-rebrand/casos/kandelium/IMG20260115124253.webp",
+          "/images/home-rebrand/casos/kandelium/IMG20260116102639.webp",
+          "/images/home-rebrand/casos/kandelium/IMG20260116110303.webp",
+          "/images/home-rebrand/casos/kandelium/IMG20260116115504.webp",
+          "/images/home-rebrand/casos/kandelium/IMG20260120183001.webp"
+        ]
+      },
+      {
+        "year": "2025",
+        "id": "motomex-kontar-ii-2025",
+        "client": "Motomex (CEDIS II) — Nave Kontar II",
+        "title": "Structure and cladding for CEDIS II",
+        "location": "WTC La Pila Industrial Park, San Luis Potosí",
+        "area": "15,400 m²",
+        "steel": "580 t",
+        "scope": "Supply, fabrication, and erection; KR-18 roof and R101 façades.",
+        "imageAlt": "Motomex CEDIS, San Luis Potosí: structure and roof",
+        "images": [
+          "/images/home-rebrand/casos/kontar-ii/IMG20241010154818.webp",
+          "/images/home-rebrand/casos/kontar-ii/IMG20241011174153.webp",
+          "/images/home-rebrand/casos/kontar-ii/IMG20241222144438.webp",
+          "/images/home-rebrand/casos/kontar-ii/IMG20250110180327.webp",
+          "/images/home-rebrand/casos/kontar-ii/IMG20250512184521.webp",
+          "/images/home-rebrand/casos/kontar-ii/IMG20250520124113.webp",
+          "/images/home-rebrand/casos/kontar-ii/IMG20250716111914.webp"
+        ]
+      },
+      {
+        "year": "2024",
+        "id": "nave-mod-4-2024",
+        "client": "Nave Mod 4",
+        "title": "Multi-tenant industrial building",
+        "location": "Guadalupe, N.L.",
+        "area": "5,773 m²",
+        "steel": "46 t",
+        "scope": "Fabrication and erection of the multi-tenant warehouse frame.",
+        "imageAlt": "Nave Mod 4: multi-tenant structure, Guadalupe",
+        "images": [
+          "/images/home-rebrand/casos/mod-4/IMG20240710155435.webp",
+          "/images/home-rebrand/casos/mod-4/IMG20240723152344.webp",
+          "/images/home-rebrand/casos/mod-4/IMG20240726104048.webp",
+          "/images/home-rebrand/casos/mod-4/IMG20240731173330.webp"
+        ]
+      },
+      {
+        "year": "2023",
+        "id": "daye-hoffsan-2023",
+        "client": "Hoffsan Industrial Park (Daye project)",
+        "title": "Main warehouse and mezzanines",
+        "location": "Salinas Victoria, N.L.",
+        "area": "7,950 m²",
+        "steel": "332 t",
+        "scope": "Erection of the main building, office mezzanines, and Losacero 15 mezzanine decking.",
+        "imageAlt": "Hoffsan Daye: warehouse and mezzanines",
+        "images": [
+          "/images/home-rebrand/casos/daye-hoffsan/IMG_20230914_173610.webp",
+          "/images/home-rebrand/casos/daye-hoffsan/IMG_20230914_173742.webp",
+          "/images/home-rebrand/casos/daye-hoffsan/IMG_20230918_145934.webp",
+          "/images/home-rebrand/casos/daye-hoffsan/IMG_20230926_145238.webp"
+        ]
+      },
+      {
+        "year": "2025",
+        "id": "motomex-cedis-i-2025",
+        "client": "Motomex (CEDIS I)",
+        "title": "Structure and cladding CEDIS I",
+        "location": "WTC La Pila Industrial Park, San Luis Potosí",
+        "area": "3,840 m²",
+        "steel": "90 t",
+        "scope": "Supply, fabrication, and erection; KR-18 roof and R101 façades.",
+        "imageAlt": "Motomex CEDIS I: structure and roof",
+        "images": [
+          "/images/home-rebrand/casos/motomex-cedis-1/IMG_20221122_181730.webp",
+          "/images/home-rebrand/casos/motomex-cedis-1/IMG_20221213_073612.webp"
+        ]
+      }
+    ]
+  },
+  "offer": {
+    "title": "What we do",
+    "subtitle": "",
+    "detailLinkLabel": "View service",
+    "items": [
+      {
+        "slug": "estructura-metalica",
+        "title": "Steel structure",
+        "body": "Assisted design, detailing, fabrication, and erection with QC for warehouses and industry."
+      },
+      {
+        "slug": "lamina-acabado-envolvente",
+        "title": "Roof and envelope",
+        "body": "Commercial profiles (e.g. KR-18), wall and façade R panels or as per design, closed out on site."
+      },
+      {
+        "slug": "reparacion-refuerzo-entre-pisos",
+        "title": "Retrofit, strengthening, and mezzanines",
+        "body": "Work on existing buildings, mezzanines, Losacero and adjustments with minimal disruption."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Contact",
+    "intro": "Direct channels for nationwide support. Headquarters in Monterrey, N.L.",
+    "labels": {
+      "phone": "Phone",
+      "email": "Email",
+      "office": "Offices"
+    },
+    "phones": [
+      {
+        "name": "Nacional de Anclas",
+        "display": "+52 81 8259 1644",
+        "href": "tel:+528182591644"
+      },
+      {
+        "name": "Nasacero / JP Rentals",
+        "display": "+52 81 1600 7864",
+        "href": "tel:+528116007864"
+      }
+    ],
+    "emails": [
+      { "address": "info@nacionaldeanclas.com" },
+      { "address": "info@nasacero.com" }
+    ],
+    "addressLines": [
+      "Anastacio Bustamante 1030 / 1048 Poniente",
+      "Bella Vista, Monterrey, N.L.",
+      "C.P. 64410"
+    ],
+    "mapLink": "Open in Google Maps"
+  },
+  "footer": {
+    "description": "Steel structures and roof / envelope systems with nationwide execution in Mexico. Grupo NASA.",
+    "services": "More on the site",
+    "servicesLink": "Industrial work & erection",
+    "legal": "Privacy policy",
+    "legacy": "Classic site view",
+    "itNote": ""
+  },
+  "about": {
+    "eyebrow": "About us",
+    "title": "JP Rentals is a national reference in industrial steel structures and cladding",
+    "body1": "We deliver projects with business sense, technical precision, and operational discipline. Our approach combines engineering, fabrication, and erection for high-impact work with demanding standards for quality, safety, and schedule.",
+    "body2": "More than a contractor, we are a strategic partner for companies that need solid results on real timelines. Industrial organizations across Mexico rely on JP Rentals for critical structural projects.",
+    "imageAlt": "JP Rentals on site for structure and cladding work"
+  },
+  "group": {
+    "title": "JP Rentals is part of Grupo NASA",
+    "intro": "The same standards for execution, fabrication, and quality control, with complementary capabilities across the group.",
+    "nacionalTitle": "Nacional de Anclas",
+    "nacionalUrl": "nacionaldeanclas.com",
+    "nacionalBody": "Foundation anchors for structural projects.",
+    "nasaceroTitle": "Nasacero",
+    "nasaceroUrl": "nasacero.com",
+    "nasaceroBody": "Specialized steel cutting: plasma, laser, oxy-fuel, and guillotine."
+  },
+  "projectPage": {
+    "backToCases": "Back to success stories",
+    "detailsTitle": "Project overview",
+    "galleryTitle": "Project gallery",
+    "galleryHint": "Click any image to view it full screen.",
+    "openImageAria": "Open image {n} full screen",
+    "lightboxAria": "Full-screen image gallery",
+    "lightboxClose": "Close gallery",
+    "lightboxPrev": "Previous image",
+    "lightboxNext": "Next image",
+    "lightboxCaption": "Image {current} of {total}"
+  },
+  "servicePage": {
+    "backToOffer": "Back to What we do"
+  }
+}

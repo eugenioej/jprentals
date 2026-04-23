@@ -1,0 +1,231 @@
+---
+import type { RebrandHomeCopy, RebrandLang } from '@/i18n/rebrand/home';
+import { rebrandHomePath, rebrandServicePath, rebrandSwitchPath } from '@/i18n/rebrand/home';
+import { getRebrandServices } from '@/i18n/rebrand/services';
+
+interface Props {
+  copy: RebrandHomeCopy;
+  lang: RebrandLang;
+}
+
+const { copy, lang } = Astro.props;
+
+const pathname = Astro.url.pathname;
+const home = rebrandHomePath(lang);
+const homeBase = home === '/' ? '' : home.replace(/\/$/, '');
+const casosHref = homeBase === '' ? '/#casos' : `${homeBase}/#casos`;
+const contactHref = homeBase === '' ? '/#contacto' : `${homeBase}/#contacto`;
+
+const servicePages = getRebrandServices(lang);
+const serviceLabelBySlug = Object.fromEntries(copy.offer.items.map((i) => [i.slug, i.title])) as Record<
+  string,
+  string
+>;
+
+const langCodes: RebrandLang[] = ['es', 'en', 'it'];
+
+const menuToggleLabel: Record<RebrandLang, string> = {
+  es: 'Abrir o cerrar menú',
+  en: 'Open or close menu',
+  it: 'Apri o chiudi menu',
+};
+---
+
+<header
+  class="jpr2-header sticky top-0 z-50 border-b border-white/10 bg-jpr2-midnight/90 backdrop-blur-md"
+  style="--jpr2-navy: #1f2d4e"
+>
+  <div class="container max-w-6xl flex min-h-[4.75rem] items-center justify-between gap-4 py-2.5">
+    <a href={home} class="text-lg font-extrabold tracking-tight text-jpr2-crema shrink-0">
+      {copy.header.logo}
+    </a>
+
+    <div class="hidden md:flex flex-1 flex-wrap items-center justify-end gap-3 lg:gap-4">
+      <nav class="flex flex-wrap items-center gap-0.5 lg:gap-1" aria-label="Principal">
+      <a
+        href={casosHref}
+        class="px-2.5 py-2 text-sm font-medium text-jpr2-crema/85 hover:text-jpr2-mustard transition-colors"
+      >
+        {copy.nav.success}
+      </a>
+
+      <div class="group relative">
+        <button
+          type="button"
+          class="flex items-center gap-1 rounded-md px-2.5 py-2 text-sm font-medium text-jpr2-crema/85 outline-none transition-colors hover:text-jpr2-mustard group-hover:text-jpr2-mustard focus-visible:ring-2 focus-visible:ring-jpr2-mustard/70"
+          aria-haspopup="true"
+          aria-expanded="false"
+          aria-controls="jpr2-nav-servicios-panel"
+        >
+          {copy.nav.services}
+          <svg
+            class="h-4 w-4 shrink-0 opacity-80 transition-transform duration-200 group-hover:-rotate-180 group-focus-within:-rotate-180"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            aria-hidden="true"
+          >
+            <path d="m6 9 6 6 6-6" />
+          </svg>
+        </button>
+        <div
+          id="jpr2-nav-servicios-panel"
+          role="menu"
+          aria-label={copy.nav.services}
+          class="pointer-events-none invisible absolute left-0 top-full z-[60] pt-1 opacity-0 transition-[opacity,visibility] duration-150 group-hover:pointer-events-auto group-hover:visible group-hover:opacity-100 group-focus-within:pointer-events-auto group-focus-within:visible group-focus-within:opacity-100"
+        >
+          <div
+            class="min-w-[16rem] rounded-xl border border-white/15 bg-jpr2-midnight-soft py-1 shadow-[0_16px_40px_rgba(5,9,18,0.45)]"
+          >
+            {
+              servicePages.map((s) => (
+                <a
+                  role="menuitem"
+                  href={rebrandServicePath(s.slug, lang)}
+                  class="block px-4 py-2.5 text-sm text-jpr2-crema/90 transition-colors hover:bg-white/10 hover:text-jpr2-mustard"
+                >
+                  {serviceLabelBySlug[s.slug] ?? s.title}
+                </a>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+      </nav>
+
+      <div
+        class="flex items-center gap-0.5 border-l border-white/15 pl-3"
+        role="navigation"
+        aria-label={copy.nav.language}
+      >
+        {
+          langCodes.map((code) => (
+            <a
+              href={rebrandSwitchPath(pathname, code)}
+              hreflang={code === 'es' ? 'es-MX' : code === 'en' ? 'en' : 'it'}
+              aria-current={code === lang ? 'page' : undefined}
+              class:list={[
+                'rounded-md px-2 py-1 text-xs font-bold tracking-wide transition-colors',
+                code === lang
+                  ? 'bg-white/15 text-jpr2-mustard'
+                  : 'text-jpr2-crema/70 hover:bg-white/10 hover:text-jpr2-mustard',
+              ]}
+            >
+              {copy.lang[code]}
+            </a>
+          ))
+        }
+      </div>
+
+      <a
+        href={contactHref}
+        class="inline-flex items-center rounded-full border border-white/25 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-jpr2-crema hover:bg-white/20 hover:text-jpr2-mustard"
+      >
+        {copy.nav.contact}
+      </a>
+    </div>
+
+    <button
+      type="button"
+      id="jpr2-menu-toggle"
+      class="inline-flex md:hidden items-center justify-center rounded-lg border border-white/20 p-2.5 text-jpr2-crema transition-colors hover:border-white/35 hover:bg-white/10 hover:text-jpr2-mustard focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-jpr2-mustard/70"
+      aria-controls="jpr2-mobile-menu"
+      aria-expanded="false"
+      aria-label={menuToggleLabel[lang]}
+    >
+      <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path
+          id="jpr2-menu-icon-path"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16"
+        />
+      </svg>
+    </button>
+  </div>
+
+  <div id="jpr2-mobile-menu" class="hidden border-t border-white/10 bg-jpr2-midnight/95 md:hidden">
+    <nav class="container max-w-6xl py-3" aria-label="Principal móvil">
+      <div class="flex flex-col">
+        <a
+          href={casosHref}
+          class="jpr2-mobile-nav-link px-4 py-3 text-sm font-medium text-jpr2-crema/90 transition-colors hover:bg-white/5 hover:text-jpr2-mustard rounded-lg"
+        >
+          {copy.nav.success}
+        </a>
+        <p class="px-4 pt-1 pb-0.5 text-xs font-semibold uppercase tracking-wide text-jpr2-crema/45">
+          {copy.nav.services}
+        </p>
+        {
+          servicePages.map((s) => (
+            <a
+              href={rebrandServicePath(s.slug, lang)}
+              class="jpr2-mobile-nav-link px-4 py-2.5 pl-6 text-sm text-jpr2-crema/85 transition-colors hover:bg-white/5 hover:text-jpr2-mustard rounded-lg"
+            >
+              {serviceLabelBySlug[s.slug] ?? s.title}
+            </a>
+          ))
+        }
+        <div class="border-t border-white/10 px-4 py-3">
+          <p class="text-xs font-semibold uppercase tracking-wide text-jpr2-crema/45">{copy.nav.language}</p>
+          <div class="mt-2 flex flex-wrap gap-2">
+            {
+              langCodes.map((code) => (
+                <a
+                  href={rebrandSwitchPath(pathname, code)}
+                  class:list={[
+                    'jpr2-mobile-lang-link rounded-md px-3 py-1.5 text-xs font-bold transition-colors',
+                    code === lang
+                      ? 'bg-white/15 text-jpr2-mustard'
+                      : 'text-jpr2-crema/85 hover:bg-white/10 hover:text-jpr2-mustard',
+                  ]}
+                  aria-current={code === lang ? 'page' : undefined}
+                >
+                  {copy.lang[code]}
+                </a>
+              ))
+            }
+          </div>
+        </div>
+        <a
+          href={contactHref}
+          class="jpr2-mobile-nav-link mt-2 border-t border-white/10 px-4 py-3 text-center text-sm font-semibold uppercase tracking-wide text-jpr2-mustard transition-colors hover:bg-white/5 rounded-b-lg"
+        >
+          {copy.nav.contact}
+        </a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const toggle = document.getElementById('jpr2-menu-toggle');
+  const menu = document.getElementById('jpr2-mobile-menu');
+  const path = document.getElementById('jpr2-menu-icon-path');
+  const hamburger = 'M4 6h16M4 12h16M4 18h16';
+  const closeIcon = 'M6 18L18 6M6 6l12 12';
+
+  function closeMenu() {
+    menu?.classList.add('hidden');
+    path?.setAttribute('d', hamburger);
+    toggle?.setAttribute('aria-expanded', 'false');
+  }
+
+  toggle?.addEventListener('click', () => {
+    const willOpen = menu?.classList.contains('hidden');
+    menu?.classList.toggle('hidden');
+    if (willOpen) {
+      path?.setAttribute('d', closeIcon);
+      toggle?.setAttribute('aria-expanded', 'true');
+    } else {
+      path?.setAttribute('d', hamburger);
+      toggle?.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  document.querySelectorAll('.jpr2-mobile-nav-link, .jpr2-mobile-lang-link').forEach((link) => {
+    link.addEventListener('click', closeMenu);
+  });
+</script>

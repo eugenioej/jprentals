@@ -1,0 +1,54 @@
+---
+import type { RebrandHomeCopy } from '@/i18n/rebrand/home';
+
+interface Props {
+  copy: RebrandHomeCopy;
+}
+
+const { copy } = Astro.props;
+const statIcons = ['badge-check', 'ruler', 'map-pinned'];
+---
+
+<section
+  class="border-b border-white/10 bg-jpr2-midnight -mt-px shadow-[0_1px_0_0_rgba(232,179,62,0.12)]"
+  aria-label="Cifras"
+>
+  <div class="container max-w-6xl py-10 md:py-14">
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-10 text-center sm:text-left">
+      {
+        copy.stats.items.map((s, i) => (
+          <div class="jpr2-fade" style={`transition-delay: ${i * 60}ms`}>
+            <div class="mb-2.5 flex items-center justify-center sm:justify-start">
+              <i
+                data-lucide={statIcons[i] ?? 'circle'}
+                class="h-5 w-5 text-jpr2-mustard/95"
+                aria-hidden="true"
+              />
+            </div>
+            <div class="text-3xl md:text-4xl font-extrabold text-jpr2-mustard tabular-nums drop-shadow-sm">
+              {s.value}
+            </div>
+            <p class="mt-1.5 text-sm font-medium leading-snug text-jpr2-crema/75">
+              {s.label}
+            </p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+
+<script is:inline src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<script is:inline>
+  const renderStatsLucide = () => {
+    if (window.lucide?.createIcons) {
+      window.lucide.createIcons();
+    }
+  };
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', renderStatsLucide, { once: true });
+  } else {
+    renderStatsLucide();
+  }
+</script>
