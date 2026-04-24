@@ -32,11 +32,11 @@ const menuToggleLabel: Record<RebrandLang, string> = {
 ---
 
 <header
-  class="jpr2-header sticky top-0 z-50 border-b border-white/10 bg-jpr2-midnight/90 backdrop-blur-md"
+  class="jpr2-header sticky top-0 z-50 border-b border-jpr2-navy/10 bg-white/95 shadow-sm backdrop-blur-md"
   style="--jpr2-navy: #1f2d4e"
 >
   <div class="container max-w-6xl flex min-h-[4.75rem] items-center justify-between gap-4 py-2.5">
-    <a href={home} class="text-lg font-extrabold tracking-tight text-jpr2-crema shrink-0">
+    <a href={home} class="text-lg font-extrabold tracking-tight text-jpr2-navy uppercase shrink-0">
       {copy.header.logo}
     </a>
 
@@ -44,7 +44,7 @@ const menuToggleLabel: Record<RebrandLang, string> = {
       <nav class="flex flex-wrap items-center gap-0.5 lg:gap-1" aria-label="Principal">
       <a
         href={casosHref}
-        class="px-2.5 py-2 text-sm font-medium text-jpr2-crema/85 hover:text-jpr2-mustard transition-colors"
+        class="px-2.5 py-2 text-sm font-medium text-jpr2-ink/90 hover:text-jpr2-coral transition-colors"
       >
         {copy.nav.success}
       </a>
@@ -52,7 +52,7 @@ const menuToggleLabel: Record<RebrandLang, string> = {
       <div class="group relative">
         <button
           type="button"
-          class="flex items-center gap-1 rounded-md px-2.5 py-2 text-sm font-medium text-jpr2-crema/85 outline-none transition-colors hover:text-jpr2-mustard group-hover:text-jpr2-mustard focus-visible:ring-2 focus-visible:ring-jpr2-mustard/70"
+          class="flex items-center gap-1 rounded-md px-2.5 py-2 text-sm font-medium text-jpr2-ink/90 outline-none transition-colors hover:text-jpr2-coral group-hover:text-jpr2-coral focus-visible:ring-2 focus-visible:ring-jpr2-mustard/70"
           aria-haspopup="true"
           aria-expanded="false"
           aria-controls="jpr2-nav-servicios-panel"
@@ -76,14 +76,14 @@ const menuToggleLabel: Record<RebrandLang, string> = {
           class="pointer-events-none invisible absolute left-0 top-full z-[60] pt-1 opacity-0 transition-[opacity,visibility] duration-150 group-hover:pointer-events-auto group-hover:visible group-hover:opacity-100 group-focus-within:pointer-events-auto group-focus-within:visible group-focus-within:opacity-100"
         >
           <div
-            class="min-w-[16rem] rounded-xl border border-white/15 bg-jpr2-midnight-soft py-1 shadow-[0_16px_40px_rgba(5,9,18,0.45)]"
+            class="min-w-[16rem] rounded-xl border border-jpr2-navy/10 bg-white py-1 shadow-[0_12px_40px_rgba(31,45,78,0.12)]"
           >
             {
               servicePages.map((s) => (
                 <a
                   role="menuitem"
                   href={rebrandServicePath(s.slug, lang)}
-                  class="block px-4 py-2.5 text-sm text-jpr2-crema/90 transition-colors hover:bg-white/10 hover:text-jpr2-mustard"
+                  class="block px-4 py-2.5 text-sm text-jpr2-ink/90 transition-colors hover:bg-jpr2-crema hover:text-jpr2-coral"
                 >
                   {serviceLabelBySlug[s.slug] ?? s.title}
                 </a>
@@ -95,7 +95,7 @@ const menuToggleLabel: Record<RebrandLang, string> = {
       </nav>
 
       <div
-        class="flex items-center gap-0.5 border-l border-white/15 pl-3"
+        class="flex items-center gap-0.5 border-l border-jpr2-navy/15 pl-3"
         role="navigation"
         aria-label={copy.nav.language}
       >
@@ -108,8 +108,8 @@ const menuToggleLabel: Record<RebrandLang, string> = {
               class:list={[
                 'rounded-md px-2 py-1 text-xs font-bold tracking-wide transition-colors',
                 code === lang
-                  ? 'bg-white/15 text-jpr2-mustard'
-                  : 'text-jpr2-crema/70 hover:bg-white/10 hover:text-jpr2-mustard',
+                  ? 'bg-jpr2-crema text-jpr2-navy'
+                  : 'text-jpr2-muted hover:bg-jpr2-crema/70 hover:text-jpr2-coral',
               ]}
             >
               {copy.lang[code]}
@@ -120,7 +120,7 @@ const menuToggleLabel: Record<RebrandLang, string> = {
 
       <a
         href={contactHref}
-        class="inline-flex items-center rounded-full border border-white/25 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-jpr2-crema hover:bg-white/20 hover:text-jpr2-mustard"
+        class="inline-flex items-center rounded-full border border-jpr2-navy/20 bg-jpr2-crema px-4 py-2 text-xs font-semibold uppercase tracking-wide text-jpr2-navy hover:border-jpr2-coral/40 hover:bg-white hover:text-jpr2-coral"
       >
         {copy.nav.contact}
       </a>
@@ -129,7 +129,7 @@ const menuToggleLabel: Record<RebrandLang, string> = {
     <button
       type="button"
       id="jpr2-menu-toggle"
-      class="inline-flex md:hidden items-center justify-center rounded-lg border border-white/20 p-2.5 text-jpr2-crema transition-colors hover:border-white/35 hover:bg-white/10 hover:text-jpr2-mustard focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-jpr2-mustard/70"
+      class="inline-flex md:hidden items-center justify-center rounded-lg border border-jpr2-navy/20 p-2.5 text-jpr2-navy transition-colors hover:border-jpr2-navy/40 hover:bg-jpr2-crema hover:text-jpr2-coral focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-jpr2-mustard/70"
       aria-controls="jpr2-mobile-menu"
       aria-expanded="false"
       aria-label={menuToggleLabel[lang]}
@@ -146,30 +146,30 @@ const menuToggleLabel: Record<RebrandLang, string> = {
     </button>
   </div>
 
-  <div id="jpr2-mobile-menu" class="hidden border-t border-white/10 bg-jpr2-midnight/95 md:hidden">
+  <div id="jpr2-mobile-menu" class="hidden border-t border-jpr2-navy/10 bg-jpr2-crema md:hidden">
     <nav class="container max-w-6xl py-3" aria-label="Principal móvil">
       <div class="flex flex-col">
         <a
           href={casosHref}
-          class="jpr2-mobile-nav-link px-4 py-3 text-sm font-medium text-jpr2-crema/90 transition-colors hover:bg-white/5 hover:text-jpr2-mustard rounded-lg"
+          class="jpr2-mobile-nav-link px-4 py-3 text-sm font-medium text-jpr2-ink/90 transition-colors hover:bg-white/80 hover:text-jpr2-coral rounded-lg"
         >
           {copy.nav.success}
         </a>
-        <p class="px-4 pt-1 pb-0.5 text-xs font-semibold uppercase tracking-wide text-jpr2-crema/45">
+        <p class="px-4 pt-1 pb-0.5 text-xs font-semibold uppercase tracking-wide text-jpr2-muted">
           {copy.nav.services}
         </p>
         {
           servicePages.map((s) => (
             <a
               href={rebrandServicePath(s.slug, lang)}
-              class="jpr2-mobile-nav-link px-4 py-2.5 pl-6 text-sm text-jpr2-crema/85 transition-colors hover:bg-white/5 hover:text-jpr2-mustard rounded-lg"
+              class="jpr2-mobile-nav-link px-4 py-2.5 pl-6 text-sm text-jpr2-ink/85 transition-colors hover:bg-white/80 hover:text-jpr2-coral rounded-lg"
             >
               {serviceLabelBySlug[s.slug] ?? s.title}
             </a>
           ))
         }
-        <div class="border-t border-white/10 px-4 py-3">
-          <p class="text-xs font-semibold uppercase tracking-wide text-jpr2-crema/45">{copy.nav.language}</p>
+        <div class="border-t border-jpr2-navy/10 px-4 py-3">
+          <p class="text-xs font-semibold uppercase tracking-wide text-jpr2-muted">{copy.nav.language}</p>
           <div class="mt-2 flex flex-wrap gap-2">
             {
               langCodes.map((code) => (
@@ -178,8 +178,8 @@ const menuToggleLabel: Record<RebrandLang, string> = {
                   class:list={[
                     'jpr2-mobile-lang-link rounded-md px-3 py-1.5 text-xs font-bold transition-colors',
                     code === lang
-                      ? 'bg-white/15 text-jpr2-mustard'
-                      : 'text-jpr2-crema/85 hover:bg-white/10 hover:text-jpr2-mustard',
+                      ? 'bg-white text-jpr2-navy ring-1 ring-jpr2-navy/15'
+                      : 'text-jpr2-ink/80 hover:bg-white/80 hover:text-jpr2-coral',
                   ]}
                   aria-current={code === lang ? 'page' : undefined}
                 >
@@ -191,7 +191,7 @@ const menuToggleLabel: Record<RebrandLang, string> = {
         </div>
         <a
           href={contactHref}
-          class="jpr2-mobile-nav-link mt-2 border-t border-white/10 px-4 py-3 text-center text-sm font-semibold uppercase tracking-wide text-jpr2-mustard transition-colors hover:bg-white/5 rounded-b-lg"
+          class="jpr2-mobile-nav-link mt-2 border-t border-jpr2-navy/10 px-4 py-3 text-center text-sm font-semibold uppercase tracking-wide text-jpr2-coral transition-colors hover:bg-white/80 rounded-b-lg"
         >
           {copy.nav.contact}
         </a>

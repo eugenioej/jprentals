@@ -8,10 +8,10 @@
     "logo": "JP Rentals"
   },
   "nav": {
-    "success": "Casi di successo",
-    "offer": "Offerta",
+    "success": "Progetti",
+    "offer": "I nostri servizi",
     "contact": "Contatti",
-    "services": "Servizi",
+    "services": "I nostri servizi",
     "language": "Lingua"
   },
   "lang": {
@@ -25,8 +25,8 @@
     "mailtoBody": "Salve,\n\nVorrei informazioni su un progetto di struttura o coperture.\n\nProgetto o località: \nAmbito indicativo: \n\nGrazie."
   },
   "hero": {
-    "eyebrow": "Struttura · Involucro · Acciaio",
-    "headline": "Ingegneria di strutture in acciaio e involucro per industria e investimenti a livello nazionale",
+    "eyebrow": "Struttura · Acciaio",
+    "headline": "Struttura e involucro industriale in tutto il paese",
     "sub": "Coordiniamo fornitura, fabbricazione e montaggio con attenzione a tempi, qualità e documentazione. Casi con capannoni, coperture, facciate e interventi strutturali in diversi impianti e stati.",
     "emailCta": "Scrivere per email",
     "contactAnchor": "Contatto in pagina"
@@ -39,16 +39,16 @@
       },
       {
         "value": "15 400 m²",
-        "label": "Copertura riferimento (progetto)"
+        "label": "Maggiore copertura (ref.)"
       },
       {
         "value": "Messico",
-        "label": "Copertura ed esecuzione nazionali"
+        "label": "Progetti in tutto il paese"
       }
     ]
   },
   "successCases": {
-    "title": "Casi di successo",
+    "title": "Progetti",
     "viewProject": "Vedi progetto",
     "subtitle": "",
     "carousel": {
@@ -67,7 +67,7 @@
         "year": "2026",
         "id": "coca-cola-fleteo-2026",
         "client": "Coca-Cola (Arca Continental)",
-        "title": "Struttura per copertura del magazzino fletaggio",
+        "title": "Copertura fletaggio",
         "location": "Monterrey, N.L.",
         "area": "3.500 m²",
         "steel": "370 t",
@@ -83,7 +83,7 @@
         "year": "2026",
         "id": "kandelium-2026",
         "client": "Kandelium",
-        "title": "Struttura e rivestimento (zona scaglia e imballo)",
+        "title": "Rivestimento (scaglia e imballo)",
         "location": "Carretera a García, N.L.",
         "area": "972 m²",
         "steel": "79 t",
@@ -104,7 +104,7 @@
         "year": "2025",
         "id": "motomex-kontar-ii-2025",
         "client": "Motomex (CEDIS II) — Nave Kontar II",
-        "title": "Struttura e chiusure CEDIS II",
+        "title": "CEDIS II: struttura e chiusure",
         "location": "WTC parco industriale La Pila, San Luis Potosí",
         "area": "15.400 m²",
         "steel": "580 t",
@@ -124,7 +124,7 @@
         "year": "2024",
         "id": "nave-mod-4-2024",
         "client": "Nave Mod 4",
-        "title": "Capannone multi-tenant",
+        "title": "Multi-tenant",
         "location": "Guadalupe, N.L.",
         "area": "5.773 m²",
         "steel": "46 t",
@@ -141,7 +141,7 @@
         "year": "2023",
         "id": "daye-hoffsan-2023",
         "client": "Parque Industrial Hoffsan (progetto Daye)",
-        "title": "Nave principale e soppalchi uffici",
+        "title": "Nave e soppalchi",
         "location": "Salinas Victoria, N.L.",
         "area": "7.950 m²",
         "steel": "332 t",
@@ -158,7 +158,7 @@
         "year": "2025",
         "id": "motomex-cedis-i-2025",
         "client": "Motomex (CEDIS I)",
-        "title": "Struttura e chiusure CEDIS I",
+        "title": "CEDIS I: struttura e chiusure",
         "location": "WTC parco industriale La Pila, San Luis Potosí",
         "area": "3.840 m²",
         "steel": "90 t",
@@ -172,23 +172,23 @@
     ]
   },
   "offer": {
-    "title": "Cosa facciamo",
+    "title": "I nostri servizi",
     "subtitle": "",
     "detailLinkLabel": "Scopri il servizio",
     "items": [
       {
         "slug": "estructura-metalica",
-        "title": "Struttura metallica",
+        "title": "Struttura",
         "body": "Progettazione assistita, disegno esecutivo, lavorazione e posa in cantiere con controlli qualitativi."
       },
       {
         "slug": "lamina-acabado-envolvente",
-        "title": "Copertura e involucro",
+        "title": "Lamiera e involucro",
         "body": "Profili commerciali (p.es. KR-18), fassade e pannellature secondo ipt; chiusure in cantiere."
       },
       {
         "slug": "reparacion-refuerzo-entre-pisos",
-        "title": "Interventi e soppalchi",
+        "title": "Rinforzi e soppalchi",
         "body": "Consolidamenti, soppalchi, Losacero 15, adeguamenti con interruzioni minime all’esercizio."
       }
     ]
@@ -234,13 +234,13 @@
   },
   "about": {
     "eyebrow": "Chi siamo",
-    "title": "JP Rentals è un punto di riferimento nazionale per strutture in acciaio e involucro industriale",
+    "title": "Struttura e involucro su scala nazionale",
     "body1": "Realizziamo progetti con visione d’impresa, precisione tecnica e disciplina operativa. Il nostro approccio unisce ingegneria, fabbricazione e montaggio per consegnare opere ad alto impatto, con standard rigorosi di qualità, sicurezza e rispetto dei tempi.",
     "body2": "Più di un appaltatore, siamo un partner strategico per le aziende che cercano risultati solidi su tempistiche reali. Per questo organizzazioni industriali in tutto il Messico si affidano a JP Rentals per progetti strutturali critici.",
     "imageAlt": "JP Rentals in cantiere per strutture e involucro"
   },
   "group": {
-    "title": "JP Rentals fa parte di Grupo NASA",
+    "title": "Grupo NASA",
     "intro": "Stessi standard di esecuzione, fabbricazione e controllo qualità, con capacità complementari all’interno del gruppo.",
     "nacionalTitle": "Nacional de Anclas",
     "nacionalUrl": "nacionaldeanclas.com",
@@ -250,9 +250,9 @@
     "nasaceroBody": "Taglio specializzato dell’acciaio: plasma, laser, ossitaglio e ghigliottina."
   },
   "projectPage": {
-    "backToCases": "Torna ai casi di successo",
-    "detailsTitle": "Dati generali del progetto",
-    "galleryTitle": "Galleria del progetto",
+    "backToCases": "Torna ai progetti",
+    "detailsTitle": "Progetto",
+    "galleryTitle": "Galleria",
     "galleryHint": "Fai clic su un’immagine per ingrandirla.",
     "openImageAria": "Apri immagine {n} a schermo intero",
     "lightboxAria": "Galleria a schermo intero",
@@ -262,6 +262,6 @@
     "lightboxCaption": "Immagine {current} di {total}"
   },
   "servicePage": {
-    "backToOffer": "Torna a Cosa facciamo"
+    "backToOffer": "Torna ai nostri servizi"
   }
 }

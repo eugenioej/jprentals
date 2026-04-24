@@ -10,7 +10,7 @@ html.rebrand-home {
 }
 
 .rebrand-home {
-  /* Navy base; midnight = mismo matiz, más profundo (ancoraje oscuro) */
+  /* Navy + tokens de acento; midnight reservado por compatibilidad (no usado en superficies claras) */
   --jpr2-navy: #1f2d4e;
   --jpr2-navy-deep: #141d33;
   --jpr2-midnight: #0a0f1e;
@@ -25,7 +25,7 @@ html.rebrand-home {
   --jpr2-line: rgba(31, 45, 78, 0.12);
   --jpr2-line-on-mist: rgba(15, 24, 45, 0.1);
   --jpr2-shadow: 0 24px 64px rgba(20, 29, 51, 0.12);
-  --jpr2-shadow-ink: 0 20px 50px rgba(5, 9, 18, 0.45);
+  --jpr2-shadow-ink: 0 16px 40px rgba(31, 45, 78, 0.1);
   color: var(--jpr2-ink);
   background-color: var(--jpr2-crema);
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
@@ -83,14 +83,14 @@ html.rebrand-home {
   font-weight: 600;
   font-size: 0.875rem;
   border-radius: 0.5rem;
-  border: 2px solid #f2efea;
-  color: #f2efea;
+  border: 2px solid var(--jpr2-navy);
+  color: var(--jpr2-navy);
   background: transparent;
   transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 .jpr2-btn-hero-ghost:hover {
-  background: #f2efea;
-  color: var(--jpr2-navy);
+  background: var(--jpr2-navy);
+  color: var(--jpr2-crema);
 }
 
 .jpr2-btn-coral-ghost {
@@ -159,15 +159,7 @@ html.rebrand-home {
 }
 
 .rebrand-hero-mesh {
-  background:
-    radial-gradient(ellipse 80% 50% at 20% 40%, rgba(232, 179, 62, 0.2), transparent 55%),
-    radial-gradient(ellipse 60% 50% at 80% 20%, rgba(200, 67, 58, 0.12), transparent 50%),
-    linear-gradient(
-      180deg,
-      var(--jpr2-navy) 0%,
-      var(--jpr2-navy-deep) 42%,
-      var(--jpr2-midnight) 100%
-    );
+  background: #fff;
 }
 
 
@@ -235,19 +227,14 @@ html.rebrand-home {
   inset: 0;
   width: 100%;
   height: 100%;
+  min-width: 100%;
+  min-height: 100%;
   object-fit: cover;
+  object-position: center;
   opacity: 0;
   transform: scale(1.08) translate3d(0, 0, 0);
   animation: jpr2HeroBgFade 36s ease-in-out infinite, jpr2HeroBgDrift 36s ease-in-out infinite;
   will-change: opacity, transform;
-}
-
-.jpr2-hero-veil {
-  z-index: 1;
-  background:
-    linear-gradient(180deg, rgba(10, 15, 30, 0.62) 0%, rgba(10, 15, 30, 0.78) 55%, rgba(10, 15, 30, 0.88) 100%),
-    radial-gradient(ellipse at 20% 18%, rgba(232, 179, 62, 0.11), transparent 45%),
-    radial-gradient(ellipse at 80% 14%, rgba(200, 67, 58, 0.11), transparent 45%);
 }
 
 @keyframes jpr2HeroBgFade {
@@ -273,23 +260,29 @@ html.rebrand-home {
   }
 }
 
-.rebrand-hero-mesh .jpr2-eyebrow {
-  color: #fff;
-}
-
-
 /* Header + Hero presence control */
 .jpr2-header {
-  --jpr2-header-h: 7.5rem; /* mobile includes secondary nav row */
-}
-@media (min-width: 768px) {
-  .jpr2-header {
-    --jpr2-header-h: 4.75rem;
-  }
+  --jpr2-header-h: 4.75rem;
 }
 
 .jpr2-hero-frame {
   height: calc(100svh - var(--jpr2-header-h, 7.5rem));
   min-height: calc(100svh - var(--jpr2-header-h, 7.5rem));
   max-height: calc(var(--jpr2-hero-max-h, 61rem) - var(--jpr2-header-h, 7.5rem));
+}
+
+/* Títulos en mayúsculas; H2 con más peso visual */
+.rebrand-home h1,
+.rebrand-home h2,
+.rebrand-home h3,
+.rebrand-home h4 {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.rebrand-home h2 {
+  font-size: clamp(1.9rem, 0.85rem + 3.4vw, 2.9rem) !important;
+  line-height: 1.12 !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.08em;
 }

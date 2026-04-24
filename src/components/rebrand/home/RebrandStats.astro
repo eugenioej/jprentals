@@ -10,7 +10,7 @@ const statIcons = ['badge-check', 'ruler', 'map-pinned'];
 ---
 
 <section
-  class="border-b border-white/10 bg-jpr2-midnight -mt-px shadow-[0_1px_0_0_rgba(232,179,62,0.12)]"
+  class="border-b border-jpr2-navy/10 bg-jpr2-crema -mt-px shadow-[0_1px_0_0_rgba(31,45,78,0.08)]"
   aria-label="Cifras"
 >
   <div class="container max-w-6xl py-10 md:py-14">
@@ -21,14 +21,14 @@ const statIcons = ['badge-check', 'ruler', 'map-pinned'];
             <div class="mb-2.5 flex items-center justify-center sm:justify-start">
               <i
                 data-lucide={statIcons[i] ?? 'circle'}
-                class="h-5 w-5 text-jpr2-mustard/95"
+                class="h-5 w-5 text-jpr2-coral"
                 aria-hidden="true"
               />
             </div>
-            <div class="text-3xl md:text-4xl font-extrabold text-jpr2-mustard tabular-nums drop-shadow-sm">
+            <div class="text-3xl md:text-4xl font-extrabold text-jpr2-navy tabular-nums">
               {s.value}
             </div>
-            <p class="mt-1.5 text-sm font-medium leading-snug text-jpr2-crema/75">
+            <p class="mt-1.5 text-sm font-medium leading-snug text-jpr2-ink/75">
               {s.label}
             </p>
           </div>

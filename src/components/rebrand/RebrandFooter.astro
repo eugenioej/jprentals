@@ -15,26 +15,26 @@ const home = rebrandHomePath(lang);
 ---
 
 <footer
-  class="mt-0 border-t-2 border-jpr2-mustard/30 bg-jpr2-midnight text-jpr2-crema shadow-[0_-8px_40px_rgba(0,0,0,0.2)]"
+  class="mt-0 border-t border-jpr2-navy/10 bg-jpr2-crema text-jpr2-ink shadow-[0_-4px_24px_rgba(31,45,78,0.04)]"
 >
   <div class="container max-w-6xl py-14">
     {copy.footer.itNote && (
-      <p class="text-sm text-jpr2-crema/80 mb-8 max-w-2xl leading-relaxed jpr2-fade">
+      <p class="text-sm text-jpr2-ink/80 mb-8 max-w-2xl leading-relaxed jpr2-fade">
         {copy.footer.itNote}
       </p>
     )}
 
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 mb-12">
       <div>
-        <div class="text-xl font-extrabold tracking-tight mb-3">{copy.header.logo}</div>
-        <p class="text-sm text-jpr2-crema/75 leading-relaxed max-w-sm">
+        <div class="text-xl font-extrabold tracking-tight text-jpr2-navy mb-3">{copy.header.logo}</div>
+        <p class="text-sm text-jpr2-ink/75 leading-relaxed max-w-sm">
           {copy.footer.description}
         </p>
         <div class="mt-5 space-y-1.5 text-sm">
           {
             copy.cta.emails.map((e) => (
               <a
-                class="block font-medium text-jpr2-mustard/95 break-all hover:underline"
+                class="block font-medium text-jpr2-coral break-all hover:underline"
                 href={`mailto:${e.address}`}
               >
                 {e.address}
@@ -44,27 +44,27 @@ const home = rebrandHomePath(lang);
         </div>
         <a
           href={links.legacyHome}
-          class="mt-3 block text-sm text-jpr2-crema/70 hover:text-jpr2-mustard hover:underline"
+          class="mt-3 block text-sm text-jpr2-muted hover:text-jpr2-coral hover:underline"
         >
           {copy.footer.legacy}
         </a>
       </div>
 
       <div>
-        <h4 class="text-xs font-bold uppercase tracking-widest text-jpr2-crema/50 mb-4">
+        <h4 class="text-xs font-bold uppercase tracking-widest text-jpr2-muted mb-4">
           {copy.footer.services}
         </h4>
-        <a href={links.industryPage} class="text-sm text-jpr2-crema/80 hover:text-jpr2-mustard transition-colors">
+        <a href={links.industryPage} class="text-sm text-jpr2-ink/85 hover:text-jpr2-coral transition-colors">
           {copy.footer.servicesLink}
         </a>
         {lang === 'it' && (
-          <p class="text-xs text-jpr2-crema/50 mt-4 max-w-xs">
+          <p class="text-xs text-jpr2-muted mt-4 max-w-xs">
             Sito:{' '}
-            <a class="underline hover:text-jpr2-mustard" href={rebrandHomePath('es')}>
+            <a class="underline hover:text-jpr2-coral" href={rebrandHomePath('es')}>
               ES
             </a>
             {' · '}
-            <a class="underline hover:text-jpr2-mustard" href={rebrandHomePath('en')}>
+            <a class="underline hover:text-jpr2-coral" href={rebrandHomePath('en')}>
               EN
             </a>
           </p>
@@ -72,16 +72,16 @@ const home = rebrandHomePath(lang);
       </div>
 
       <div>
-        <h4 class="text-xs font-bold uppercase tracking-widest text-jpr2-crema/50 mb-4">Legal</h4>
-        <a href={links.privacidad} class="text-sm text-jpr2-crema/80 hover:text-jpr2-mustard block">
+        <h4 class="text-xs font-bold uppercase tracking-widest text-jpr2-muted mb-4">Legal</h4>
+        <a href={links.privacidad} class="text-sm text-jpr2-ink/85 hover:text-jpr2-coral block">
           {copy.footer.legal}
         </a>
       </div>
     </div>
 
-    <p class="text-center text-xs text-jpr2-crema/45">
+    <p class="text-center text-xs text-jpr2-muted">
       © {new Date().getFullYear()} JP Rentals ·
-      <a class="hover:text-jpr2-mustard" href={home}>
+      <a class="text-jpr2-ink/80 hover:text-jpr2-coral" href={home}>
         {lang === 'en' ? 'Home' : lang === 'it' ? 'Home' : 'Inicio'}
       </a>
     </p>

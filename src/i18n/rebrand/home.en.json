@@ -8,10 +8,10 @@
     "logo": "JP Rentals"
   },
   "nav": {
-    "success": "Success stories",
-    "offer": "What we offer",
+    "success": "Projects",
+    "offer": "Our services",
     "contact": "Contact",
-    "services": "Services",
+    "services": "Our services",
     "language": "Language"
   },
   "lang": {
@@ -25,8 +25,8 @@
     "mailtoBody": "Hello,\n\nI would like information on a structure or decking project.\n\nProject or location: \nApproximate scope: \n\nThank you."
   },
   "hero": {
-    "eyebrow": "Structure · Cladding · Steel",
-    "headline": "Structural steel and cladding engineering for industry and investors nationwide",
+    "eyebrow": "Structure · Steel",
+    "headline": "Industrial steel and cladding nationwide",
     "sub": "We coordinate supply, fabrication, and erection with a focus on schedule, quality, and documentation. References include warehouses, roofs, façades, and structural work across multiple plants and states.",
     "emailCta": "Email us",
     "contactAnchor": "Contact section"
@@ -39,16 +39,16 @@
       },
       {
         "value": "15,400 m²",
-        "label": "Largest roof area (reference project)"
+        "label": "Largest roof (reference)"
       },
       {
         "value": "MX coverage",
-        "label": "National reach and execution"
+        "label": "Projects across Mexico"
       }
     ]
   },
   "successCases": {
-    "title": "Success stories",
+    "title": "Projects",
     "viewProject": "View project",
     "subtitle": "",
     "carousel": {
@@ -67,7 +67,7 @@
         "year": "2026",
         "id": "coca-cola-fleteo-2026",
         "client": "Coca-Cola (Arca Continental)",
-        "title": "Structure for freight warehouse roof",
+        "title": "Freight roof",
         "location": "Monterrey, N.L.",
         "area": "3,500 m²",
         "steel": "370 t",
@@ -83,7 +83,7 @@
         "year": "2026",
         "id": "kandelium-2026",
         "client": "Kandelium",
-        "title": "Structure and cladding (scaling & packing area)",
+        "title": "Cladding (scaling & packing)",
         "location": "García highway area, N.L.",
         "area": "972 m²",
         "steel": "79 t",
@@ -104,7 +104,7 @@
         "year": "2025",
         "id": "motomex-kontar-ii-2025",
         "client": "Motomex (CEDIS II) — Nave Kontar II",
-        "title": "Structure and cladding for CEDIS II",
+        "title": "CEDIS II — structure & cladding",
         "location": "WTC La Pila Industrial Park, San Luis Potosí",
         "area": "15,400 m²",
         "steel": "580 t",
@@ -124,7 +124,7 @@
         "year": "2024",
         "id": "nave-mod-4-2024",
         "client": "Nave Mod 4",
-        "title": "Multi-tenant industrial building",
+        "title": "Multi-tenant building",
         "location": "Guadalupe, N.L.",
         "area": "5,773 m²",
         "steel": "46 t",
@@ -141,7 +141,7 @@
         "year": "2023",
         "id": "daye-hoffsan-2023",
         "client": "Hoffsan Industrial Park (Daye project)",
-        "title": "Main warehouse and mezzanines",
+        "title": "Warehouse & mezzanines",
         "location": "Salinas Victoria, N.L.",
         "area": "7,950 m²",
         "steel": "332 t",
@@ -158,7 +158,7 @@
         "year": "2025",
         "id": "motomex-cedis-i-2025",
         "client": "Motomex (CEDIS I)",
-        "title": "Structure and cladding CEDIS I",
+        "title": "CEDIS I — structure & cladding",
         "location": "WTC La Pila Industrial Park, San Luis Potosí",
         "area": "3,840 m²",
         "steel": "90 t",
@@ -172,23 +172,23 @@
     ]
   },
   "offer": {
-    "title": "What we do",
+    "title": "Our services",
     "subtitle": "",
     "detailLinkLabel": "View service",
     "items": [
       {
         "slug": "estructura-metalica",
-        "title": "Steel structure",
+        "title": "Structure",
         "body": "Assisted design, detailing, fabrication, and erection with QC for warehouses and industry."
       },
       {
         "slug": "lamina-acabado-envolvente",
-        "title": "Roof and envelope",
+        "title": "Sheeting & envelope",
         "body": "Commercial profiles (e.g. KR-18), wall and façade R panels or as per design, closed out on site."
       },
       {
         "slug": "reparacion-refuerzo-entre-pisos",
-        "title": "Retrofit, strengthening, and mezzanines",
+        "title": "Strengthening & mezzanines",
         "body": "Work on existing buildings, mezzanines, Losacero and adjustments with minimal disruption."
       }
     ]
@@ -234,13 +234,13 @@
   },
   "about": {
     "eyebrow": "About us",
-    "title": "JP Rentals is a national reference in industrial steel structures and cladding",
+    "title": "Steel and cladding at national scale",
     "body1": "We deliver projects with business sense, technical precision, and operational discipline. Our approach combines engineering, fabrication, and erection for high-impact work with demanding standards for quality, safety, and schedule.",
     "body2": "More than a contractor, we are a strategic partner for companies that need solid results on real timelines. Industrial organizations across Mexico rely on JP Rentals for critical structural projects.",
     "imageAlt": "JP Rentals on site for structure and cladding work"
   },
   "group": {
-    "title": "JP Rentals is part of Grupo NASA",
+    "title": "Grupo NASA",
     "intro": "The same standards for execution, fabrication, and quality control, with complementary capabilities across the group.",
     "nacionalTitle": "Nacional de Anclas",
     "nacionalUrl": "nacionaldeanclas.com",
@@ -250,9 +250,9 @@
     "nasaceroBody": "Specialized steel cutting: plasma, laser, oxy-fuel, and guillotine."
   },
   "projectPage": {
-    "backToCases": "Back to success stories",
-    "detailsTitle": "Project overview",
-    "galleryTitle": "Project gallery",
+    "backToCases": "Back to projects",
+    "detailsTitle": "Overview",
+    "galleryTitle": "Gallery",
     "galleryHint": "Click any image to view it full screen.",
     "openImageAria": "Open image {n} full screen",
     "lightboxAria": "Full-screen image gallery",
@@ -262,6 +262,6 @@
     "lightboxCaption": "Image {current} of {total}"
   },
   "servicePage": {
-    "backToOffer": "Back to What we do"
+    "backToOffer": "Back to our services"
   }
 }

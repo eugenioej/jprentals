@@ -11,7 +11,7 @@ interface Props {
 }
 
 const { copy, service, lang } = Astro.props;
-const backHref = `${rebrandHomePath(lang)}#oferta`;
+const backHref = `${rebrandHomePath(lang)}#servicios`;
 
 function encodeUrlPath(p: string): string {
   return `/${p
@@ -26,13 +26,13 @@ const gallery = service.gallery;
 ---
 
 <main class="bg-jpr2-crema">
-  <section class="border-b border-jpr2-navy/10 bg-jpr2-midnight pt-28 pb-12 text-white md:pt-32 md:pb-16">
+  <section class="border-b border-jpr2-navy/10 bg-white pt-28 pb-12 md:pt-32 md:pb-16">
     <div class="container max-w-6xl">
       <div class="grid items-center gap-10 lg:grid-cols-12 lg:gap-12">
         <div class="lg:col-span-6">
           <a
             href={backHref}
-            class="inline-flex items-center gap-2 text-sm font-medium text-white/85 transition-colors hover:text-white"
+            class="inline-flex items-center gap-2 text-sm font-medium text-jpr2-ink/75 transition-colors hover:text-jpr2-coral"
           >
             <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
               <path d="M15 18l-6-6 6-6" />
@@ -40,12 +40,12 @@ const gallery = service.gallery;
             {copy.servicePage.backToOffer}
           </a>
           <p class="mt-6 text-xs font-bold uppercase tracking-[0.2em] text-jpr2-coral">{service.eyebrow}</p>
-          <h1 class="mt-3 text-3xl font-extrabold leading-tight md:text-4xl lg:text-[2.35rem] lg:leading-tight">
+          <h1 class="mt-3 text-3xl font-extrabold leading-tight text-jpr2-navy md:text-4xl lg:text-[2.35rem] lg:leading-tight">
             {service.title}
           </h1>
-          <p class="mt-4 text-base leading-relaxed text-white/88 md:text-lg">{service.lead}</p>
+          <p class="mt-4 text-base leading-relaxed text-jpr2-ink/85 md:text-lg">{service.lead}</p>
         </div>
-        <figure class="relative overflow-hidden rounded-2xl border border-white/15 shadow-[0_20px_50px_rgba(5,9,18,0.45)] lg:col-span-6">
+        <figure class="relative overflow-hidden rounded-2xl border border-jpr2-navy/10 bg-white shadow-[0_12px_40px_rgba(31,45,78,0.1)] lg:col-span-6">
           <div class="aspect-[4/3] w-full sm:aspect-[16/10] lg:aspect-[5/4]">
             <img
               src={heroSrc}
@@ -58,10 +58,6 @@ const gallery = service.gallery;
               fetchpriority="high"
             />
           </div>
-          <div
-            class="pointer-events-none absolute inset-0 bg-gradient-to-tr from-jpr2-midnight/25 via-transparent to-transparent"
-            aria-hidden="true"
-          />
         </figure>
       </div>
     </div>
