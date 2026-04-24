@@ -34,16 +34,16 @@
   "stats": {
     "items": [
       {
-        "value": "15+",
-        "label": "Años de operación"
+        "value": "+30",
+        "label": "Años de experiencia"
       },
       {
-        "value": "15 400 m²",
-        "label": "Mayor cubierta (referencia)"
+        "value": "20K",
+        "label": "Toneladas instaladas"
       },
       {
-        "value": "Cobertura MX",
-        "label": "Proyectos en todo México"
+        "value": "+70",
+        "label": "Colaboradores"
       }
     ]
   },
@@ -194,8 +194,8 @@
     ]
   },
   "cta": {
-    "title": "Contacto",
-    "intro": "Canales directos para atención nacional. Oficina base en Monterrey, N.L.",
+    "title": "Construyamos juntos",
+    "intro": "",
     "labels": {
       "phone": "Teléfono",
       "email": "Correo",

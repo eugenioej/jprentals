@@ -34,16 +34,16 @@
   "stats": {
     "items": [
       {
-        "value": "15+",
-        "label": "Years in operation"
+        "value": "+30",
+        "label": "Years of experience"
       },
       {
-        "value": "15,400 m²",
-        "label": "Largest roof (reference)"
+        "value": "20K",
+        "label": "Tons installed"
       },
       {
-        "value": "MX coverage",
-        "label": "Projects across Mexico"
+        "value": "+70",
+        "label": "Team members"
       }
     ]
   },
@@ -194,8 +194,8 @@
     ]
   },
   "cta": {
-    "title": "Contact",
-    "intro": "Direct channels for nationwide support. Headquarters in Monterrey, N.L.",
+    "title": "Let's build together",
+    "intro": "",
     "labels": {
       "phone": "Phone",
       "email": "Email",

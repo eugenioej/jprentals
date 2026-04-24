@@ -6,7 +6,6 @@ interface Props {
 }
 
 const { copy } = Astro.props;
-const statIcons = ['badge-check', 'ruler', 'map-pinned'];
 ---
 
 <section
@@ -14,21 +13,14 @@ const statIcons = ['badge-check', 'ruler', 'map-pinned'];
   aria-label="Cifras"
 >
   <div class="container max-w-6xl py-10 md:py-14">
-    <div class="grid grid-cols-1 sm:grid-cols-3 gap-10 text-center sm:text-left">
+    <div class="grid grid-cols-1 gap-12 text-center sm:grid-cols-3 sm:gap-10 sm:text-left">
       {
         copy.stats.items.map((s, i) => (
           <div class="jpr2-fade" style={`transition-delay: ${i * 60}ms`}>
-            <div class="mb-2.5 flex items-center justify-center sm:justify-start">
-              <i
-                data-lucide={statIcons[i] ?? 'circle'}
-                class="h-5 w-5 text-jpr2-coral"
-                aria-hidden="true"
-              />
-            </div>
-            <div class="text-3xl md:text-4xl font-extrabold text-jpr2-navy tabular-nums">
+            <div class="text-4xl font-black tabular-nums tracking-tight text-jpr2-coral sm:text-5xl md:text-6xl">
               {s.value}
             </div>
-            <p class="mt-1.5 text-sm font-medium leading-snug text-jpr2-ink/75">
+            <p class="mt-2.5 text-sm font-semibold leading-snug text-jpr2-ink/75 md:text-base">
               {s.label}
             </p>
           </div>
@@ -37,18 +29,3 @@ const statIcons = ['badge-check', 'ruler', 'map-pinned'];
     </div>
   </div>
 </section>
-
-
-<script is:inline src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
-<script is:inline>
-  const renderStatsLucide = () => {
-    if (window.lucide?.createIcons) {
-      window.lucide.createIcons();
-    }
-  };
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', renderStatsLucide, { once: true });
-  } else {
-    renderStatsLucide();
-  }
-</script>

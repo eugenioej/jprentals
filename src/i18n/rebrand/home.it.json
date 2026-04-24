@@ -34,16 +34,16 @@
   "stats": {
     "items": [
       {
-        "value": "15+",
-        "label": "Anni di attività"
+        "value": "+30",
+        "label": "Anni di esperienza"
       },
       {
-        "value": "15 400 m²",
-        "label": "Maggiore copertura (ref.)"
+        "value": "20K",
+        "label": "Tonnellate installate"
       },
       {
-        "value": "Messico",
-        "label": "Progetti in tutto il paese"
+        "value": "+70",
+        "label": "Collaboratori"
       }
     ]
   },
@@ -194,8 +194,8 @@
     ]
   },
   "cta": {
-    "title": "Contatti",
-    "intro": "Canali diretti per assistenza a livello nazionale. Sede a Monterrey, N.L.",
+    "title": "Costruiamo insieme",
+    "intro": "",
     "labels": {
       "phone": "Telefono",
       "email": "E-mail",

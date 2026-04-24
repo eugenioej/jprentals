@@ -1,5 +1,6 @@
 ---
 import { rebrandServicePath, type RebrandHomeCopy, type RebrandLang } from '@/i18n/rebrand/home';
+import { getRebrandServiceBySlug } from '@/i18n/rebrand/services';
 
 interface Props {
   copy: RebrandHomeCopy;
@@ -7,7 +8,6 @@ interface Props {
 }
 
 const { copy, lang } = Astro.props;
-const offerIcons = ['building-2', 'layers-3', 'shield-check'];
 ---
 
 <section
@@ -26,35 +26,48 @@ const offerIcons = ['building-2', 'layers-3', 'shield-check'];
     )}
     <div class="mt-10 grid gap-5 md:grid-cols-3">
       {
-        copy.offer.items.map((item, i) => (
-          <article
-            class="jpr2-surface--on-mist jpr2-fade flex h-full flex-col p-6"
-            style={`transition-delay: ${i * 70}ms`}
-          >
-            <div class="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-jpr2-navy/8 text-jpr2-navy">
-              <i data-lucide={offerIcons[i] ?? 'circle'} class="h-5 w-5" aria-hidden="true" />
-            </div>
-            <h3 class="text-lg font-bold text-jpr2-navy">{item.title}</h3>
-            <p class="mt-3 text-sm text-jpr2-ink/75 leading-relaxed flex-1">{item.body}</p>
-            <a
-              href={rebrandServicePath(item.slug, lang)}
-              class="group mt-5 inline-flex items-center gap-2 text-sm font-semibold text-jpr2-coral transition-colors hover:text-jpr2-navy"
+        copy.offer.items.map((item, i) => {
+          const service = getRebrandServiceBySlug(item.slug, lang);
+          return (
+            <article
+              class="jpr2-surface--on-mist jpr2-fade flex h-full flex-col overflow-hidden"
+              style={`transition-delay: ${i * 70}ms`}
             >
-              {copy.offer.detailLinkLabel}
-              <svg
-                class="h-4 w-4 transition-transform duration-200 ease-out group-hover:translate-x-1"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                aria-hidden="true"
-              >
-                <path d="M5 12h14" />
-                <path d="m13 6 6 6-6 6" />
-              </svg>
-            </a>
-          </article>
-        ))
+              {service && (
+                <div class="relative aspect-[5/3] w-full shrink-0 overflow-hidden bg-jpr2-navy/5">
+                  <img
+                    src={service.heroImage}
+                    alt={service.heroImageAlt}
+                    class="h-full w-full object-cover"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              )}
+              <div class="flex flex-1 flex-col p-6">
+                <h3 class="text-lg font-bold text-jpr2-navy">{item.title}</h3>
+                <p class="mt-3 flex-1 text-sm leading-relaxed text-jpr2-ink/75">{item.body}</p>
+                <a
+                  href={rebrandServicePath(item.slug, lang)}
+                  class="group mt-5 inline-flex items-center gap-2 text-sm font-semibold text-jpr2-coral transition-colors hover:text-jpr2-navy"
+                >
+                  {copy.offer.detailLinkLabel}
+                  <svg
+                    class="h-4 w-4 transition-transform duration-200 ease-out group-hover:translate-x-1"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    aria-hidden="true"
+                  >
+                    <path d="M5 12h14" />
+                    <path d="m13 6 6 6-6 6" />
+                  </svg>
+                </a>
+              </div>
+            </article>
+          );
+        })
       }
     </div>
   </div>
