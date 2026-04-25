@@ -16,7 +16,7 @@ const heroBgImages = [
   '/images/home-rebrand/casos/kandelium/IMG20260116115504.webp',
   '/images/home-rebrand/casos/kontar-ii/IMG20250716111914.webp',
   '/images/home-rebrand/casos/mod-4/IMG20240731173330.webp',
-  '/images/home-rebrand/casos/daye-hoffsan/IMG_20230926_145238.webp',
+  '/images/home-rebrand/casos/daye-hoffsan/IMG_20230909_101448.webp',
   '/images/home-rebrand/casos/motomex-cedis-1/IMG_20221213_073612.webp',
 ];
 const heroBg = heroBgImages.map(encodeUrlPath);
@@ -32,10 +32,10 @@ const heroBg = heroBgImages.map(encodeUrlPath);
   />
 
   <div
-    class="jpr2-hero-grid relative z-10 flex min-h-0 w-full min-w-0 flex-1 flex-col content-center items-stretch justify-center max-lg:gap-8 max-lg:py-10 sm:max-lg:py-12 lg:flex-row lg:items-stretch"
+    class="jpr2-hero-grid relative z-10 flex min-h-0 w-full min-w-0 flex-1 flex-col content-center items-stretch justify-start gap-6 pt-8 pb-0 max-lg:min-h-0 sm:pt-10 sm:pb-0 lg:flex-row lg:items-stretch lg:justify-center lg:gap-8 lg:py-0"
   >
     <div
-      class="jpr2-hero-text order-1 flex w-full min-w-0 max-w-2xl flex-col justify-center px-4 text-left sm:px-6 lg:max-w-none lg:w-1/2 lg:flex-[0_0_50%] lg:shrink-0 lg:py-12 lg:pl-[max(1.5rem,calc((100vw-72rem)/2+1.5rem))] lg:pr-8 lg:max-xl:pr-10 xl:pr-12"
+      class="jpr2-hero-text order-1 flex w-full min-w-0 max-w-2xl shrink-0 flex-col justify-center px-4 text-left sm:px-6 lg:max-w-none lg:w-1/2 lg:flex-[0_0_50%] lg:shrink-0 lg:py-12 lg:pl-[max(1.5rem,calc((100vw-72rem)/2+1.5rem))] lg:pr-8 lg:max-xl:pr-10 xl:pr-12"
     >
       <p class="jpr2-eyebrow jpr2-fade mb-4 sm:mb-5">
         {copy.hero.eyebrow}
@@ -47,15 +47,13 @@ const heroBg = heroBgImages.map(encodeUrlPath);
       >
         {copy.hero.headline}
       </h1>
-      <p
-        class="jpr2-fade mt-5 sm:mt-6 text-base text-jpr2-ink/80 max-w-xl leading-relaxed md:text-lg"
-      >
+      <p class="jpr2-fade mt-5 max-w-xl text-base leading-relaxed text-jpr2-ink/80 sm:mt-6">
         {copy.hero.sub}
       </p>
     </div>
 
     <div
-      class="jpr2-hero-image-shell order-2 relative w-full min-w-0 min-h-[18rem] flex-[0_0_auto] overflow-hidden border border-jpr2-navy/10 border-r-0 bg-white sm:min-h-[20rem] sm:mx-4 lg:mx-0 lg:min-h-0 lg:w-1/2 lg:max-w-[50%] lg:shrink-0 lg:flex-[0_0_50%] lg:h-full"
+      class="jpr2-hero-image-shell order-2 relative w-full min-w-0 overflow-hidden border border-jpr2-navy/10 border-r-0 bg-white max-lg:flex-1 max-lg:min-h-[min(50svh,22rem)] sm:max-lg:min-h-[min(46svh,24rem)] sm:mx-4 lg:mx-0 lg:flex-[0_0_50%] lg:h-full lg:min-h-0 lg:w-1/2 lg:max-w-[50%] lg:shrink-0"
     >
       <div
         class="jpr2-hero-bg absolute inset-0 h-full w-full min-h-full min-w-full"

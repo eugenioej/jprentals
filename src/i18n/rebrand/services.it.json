@@ -12,8 +12,9 @@
           "alt": "Montaggio della struttura metallica di un capannone multi-tenant in cantiere."
         },
         {
-          "src": "/images/home-rebrand/casos/daye-hoffsan/IMG_20230926_145238.webp",
-          "alt": "Struttura del capannone e tra piani: acciaio e losacero in opera."
+          "src": "/images/home-rebrand/casos/daye-hoffsan/IMG_20230909_101448.webp",
+          "alt": "Struttura del capannone e tra piani: acciaio e losacero in opera.",
+          "rotate90": true
         }
       ],
       "eyebrow": "I nostri servizi",

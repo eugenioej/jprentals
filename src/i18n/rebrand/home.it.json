@@ -27,8 +27,8 @@
   "hero": {
     "eyebrow": "Struttura · Acciaio",
     "headline": "Struttura e involucro industriale in tutto il paese",
-    "sub": "Coordiniamo fornitura, fabbricazione e montaggio con attenzione a tempi, qualità e documentazione. Casi con capannoni, coperture, facciate e interventi strutturali in diversi impianti e stati.",
-    "emailCta": "Scrivere per email",
+    "sub": "Affianchiamo ogni progetto dal concept al cantiere, con rigore tecnico, rispetto delle scadenze e la documentazione richiesta da ogni committente. Capannoni, coperture, facciate e rinforzi strutturali in tutto il Messico.",
+    "emailCta": "Scrivici",
     "contactAnchor": "Contatto in pagina"
   },
   "stats": {
@@ -60,7 +60,7 @@
       "location": "Località",
       "client": "Cliente",
       "area": "Superficie",
-      "steel": "Struttura in acciaio (circa)"
+      "steel": "Struttura in acciaio"
     },
     "items": [
       {
@@ -151,7 +151,7 @@
           "/images/home-rebrand/casos/daye-hoffsan/IMG_20230914_173610.webp",
           "/images/home-rebrand/casos/daye-hoffsan/IMG_20230914_173742.webp",
           "/images/home-rebrand/casos/daye-hoffsan/IMG_20230918_145934.webp",
-          "/images/home-rebrand/casos/daye-hoffsan/IMG_20230926_145238.webp"
+          "/images/home-rebrand/casos/daye-hoffsan/IMG_20230909_101448.webp"
         ]
       },
       {
@@ -184,7 +184,7 @@
       {
         "slug": "lamina-acabado-envolvente",
         "title": "Lamiera e involucro",
-        "body": "Profili commerciali (p.es. KR-18), fassade e pannellature secondo ipt; chiusure in cantiere."
+        "body": "Profili commerciali (es. KR-18), facciate e tamponamenti R o secondo progetto, con chiusura in cantiere."
       },
       {
         "slug": "reparacion-refuerzo-entre-pisos",
@@ -194,7 +194,8 @@
     ]
   },
   "cta": {
-    "title": "Costruiamo insieme",
+    "title": "Costruiamo",
+    "titleAccent": "insieme",
     "intro": "",
     "labels": {
       "phone": "Telefono",
@@ -214,8 +215,12 @@
       }
     ],
     "emails": [
-      { "address": "info@nacionaldeanclas.com" },
-      { "address": "info@nasacero.com" }
+      {
+        "address": "info@nacionaldeanclas.com"
+      },
+      {
+        "address": "info@nasacero.com"
+      }
     ],
     "addressLines": [
       "Anastacio Bustamante 1030 / 1048 Poniente",
@@ -236,7 +241,7 @@
     "eyebrow": "Chi siamo",
     "title": "Struttura e involucro su scala nazionale",
     "body1": "Realizziamo progetti con visione d’impresa, precisione tecnica e disciplina operativa. Il nostro approccio unisce ingegneria, fabbricazione e montaggio per consegnare opere ad alto impatto, con standard rigorosi di qualità, sicurezza e rispetto dei tempi.",
-    "body2": "Più di un appaltatore, siamo un partner strategico per le aziende che cercano risultati solidi su tempistiche reali. Per questo organizzazioni industriali in tutto il Messico si affidano a JP Rentals per progetti strutturali critici.",
+    "body2": "Più che semplici appaltatori, siamo un partner strategico per le aziende che cercano risultati solidi su tempi reali. Per questo organizzazioni industriali in tutto il Messico scelgono JP Rentals per i loro progetti strutturali più impegnativi.",
     "imageAlt": "JP Rentals in cantiere per strutture e involucro"
   },
   "group": {
@@ -252,8 +257,6 @@
   "projectPage": {
     "backToCases": "Torna ai progetti",
     "detailsTitle": "Progetto",
-    "galleryTitle": "Galleria",
-    "galleryHint": "Fai clic su un’immagine per ingrandirla.",
     "openImageAria": "Apri immagine {n} a schermo intero",
     "lightboxAria": "Galleria a schermo intero",
     "lightboxClose": "Chiudi galleria",
@@ -263,5 +266,149 @@
   },
   "servicePage": {
     "backToOffer": "Torna ai nostri servizi"
+  },
+  "process": {
+    "eyebrow": "Processo integrato",
+    "title": "Cinque fasi, un unico percorso",
+    "intro": "Gestiamo un processo integrato che copre l’intero ciclo di progetto: dall’ingegneria e dal design fino alle finiture in cantiere, con normativa, sicurezza e controllo qualità in ogni fase.",
+    "stepsNavAria": "Vai a una fase del processo",
+    "stepLabel": "FASE {n}",
+    "steps": [
+      {
+        "id": "01",
+        "shortTitle": "Ingegneria",
+        "title": "Ingegneria",
+        "tagline": "Un progetto che si costruisce",
+        "body": "Ogni intervento parte da un progetto personalizzato con Tekla Structures e AutoCAD. I nostri elaborati rispettano le norme del settore in Messico e standard internazionali per sicurezza e costruibilità.",
+        "bullets": [
+          {
+            "title": "Ingegneria strutturale",
+            "text": "Carichi, collegamenti e dimensionamento."
+          },
+          {
+            "title": "Disegni di officina",
+            "text": "Dettagli per una fabbricazione precisa."
+          },
+          {
+            "title": "Revisioni tecniche",
+            "text": "Coordinamento con architettura e impianti."
+          },
+          {
+            "title": "Relazioni di calcolo",
+            "text": "Documentazione completa in consegna."
+          }
+        ],
+        "image": "/images/home-rebrand/casos/kontar-ii/IMG20250512184521.webp",
+        "imageAlt": "Struttura in acciaio in montaggio — riferimento di ingegneria"
+      },
+      {
+        "id": "02",
+        "shortTitle": "Fabbricazione",
+        "title": "Fabbricazione",
+        "tagline": "Precisione industriale",
+        "body": "Il nostro stabilimento unisce tecnologia avanzata e team specializzati per trasformare l’acciaio in strutture robuste. Materiali certificati e processi controllati da tracciamento fino all’assemblaggio.",
+        "bullets": [
+          {
+            "title": "Taglio e preparazione",
+            "text": "Ossitaglio, plasma e laser."
+          },
+          {
+            "title": "Saldatura certificata",
+            "text": "Saldatori qualificati AWS."
+          },
+          {
+            "title": "Controllo qualità",
+            "text": "Ispezione visiva e dimensionale."
+          },
+          {
+            "title": "Tracciabilità",
+            "text": "Ogni pezzo identificato e documentato."
+          }
+        ],
+        "image": "/images/home-rebrand/casos/daye-hoffsan/IMG_20230918_145934.webp",
+        "imageAlt": "Avanzamento strutturale in cantiere — riferimento di fabbricazione"
+      },
+      {
+        "id": "03",
+        "shortTitle": "Montaggio",
+        "title": "Montaggio",
+        "tagline": "Installazione sicura e precisa",
+        "body": "Il montaggio in opera segue protocolli rigorosi di sicurezza. Esperienza su capannoni industriali, magazzini, soppalchi, uffici e strutture speciali di ogni dimensione.",
+        "bullets": [
+          {
+            "title": "Capannoni industriali",
+            "text": "Fornitura, fabbricazione e montaggio."
+          },
+          {
+            "title": "Soppalchi e piani intermedi",
+            "text": "Soluzioni in spazi esistenti."
+          },
+          {
+            "title": "Sicurezza in cantiere",
+            "text": "Conformità STPS (normativa messicana) e procedure di cantiere."
+          },
+          {
+            "title": "Coordinamento logistico",
+            "text": "Pianificazione con il cliente."
+          }
+        ],
+        "image": "/images/home-rebrand/casos/mod-4/IMG20240726104048.webp",
+        "imageAlt": "Montaggio struttura in nave industriale"
+      },
+      {
+        "id": "04",
+        "shortTitle": "Lamierati",
+        "title": "Laminazione / involucro",
+        "tagline": "Copriamo l’intero progetto",
+        "body": "Installiamo sistemi di copertura e tamponamento in lamiera in base alle condizioni di cantiere e alle esigenze di illuminazione e isolamento. Profili e marchi riconosciuti sul mercato.",
+        "bullets": [
+          {
+            "title": "Lamiera KR-18",
+            "text": "Standard diffuso per coperture industriali."
+          },
+          {
+            "title": "Lamiera R-101",
+            "text": "Alternativa ad alte prestazioni."
+          },
+          {
+            "title": "Lamiera traslucida",
+            "text": "Illuminazione naturale."
+          },
+          {
+            "title": "Isolante in fibra di vetro",
+            "text": "Comfort termico e acustico."
+          }
+        ],
+        "image": "/images/home-rebrand/casos/coca-cola/IMG20251220215456.webp",
+        "imageAlt": "Copertura e chiusure in lamiera su struttura"
+      },
+      {
+        "id": "05",
+        "shortTitle": "Verniciatura",
+        "title": "Verniciatura",
+        "tagline": "Finitura che protegge",
+        "body": "Applichiamo cicli anticorrosivi ad alta durata per prolungare la vita utile. Trattamenti adeguati all’ambiente di esercizio, da contesti industriali ad esposizione marina.",
+        "bullets": [
+          {
+            "title": "Primer anticorrosivo",
+            "text": "Protezione di base dall’ossidazione."
+          },
+          {
+            "title": "Finitura ad alta durata",
+            "text": "Resistenza a UV e intemperie."
+          },
+          {
+            "title": "Colori personalizzati",
+            "text": "Secondo immagine del cliente."
+          },
+          {
+            "title": "Applicazione professionale",
+            "text": "Attrezzature e ambiente controllati."
+          }
+        ],
+        "image": "/images/home-rebrand/casos/motomex-cedis-1/IMG_20221213_073612.webp",
+        "imageAlt": "Chiusure e finiture su opera industriale"
+      }
+    ]
   }
 }

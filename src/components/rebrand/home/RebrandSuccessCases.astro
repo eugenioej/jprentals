@@ -21,70 +21,44 @@ const car = {
 
 <section
   id="casos"
-  class="scroll-mt-24 border-b border-jpr2-navy/10 bg-jpr2-crema py-16 md:py-24"
+  class="scroll-mt-24 border-b border-jpr2-navy/10 bg-white py-16 md:py-24"
   aria-labelledby="casos-title"
 >
   <div class="container max-w-6xl">
     <h2
       id="casos-title"
-      class="jpr2-fade text-2xl font-extrabold text-jpr2-navy md:text-3xl"
+      class="jpr2-fade text-center text-2xl font-extrabold text-jpr2-navy md:text-3xl"
     >
       {sc.title}
     </h2>
     {sc.subtitle && (
-      <p class="jpr2-fade mt-2 max-w-3xl text-sm leading-relaxed text-jpr2-ink/75 md:text-base">
+      <p class="jpr2-fade mt-2 max-w-3xl text-base leading-relaxed text-jpr2-ink/75">
         {sc.subtitle}
       </p>
     )}
 
     <div
-      class="jpr2-fade mt-12 grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-x-8 md:gap-y-12 lg:gap-x-10"
+      class="jpr2-fade mt-12 grid grid-cols-1 gap-8 md:gap-10"
     >
       {
         sc.items.map((item, i) => {
           const hasMany = item.images.length > 1;
           return (
             <article
-              class="jpr2-surface jpr2-fade flex h-full flex-col overflow-hidden p-5 shadow-sm sm:p-6"
-              style={`transition-delay: ${(i % 2) * 30 + Math.floor(i / 2) * 40}ms`}
+              class="jpr2-surface jpr2-fade overflow-hidden shadow-sm"
+              style={`transition-delay: ${i * 40}ms`}
             >
-              <div class="min-h-0 flex-1 space-y-3">
-                <p class="text-xs font-bold uppercase tracking-widest text-jpr2-coral">
-                  {item.year} · {item.client}
-                </p>
-                <h3 class="text-lg font-bold leading-snug text-jpr2-navy sm:text-xl">{item.title}</h3>
-                <p class="text-sm leading-relaxed text-jpr2-ink/80 md:text-sm">{item.scope}</p>
-                <div class="pt-1">
-                  <a
-                    href={getSuccessCasePath(item, lang)}
-                    class="group inline-flex items-center gap-2 text-sm font-semibold text-jpr2-coral transition-colors hover:text-jpr2-navy"
-                  >
-                    {sc.viewProject}
-                    <svg
-                      class="h-4 w-4 transition-transform duration-200 ease-out group-hover:translate-x-1"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      aria-hidden="true"
-                    >
-                      <path d="M5 12h14" />
-                      <path d="m13 6 6 6-6 6" />
-                    </svg>
-                  </a>
-                </div>
-              </div>
-
-              <div
-                class="relative mt-5"
-                data-jpr2-carousel
-                role="region"
-                aria-label={item.client + ' — ' + item.title}
-                aria-roledescription={car.roleDescription}
-              >
+              <div class="grid grid-cols-1 md:grid-cols-12">
+                <div
+                  class="relative md:col-span-5"
+                  data-jpr2-carousel
+                  role="region"
+                  aria-label={item.client + ' — ' + item.title}
+                  aria-roledescription={car.roleDescription}
+                >
                 {hasMany ? (
                   <>
-                    <div class="overflow-hidden rounded-lg border border-jpr2-navy/8 bg-white shadow-[0_4px_20px_rgba(10,15,30,0.07)]">
+                    <div class="relative overflow-hidden rounded-lg border border-jpr2-navy/8 bg-white shadow-[0_4px_20px_rgba(10,15,30,0.07)]">
                       <ul
                         class="jpr2-carousel__track flex w-full snap-x snap-mandatory overflow-x-auto scroll-smooth"
                         data-jpr2-track
@@ -112,14 +86,10 @@ const car = {
                           );
                         })}
                       </ul>
-                    </div>
-                    <div
-                      class="pointer-events-none absolute inset-y-0 left-0 z-10 flex w-10 items-center sm:w-12"
-                    >
-                      <div class="pointer-events-auto w-full bg-white/90 pl-0.5 pr-2 pt-0 pb-0 sm:pl-1">
+                      <div class="pointer-events-none absolute inset-0 z-10">
                         <button
                           type="button"
-                          class="jpr2-carousel__arrow"
+                          class="jpr2-carousel__arrow pointer-events-auto absolute left-2 top-1/2 z-10 -translate-y-1/2 sm:left-3"
                           data-jpr2-carousel-prev
                           aria-label={car.prev}
                         >
@@ -127,15 +97,9 @@ const car = {
                             <path d="M15 18l-6-6 6-6" />
                           </svg>
                         </button>
-                      </div>
-                    </div>
-                    <div
-                      class="pointer-events-none absolute inset-y-0 right-0 z-10 flex w-10 items-center sm:w-12"
-                    >
-                      <div class="pointer-events-auto flex w-full justify-end bg-white/90 pl-2 pr-0.5 sm:pr-1">
                         <button
                           type="button"
-                          class="jpr2-carousel__arrow"
+                          class="jpr2-carousel__arrow pointer-events-auto absolute right-2 top-1/2 z-10 -translate-y-1/2 sm:right-3"
                           data-jpr2-carousel-next
                           aria-label={car.next}
                         >
@@ -144,18 +108,20 @@ const car = {
                           </svg>
                         </button>
                       </div>
-                    </div>
-                    <div class="mt-2.5 flex flex-wrap items-center justify-center gap-1.5">
-                      {item.images.map((_, di) => (
-                        <button
-                          type="button"
-                          class="jpr2-carousel__dot h-1.5 min-h-[0.25rem] cursor-pointer rounded-full border-0 p-0 transition-all duration-200"
-                          data-jpr2-carousel-dot
-                          data-index={di}
-                          aria-label={String(di + 1) + ' / ' + String(item.images.length)}
-                          aria-pressed={di === 0 ? 'true' : 'false'}
-                        />
-                      ))}
+                      <div class="pointer-events-none absolute inset-x-0 bottom-3 z-20 flex justify-center px-3">
+                        <div class="jpr2-carousel__dots-on-image pointer-events-auto flex flex-wrap items-center justify-center gap-1.5 rounded-full border border-jpr2-navy/10 bg-white/95 px-2.5 py-1.5 shadow-[0_2px_14px_rgba(31,45,78,0.08)]">
+                          {item.images.map((_, di) => (
+                            <button
+                              type="button"
+                              class="jpr2-carousel__dot h-1.5 min-h-[0.25rem] cursor-pointer rounded-full border-0 p-0 transition-all duration-200"
+                              data-jpr2-carousel-dot
+                              data-index={di}
+                              aria-label={String(di + 1) + ' / ' + String(item.images.length)}
+                              aria-pressed={di === 0 ? 'true' : 'false'}
+                            />
+                          ))}
+                        </div>
+                      </div>
                     </div>
                   </>
                 ) : (
@@ -173,6 +139,57 @@ const car = {
                     </div>
                   </div>
                 )}
+                </div>
+                <div class="min-h-0 flex flex-col justify-center space-y-3 px-5 py-5 sm:px-6 sm:py-6 md:col-span-7 md:px-7">
+                  <p class="text-xs font-bold uppercase tracking-widest text-jpr2-coral">
+                    {item.year} · {item.client}
+                  </p>
+                  <h3 class="text-lg font-bold leading-snug text-jpr2-navy sm:text-xl">{item.title}</h3>
+                  <dl class="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-3">
+                    <div>
+                      <dt class="text-[0.65rem] font-bold uppercase tracking-wider text-jpr2-muted">
+                        {sc.labels.area}
+                      </dt>
+                      <dd class="mt-0.5 text-xl font-black tabular-nums tracking-tight text-jpr2-coral sm:text-2xl">
+                        {item.area}
+                      </dd>
+                    </div>
+                    <div>
+                      <dt class="text-[0.65rem] font-bold uppercase tracking-wider text-jpr2-muted">
+                        {sc.labels.steel}
+                      </dt>
+                      <dd class="mt-0.5 text-xl font-black tabular-nums tracking-tight text-jpr2-coral sm:text-2xl">
+                        {item.steel}
+                      </dd>
+                    </div>
+                    <div class="sm:col-span-1">
+                      <dt class="text-[0.65rem] font-bold uppercase tracking-wider text-jpr2-muted">
+                        {sc.labels.location}
+                      </dt>
+                      <dd class="mt-0.5 text-base font-semibold leading-snug text-jpr2-ink">{item.location}</dd>
+                    </div>
+                  </dl>
+                  <p class="mt-4 text-base leading-relaxed text-jpr2-ink/80">{item.scope}</p>
+                  <div class="pt-1">
+                    <a
+                      href={getSuccessCasePath(item, lang)}
+                      class="group inline-flex items-center gap-2 text-sm font-semibold text-jpr2-coral transition-colors hover:text-jpr2-navy"
+                    >
+                      {sc.viewProject}
+                      <svg
+                        class="h-4 w-4 transition-transform duration-200 ease-out group-hover:translate-x-1"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        aria-hidden="true"
+                      >
+                        <path d="M5 12h14" />
+                        <path d="m13 6 6 6-6 6" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
               </div>
             </article>
           );

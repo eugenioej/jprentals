@@ -186,22 +186,24 @@ html.rebrand-home {
 
 .jpr2-carousel__arrow {
   display: flex;
-  height: 2.25rem;
-  width: 2.25rem;
+  height: 2.5rem;
+  width: 2.5rem;
   flex-shrink: 0;
   align-items: center;
   justify-content: center;
   border-radius: 9999px;
-  background: rgba(255, 255, 255, 0.92);
+  background: #fff;
   color: var(--jpr2-navy);
-  box-shadow: 0 4px 20px rgba(10, 15, 30, 0.15);
-  border: 1px solid var(--jpr2-line);
-  transition: background 0.2s ease, color 0.2s ease, transform 0.15s ease;
+  box-shadow: 0 2px 12px rgba(31, 45, 78, 0.14);
+  border: 1px solid rgba(31, 45, 78, 0.1);
+  /* No usar transform en hover: pisa translateY(-50%) de Tailwind y desplaza la flecha. */
+  transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 .jpr2-carousel__arrow:hover {
   background: #fff;
   color: var(--jpr2-coral);
-  transform: scale(1.05);
+  box-shadow: 0 3px 16px rgba(31, 45, 78, 0.18);
+  border-color: rgba(255, 107, 74, 0.35);
 }
 
 .jpr2-carousel__dot[aria-pressed='true'] {
@@ -217,6 +219,17 @@ html.rebrand-home {
   opacity: 0.9;
 }
 
+/* Dots sobre la imagen: bolitas en coral (activa plena, inactiva atenuada) */
+.jpr2-carousel__dots-on-image .jpr2-carousel__dot[aria-pressed='true'] {
+  background: var(--jpr2-coral) !important;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.65);
+}
+.jpr2-carousel__dots-on-image .jpr2-carousel__dot[aria-pressed='false'] {
+  width: 0.4rem;
+  min-width: 0.4rem;
+  background: rgba(200, 67, 58, 0.55) !important;
+  opacity: 1;
+}
 
 .jpr2-hero-bg {
   z-index: 0;

@@ -1,89 +1,22 @@
 ---
 import type { RebrandHomeCopy, RebrandLang } from '@/i18n/rebrand/home';
-import { rebrandHomePath } from '@/i18n/rebrand/home';
 
 type LinkBlock = (typeof import('@/i18n/rebrand/home'))['rebrandHomeLinks'][RebrandLang];
 
+/** Props kept so existing pages do not need changes; footer content is fixed minimal. */
 interface Props {
   copy: RebrandHomeCopy;
   links: LinkBlock;
   lang: RebrandLang;
 }
 
-const { copy, links, lang } = Astro.props;
-const home = rebrandHomePath(lang);
+void Astro.props;
 ---
 
-<footer
-  class="mt-0 border-t border-jpr2-navy/10 bg-jpr2-crema text-jpr2-ink shadow-[0_-4px_24px_rgba(31,45,78,0.04)]"
->
-  <div class="container max-w-6xl py-14">
-    {copy.footer.itNote && (
-      <p class="text-sm text-jpr2-ink/80 mb-8 max-w-2xl leading-relaxed jpr2-fade">
-        {copy.footer.itNote}
-      </p>
-    )}
-
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 mb-12">
-      <div>
-        <div class="text-xl font-extrabold tracking-tight text-jpr2-navy mb-3">{copy.header.logo}</div>
-        <p class="text-sm text-jpr2-ink/75 leading-relaxed max-w-sm">
-          {copy.footer.description}
-        </p>
-        <div class="mt-5 space-y-1.5 text-sm">
-          {
-            copy.cta.emails.map((e) => (
-              <a
-                class="block font-medium text-jpr2-coral break-all hover:underline"
-                href={`mailto:${e.address}`}
-              >
-                {e.address}
-              </a>
-            ))
-          }
-        </div>
-        <a
-          href={links.legacyHome}
-          class="mt-3 block text-sm text-jpr2-muted hover:text-jpr2-coral hover:underline"
-        >
-          {copy.footer.legacy}
-        </a>
-      </div>
-
-      <div>
-        <h4 class="text-xs font-bold uppercase tracking-widest text-jpr2-muted mb-4">
-          {copy.footer.services}
-        </h4>
-        <a href={links.industryPage} class="text-sm text-jpr2-ink/85 hover:text-jpr2-coral transition-colors">
-          {copy.footer.servicesLink}
-        </a>
-        {lang === 'it' && (
-          <p class="text-xs text-jpr2-muted mt-4 max-w-xs">
-            Sito:{' '}
-            <a class="underline hover:text-jpr2-coral" href={rebrandHomePath('es')}>
-              ES
-            </a>
-            {' · '}
-            <a class="underline hover:text-jpr2-coral" href={rebrandHomePath('en')}>
-              EN
-            </a>
-          </p>
-        )}
-      </div>
-
-      <div>
-        <h4 class="text-xs font-bold uppercase tracking-widest text-jpr2-muted mb-4">Legal</h4>
-        <a href={links.privacidad} class="text-sm text-jpr2-ink/85 hover:text-jpr2-coral block">
-          {copy.footer.legal}
-        </a>
-      </div>
-    </div>
-
-    <p class="text-center text-xs text-jpr2-muted">
-      © {new Date().getFullYear()} JP Rentals ·
-      <a class="text-jpr2-ink/80 hover:text-jpr2-coral" href={home}>
-        {lang === 'en' ? 'Home' : lang === 'it' ? 'Home' : 'Inicio'}
-      </a>
+<footer class="mt-0 border-t border-jpr2-navy/10 bg-jpr2-crema">
+  <div class="container max-w-6xl py-6 md:py-7">
+    <p class="text-center text-[0.7rem] font-medium tracking-wide text-jpr2-ink/45 md:text-xs">
+      © {new Date().getFullYear()} JP Rentals
     </p>
   </div>
 </footer>

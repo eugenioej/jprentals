@@ -20,9 +20,10 @@ const d = copy.cta;
         id="contacto-title"
         class="text-2xl font-extrabold tracking-tight text-jpr2-navy md:text-3xl"
       >
-        {d.title}
+        {d.title}{' '}
+        <span class="text-jpr2-coral">{d.titleAccent}</span>
       </h2>
-      {d.intro && <p class="mt-2 text-sm leading-relaxed text-jpr2-ink/70 md:text-base">{d.intro}</p>}
+      {d.intro && <p class="mt-2 text-base leading-relaxed text-jpr2-ink/70">{d.intro}</p>}
     </header>
 
     <div
@@ -31,18 +32,15 @@ const d = copy.cta;
       <div
         class="px-5 py-8 sm:px-8 sm:py-10"
       >
-        <h3
-          class="text-[0.7rem] font-extrabold uppercase tracking-[0.2em] text-jpr2-coral"
-        >
+        <h3 class="text-lg font-extrabold tracking-tight text-jpr2-navy md:text-xl">
           {d.labels.phone}
         </h3>
-        <ul class="mt-6 space-y-6" role="list">
+        <ul class="mt-6 space-y-3" role="list">
           {
             d.phones.map((p) => (
               <li>
-                <p class="text-xs font-medium text-jpr2-muted uppercase tracking-wide">{p.name}</p>
                 <a
-                  class="mt-1 inline-block text-base font-semibold text-jpr2-navy transition-colors hover:text-jpr2-coral"
+                  class="inline-block text-base font-semibold text-jpr2-navy transition-colors hover:text-jpr2-coral"
                   href={p.href}
                 >
                   {p.display}
@@ -56,9 +54,7 @@ const d = copy.cta;
       <div
         class="border-t border-jpr2-navy/10 px-5 py-8 sm:px-8 sm:py-10 md:border-t-0"
       >
-        <h3
-          class="text-[0.7rem] font-extrabold uppercase tracking-[0.2em] text-jpr2-coral"
-        >
+        <h3 class="text-lg font-extrabold tracking-tight text-jpr2-navy md:text-xl">
           {d.labels.email}
         </h3>
         <ul class="mt-6 space-y-3" role="list">
@@ -66,7 +62,7 @@ const d = copy.cta;
             d.emails.map((e) => (
               <li>
                 <a
-                  class="break-words text-sm font-medium text-jpr2-navy underline-offset-2 hover:underline"
+                  class="break-words text-base font-medium text-jpr2-navy underline-offset-2 hover:underline"
                   href={`mailto:${e.address}`}
                 >
                   {e.address}
@@ -80,20 +76,18 @@ const d = copy.cta;
       <div
         class="border-t border-jpr2-navy/10 bg-white px-5 py-8 sm:px-8 sm:py-10 md:border-t-0"
       >
-        <h3
-          class="text-[0.7rem] font-extrabold uppercase tracking-[0.2em] text-jpr2-coral"
-        >
+        <h3 class="text-lg font-extrabold tracking-tight text-jpr2-navy md:text-xl">
           {d.labels.office}
         </h3>
         <address class="not-italic">
           {
             d.addressLines.map((line) => (
-              <p class="mt-1 first:mt-4 text-sm leading-relaxed text-jpr2-ink/90">{line}</p>
+              <p class="mt-1 first:mt-4 text-base leading-relaxed text-jpr2-ink/90">{line}</p>
             ))
           }
         </address>
         <a
-          class="mt-5 inline-flex text-xs font-semibold text-jpr2-navy/80 hover:text-jpr2-coral"
+          class="mt-5 inline-flex text-base font-semibold text-jpr2-navy/80 hover:text-jpr2-coral"
           href="https://www.google.com/maps/search/?api=1&query=Anastacio%20Bustamante%201030%2C%20Bella%20Vista%2C%2064410%20Monterrey"
           rel="noopener"
           target="_blank"

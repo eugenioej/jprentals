@@ -12,8 +12,9 @@
           "alt": "Armado de estructura metálica de nave multi-tenant en obra."
         },
         {
-          "src": "/images/home-rebrand/casos/daye-hoffsan/IMG_20230926_145238.webp",
-          "alt": "Estructura de nave y entre pisos: acero y losacero en planta."
+          "src": "/images/home-rebrand/casos/daye-hoffsan/IMG_20230909_101448.webp",
+          "alt": "Estructura de nave y entre pisos: acero y losacero en planta.",
+          "rotate90": true
         }
       ],
       "eyebrow": "Nuestros servicios",
@@ -21,7 +22,7 @@
       "lead": "Diseño asistido, detallado, fabricación e instalación con control de calidad y normativa aplicable a naves e industria.",
       "paragraphs": [
         "Acompañamos el proyecto desde el criterio estructural y el detallado hasta la fabricación y el montaje en obra, con enfoque en plazos, seguridad y documentación alineada a lo que exige cada cliente y cada sitio.",
-        "Nuestro alcance típico incluye porticos, cerchas, arriostramientos, mesanines y estructuras de soporte para equipos o recorridos de grúa, siempre coordinando con otras disciplinas y con el avance de obra."
+        "Nuestro alcance típico incluye porticos, cerchas, arriostramientos, mezzanines y estructuras de soporte para equipos o recorridos de grúa, siempre coordinando con otras disciplinas y con el avance de obra."
       ],
       "bullets": [
         "Detallado y fabricación bajo criterios de calidad y trazabilidad.",

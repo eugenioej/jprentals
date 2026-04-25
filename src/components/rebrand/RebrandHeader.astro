@@ -29,69 +29,85 @@ const menuToggleLabel: Record<RebrandLang, string> = {
   en: 'Open or close menu',
   it: 'Apri o chiudi menu',
 };
+
+const langMenuLabel: Record<RebrandLang, string> = {
+  es: 'Seleccionar idioma',
+  en: 'Choose language',
+  it: 'Seleziona lingua',
+};
 ---
 
 <header
-  class="jpr2-header sticky top-0 z-50 border-b border-jpr2-navy/10 bg-white/95 shadow-sm backdrop-blur-md"
+  class="jpr2-header sticky top-0 z-50 border-b border-jpr2-navy/10 bg-white/95 shadow-sm backdrop-blur-md overflow-visible"
   style="--jpr2-navy: #1f2d4e"
 >
-  <div class="container max-w-6xl flex min-h-[4.75rem] items-center justify-between gap-4 py-2.5">
-    <a href={home} class="text-lg font-extrabold tracking-tight text-jpr2-navy uppercase shrink-0">
+  <div class="container max-w-6xl flex min-h-[4.75rem] items-center justify-between gap-3 py-2.5 md:gap-4">
+    <a href={home} class="flex shrink-0 min-w-0 items-center gap-2.5 text-lg font-extrabold uppercase tracking-tight text-jpr2-navy">
+      <img
+        src="/images/home-rebrand/jp%20rentals%20logo.svg"
+        alt=""
+        width="88"
+        height="24"
+        class="h-5 w-auto shrink-0"
+        loading="eager"
+        decoding="async"
+        aria-hidden="true"
+      />
       {copy.header.logo}
     </a>
 
     <div class="hidden md:flex flex-1 flex-wrap items-center justify-end gap-3 lg:gap-4">
       <nav class="flex flex-wrap items-center gap-0.5 lg:gap-1" aria-label="Principal">
-      <a
-        href={casosHref}
-        class="px-2.5 py-2 text-sm font-medium text-jpr2-ink/90 hover:text-jpr2-coral transition-colors"
-      >
-        {copy.nav.success}
-      </a>
+        <a
+          href={casosHref}
+          class="px-2.5 py-2 text-sm font-medium text-jpr2-ink/90 hover:text-jpr2-coral transition-colors"
+        >
+          {copy.nav.success}
+        </a>
 
-      <div class="group relative">
-        <button
-          type="button"
-          class="flex items-center gap-1 rounded-md px-2.5 py-2 text-sm font-medium text-jpr2-ink/90 outline-none transition-colors hover:text-jpr2-coral group-hover:text-jpr2-coral focus-visible:ring-2 focus-visible:ring-jpr2-mustard/70"
-          aria-haspopup="true"
-          aria-expanded="false"
-          aria-controls="jpr2-nav-servicios-panel"
-        >
-          {copy.nav.services}
-          <svg
-            class="h-4 w-4 shrink-0 opacity-80 transition-transform duration-200 group-hover:-rotate-180 group-focus-within:-rotate-180"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            aria-hidden="true"
+        <div class="group relative">
+          <button
+            type="button"
+            class="flex items-center gap-1 rounded-md px-2.5 py-2 text-sm font-medium text-jpr2-ink/90 outline-none transition-colors hover:text-jpr2-coral group-hover:text-jpr2-coral focus-visible:ring-2 focus-visible:ring-jpr2-mustard/70"
+            aria-haspopup="true"
+            aria-expanded="false"
+            aria-controls="jpr2-nav-servicios-panel"
           >
-            <path d="m6 9 6 6 6-6" />
-          </svg>
-        </button>
-        <div
-          id="jpr2-nav-servicios-panel"
-          role="menu"
-          aria-label={copy.nav.services}
-          class="pointer-events-none invisible absolute left-0 top-full z-[60] pt-1 opacity-0 transition-[opacity,visibility] duration-150 group-hover:pointer-events-auto group-hover:visible group-hover:opacity-100 group-focus-within:pointer-events-auto group-focus-within:visible group-focus-within:opacity-100"
-        >
+            {copy.nav.services}
+            <svg
+              class="h-4 w-4 shrink-0 opacity-80 transition-transform duration-200 group-hover:-rotate-180 group-focus-within:-rotate-180"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              aria-hidden="true"
+            >
+              <path d="m6 9 6 6 6-6" />
+            </svg>
+          </button>
           <div
-            class="min-w-[16rem] rounded-xl border border-jpr2-navy/10 bg-white py-1 shadow-[0_12px_40px_rgba(31,45,78,0.12)]"
+            id="jpr2-nav-servicios-panel"
+            role="menu"
+            aria-label={copy.nav.services}
+            class="pointer-events-none invisible absolute left-0 top-full z-[60] pt-1 opacity-0 transition-[opacity,visibility] duration-150 group-hover:pointer-events-auto group-hover:visible group-hover:opacity-100 group-focus-within:pointer-events-auto group-focus-within:visible group-focus-within:opacity-100"
           >
-            {
-              servicePages.map((s) => (
-                <a
-                  role="menuitem"
-                  href={rebrandServicePath(s.slug, lang)}
-                  class="block px-4 py-2.5 text-sm text-jpr2-ink/90 transition-colors hover:bg-jpr2-crema hover:text-jpr2-coral"
-                >
-                  {serviceLabelBySlug[s.slug] ?? s.title}
-                </a>
-              ))
-            }
+            <div
+              class="min-w-[16rem] rounded-xl border border-jpr2-navy/10 bg-white py-1 shadow-[0_12px_40px_rgba(31,45,78,0.12)]"
+            >
+              {
+                servicePages.map((s) => (
+                  <a
+                    role="menuitem"
+                    href={rebrandServicePath(s.slug, lang)}
+                    class="block px-4 py-2.5 text-sm text-jpr2-ink/90 transition-colors hover:bg-jpr2-crema hover:text-jpr2-coral"
+                  >
+                    {serviceLabelBySlug[s.slug] ?? s.title}
+                  </a>
+                ))
+              }
+            </div>
           </div>
         </div>
-      </div>
       </nav>
 
       <div
@@ -126,72 +142,125 @@ const menuToggleLabel: Record<RebrandLang, string> = {
       </a>
     </div>
 
-    <button
-      type="button"
-      id="jpr2-menu-toggle"
-      class="inline-flex md:hidden items-center justify-center rounded-lg border border-jpr2-navy/20 p-2.5 text-jpr2-navy transition-colors hover:border-jpr2-navy/40 hover:bg-jpr2-crema hover:text-jpr2-coral focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-jpr2-mustard/70"
-      aria-controls="jpr2-mobile-menu"
-      aria-expanded="false"
-      aria-label={menuToggleLabel[lang]}
-    >
-      <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-        <path
-          id="jpr2-menu-icon-path"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M4 6h16M4 12h16M4 18h16"
-        />
-      </svg>
-    </button>
+    <!-- Móvil: idioma (dropdown) + hamburguesa — fuera del panel desplegable -->
+    <div class="flex shrink-0 items-center gap-2 md:hidden">
+      <div class="relative z-[70]">
+        <button
+          type="button"
+          id="jpr2-lang-dd-btn"
+          class="flex min-h-[2.75rem] items-center gap-1.5 rounded-lg border border-jpr2-navy/20 bg-white px-3 py-2 text-sm font-bold text-jpr2-navy shadow-sm transition-colors hover:border-jpr2-navy/35 hover:bg-jpr2-crema focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-jpr2-mustard/70"
+          aria-expanded="false"
+          aria-haspopup="menu"
+          aria-controls="jpr2-lang-dd-panel"
+          aria-label={langMenuLabel[lang]}
+        >
+          <span>{copy.lang[lang]}</span>
+          <svg
+            id="jpr2-lang-dd-chev"
+            class="h-4 w-4 shrink-0 text-jpr2-muted transition-transform duration-200 will-change-transform"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            aria-hidden="true"
+          >
+            <path d="m6 9 6 6 6-6" />
+          </svg>
+        </button>
+        <div
+          id="jpr2-lang-dd-panel"
+          role="menu"
+          aria-label={copy.nav.language}
+          class="absolute right-0 top-full z-[80] mt-1 hidden min-w-[9.5rem] overflow-hidden rounded-xl border border-jpr2-navy/10 bg-white py-1 shadow-[0_12px_40px_rgba(31,45,78,0.15)]"
+        >
+          {
+            langCodes.map((code) => (
+              <a
+                role="menuitem"
+                href={rebrandSwitchPath(pathname, code)}
+                hreflang={code === 'es' ? 'es-MX' : code === 'en' ? 'en' : 'it'}
+                aria-current={code === lang ? 'page' : undefined}
+                class:list={[
+                  'jpr2-lang-dd-link flex items-center px-4 py-2.5 text-sm font-semibold transition-colors',
+                  code === lang
+                    ? 'bg-jpr2-crema text-jpr2-navy'
+                    : 'text-jpr2-ink/90 hover:bg-jpr2-crema/60 hover:text-jpr2-coral',
+                ]}
+              >
+                {copy.lang[code]}
+              </a>
+            ))
+          }
+        </div>
+      </div>
+
+      <button
+        type="button"
+        id="jpr2-menu-toggle"
+        class="inline-flex min-h-[2.75rem] min-w-[2.75rem] items-center justify-center rounded-lg border border-jpr2-navy/20 p-2 text-jpr2-navy transition-colors hover:border-jpr2-navy/40 hover:bg-jpr2-crema hover:text-jpr2-coral focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-jpr2-mustard/70"
+        aria-controls="jpr2-mobile-menu"
+        aria-expanded="false"
+        aria-label={menuToggleLabel[lang]}
+      >
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            id="jpr2-menu-icon-path"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          />
+        </svg>
+      </button>
+    </div>
   </div>
 
-  <div id="jpr2-mobile-menu" class="hidden border-t border-jpr2-navy/10 bg-jpr2-crema md:hidden">
-    <nav class="container max-w-6xl py-3" aria-label="Principal móvil">
-      <div class="flex flex-col">
+  <div
+    id="jpr2-mobile-menu"
+    class="hidden max-h-[min(72vh,28rem)] overflow-y-auto overscroll-contain border-t border-jpr2-navy/10 bg-jpr2-crema shadow-inner md:hidden"
+  >
+    <nav class="container max-w-6xl px-2 py-2" aria-label="Principal móvil">
+      <div class="flex flex-col gap-0.5">
         <a
           href={casosHref}
-          class="jpr2-mobile-nav-link px-4 py-3 text-sm font-medium text-jpr2-ink/90 transition-colors hover:bg-white/80 hover:text-jpr2-coral rounded-lg"
+          class="jpr2-mobile-nav-link rounded-xl px-4 py-3.5 text-sm font-medium text-jpr2-ink/90 transition-colors hover:bg-white/90 hover:text-jpr2-coral"
         >
           {copy.nav.success}
         </a>
-        <p class="px-4 pt-1 pb-0.5 text-xs font-semibold uppercase tracking-wide text-jpr2-muted">
-          {copy.nav.services}
-        </p>
-        {
-          servicePages.map((s) => (
-            <a
-              href={rebrandServicePath(s.slug, lang)}
-              class="jpr2-mobile-nav-link px-4 py-2.5 pl-6 text-sm text-jpr2-ink/85 transition-colors hover:bg-white/80 hover:text-jpr2-coral rounded-lg"
+
+        <details class="jpr2-mob-srv rounded-xl border border-transparent hover:border-jpr2-navy/10 open:border-jpr2-navy/10 open:bg-white/90">
+          <summary
+            class="flex cursor-pointer list-none items-center justify-between gap-2 rounded-xl px-4 py-3.5 text-sm font-medium text-jpr2-ink/90 marker:content-none [&::-webkit-details-marker]:hidden hover:bg-white/60"
+          >
+            <span>{copy.nav.services}</span>
+            <svg
+              class="jpr2-mob-srv-chev h-5 w-5 shrink-0 text-jpr2-muted transition-transform duration-200"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              aria-hidden="true"
             >
-              {serviceLabelBySlug[s.slug] ?? s.title}
-            </a>
-          ))
-        }
-        <div class="border-t border-jpr2-navy/10 px-4 py-3">
-          <p class="text-xs font-semibold uppercase tracking-wide text-jpr2-muted">{copy.nav.language}</p>
-          <div class="mt-2 flex flex-wrap gap-2">
+              <path d="m6 9 6 6 6-6" />
+            </svg>
+          </summary>
+          <div class="border-t border-jpr2-navy/8 pb-2 pt-1">
             {
-              langCodes.map((code) => (
+              servicePages.map((s) => (
                 <a
-                  href={rebrandSwitchPath(pathname, code)}
-                  class:list={[
-                    'jpr2-mobile-lang-link rounded-md px-3 py-1.5 text-xs font-bold transition-colors',
-                    code === lang
-                      ? 'bg-white text-jpr2-navy ring-1 ring-jpr2-navy/15'
-                      : 'text-jpr2-ink/80 hover:bg-white/80 hover:text-jpr2-coral',
-                  ]}
-                  aria-current={code === lang ? 'page' : undefined}
+                  href={rebrandServicePath(s.slug, lang)}
+                  class="jpr2-mobile-nav-link block rounded-lg px-4 py-2.5 pl-5 text-sm text-jpr2-ink/85 transition-colors hover:bg-white/80 hover:text-jpr2-coral"
                 >
-                  {copy.lang[code]}
+                  {serviceLabelBySlug[s.slug] ?? s.title}
                 </a>
               ))
             }
           </div>
-        </div>
+        </details>
+
         <a
           href={contactHref}
-          class="jpr2-mobile-nav-link mt-2 border-t border-jpr2-navy/10 px-4 py-3 text-center text-sm font-semibold uppercase tracking-wide text-jpr2-coral transition-colors hover:bg-white/80 rounded-b-lg"
+          class="jpr2-mobile-nav-link mt-1 rounded-xl border border-jpr2-navy/10 bg-white/50 px-4 py-3.5 text-center text-sm font-semibold uppercase tracking-wide text-jpr2-coral transition-colors hover:bg-white hover:text-jpr2-navy"
         >
           {copy.nav.contact}
         </a>
@@ -200,6 +269,15 @@ const menuToggleLabel: Record<RebrandLang, string> = {
   </div>
 </header>
 
+<style is:global>
+  header.jpr2-header .jpr2-mob-srv[open] .jpr2-mob-srv-chev {
+    transform: rotate(180deg);
+  }
+  header.jpr2-header #jpr2-lang-dd-btn[aria-expanded='true'] #jpr2-lang-dd-chev {
+    transform: rotate(180deg);
+  }
+</style>
+
 <script>
   const toggle = document.getElementById('jpr2-menu-toggle');
   const menu = document.getElementById('jpr2-mobile-menu');
@@ -207,13 +285,33 @@ const menuToggleLabel: Record<RebrandLang, string> = {
   const hamburger = 'M4 6h16M4 12h16M4 18h16';
   const closeIcon = 'M6 18L18 6M6 6l12 12';
 
+  const langBtn = document.getElementById('jpr2-lang-dd-btn');
+  const langPanel = document.getElementById('jpr2-lang-dd-panel');
+
   function closeMenu() {
     menu?.classList.add('hidden');
     path?.setAttribute('d', hamburger);
     toggle?.setAttribute('aria-expanded', 'false');
   }
 
+  function closeLangPanel() {
+    langPanel?.classList.add('hidden');
+    langBtn?.setAttribute('aria-expanded', 'false');
+  }
+
+  function toggleLangPanel() {
+    const open = langPanel?.classList.contains('hidden') === false;
+    if (open) {
+      closeLangPanel();
+    } else {
+      closeMenu();
+      langPanel?.classList.remove('hidden');
+      langBtn?.setAttribute('aria-expanded', 'true');
+    }
+  }
+
   toggle?.addEventListener('click', () => {
+    closeLangPanel();
     const willOpen = menu?.classList.contains('hidden');
     menu?.classList.toggle('hidden');
     if (willOpen) {
@@ -225,7 +323,32 @@ const menuToggleLabel: Record<RebrandLang, string> = {
     }
   });
 
-  document.querySelectorAll('.jpr2-mobile-nav-link, .jpr2-mobile-lang-link').forEach((link) => {
+  langBtn?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    toggleLangPanel();
+  });
+
+  document.addEventListener('click', (e) => {
+    const t = e.target as Node;
+    if (langBtn && langPanel && !langBtn.contains(t) && !langPanel.contains(t)) {
+      closeLangPanel();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeLangPanel();
+      closeMenu();
+    }
+  });
+
+  document.querySelectorAll('.jpr2-mobile-nav-link').forEach((link) => {
     link.addEventListener('click', closeMenu);
+  });
+
+  document.querySelectorAll('.jpr2-lang-dd-link').forEach((link) => {
+    link.addEventListener('click', () => {
+      closeLangPanel();
+    });
   });
 </script>

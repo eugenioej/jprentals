@@ -1,6 +1,5 @@
 ---
 import type { RebrandHomeCopy, RebrandLang } from '@/i18n/rebrand/home';
-import { rebrandHomePath } from '@/i18n/rebrand/home';
 import type { RebrandServiceDetail } from '@/i18n/rebrand/services';
 import RebrandCta from '@/components/rebrand/home/RebrandCta.astro';
 
@@ -11,7 +10,6 @@ interface Props {
 }
 
 const { copy, service, lang } = Astro.props;
-const backHref = `${rebrandHomePath(lang)}#servicios`;
 
 function encodeUrlPath(p: string): string {
   return `/${p
@@ -41,23 +39,14 @@ const heroHeadingId = `service-hero-${service.slug}`;
       <div
         class="jpr2-hero-text order-1 flex w-full min-w-0 max-w-2xl flex-col justify-center px-4 text-left sm:px-6 lg:max-w-none lg:w-1/2 lg:flex-[0_0_50%] lg:shrink-0 lg:py-12 lg:pl-[max(1.5rem,calc((100vw-72rem)/2+1.5rem))] lg:pr-8 lg:max-xl:pr-10 xl:pr-12"
       >
-        <a
-          href={backHref}
-          class="inline-flex items-center gap-2 text-sm font-medium text-jpr2-ink/75 transition-colors hover:text-jpr2-coral"
-        >
-          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-            <path d="M15 18l-6-6 6-6" />
-          </svg>
-          {copy.servicePage.backToOffer}
-        </a>
-        <p class="jpr2-eyebrow mt-6 sm:mt-8">{service.eyebrow}</p>
+        <p class="jpr2-eyebrow">{service.eyebrow}</p>
         <h1
           id={heroHeadingId}
           class="mt-3 text-3xl font-extrabold leading-tight text-jpr2-navy sm:text-4xl md:text-[2.4rem] lg:text-4xl xl:text-5xl lg:leading-[1.12]"
         >
           {service.title}
         </h1>
-        <p class="mt-5 max-w-xl text-base leading-relaxed text-jpr2-ink/80 sm:mt-6 md:text-lg">{service.lead}</p>
+        <p class="mt-5 max-w-xl text-base leading-relaxed text-jpr2-ink/80 sm:mt-6">{service.lead}</p>
       </div>
       <div
         class="jpr2-hero-image-shell order-2 relative w-full min-w-0 min-h-[18rem] flex-[0_0_auto] overflow-hidden border border-jpr2-navy/10 border-r-0 bg-white sm:min-h-[20rem] sm:mx-4 lg:mx-0 lg:min-h-0 lg:w-1/2 lg:max-w-[50%] lg:shrink-0 lg:flex-[0_0_50%] lg:h-full"
@@ -78,18 +67,18 @@ const heroHeadingId = `service-hero-${service.slug}`;
     </div>
   </section>
 
-  <article class="border-b border-jpr2-navy/10 py-12 md:py-16">
+  <article class="overflow-x-clip border-b border-jpr2-navy/10 pt-12 pb-0 md:pt-16">
     <div class="container max-w-6xl">
       <div class="jpr2-surface--on-mist mx-auto max-w-3xl rounded-2xl border border-jpr2-navy/10 bg-white p-6 shadow-sm md:p-10">
         <div class="space-y-5">
           {
             service.paragraphs.map((p) => (
-              <p class="text-sm leading-relaxed text-jpr2-ink/85 md:text-base">{p}</p>
+              <p class="text-base leading-relaxed text-jpr2-ink/85">{p}</p>
             ))
           }
         </div>
         {service.bullets?.length ? (
-          <ul class="mt-8 list-disc space-y-2 pl-5 text-sm text-jpr2-ink/85 md:text-base" role="list">
+          <ul class="mt-8 list-disc space-y-2 pl-5 text-base text-jpr2-ink/85" role="list">
             {service.bullets.map((b) => (
               <li>{b}</li>
             ))}
@@ -97,26 +86,50 @@ const heroHeadingId = `service-hero-${service.slug}`;
         ) : null}
       </div>
 
-      <div class="mx-auto mt-10 grid max-w-5xl gap-4 sm:grid-cols-2 md:mt-12 md:gap-5">
+      <!-- Galería a ancho de viewport; 1 col móvil, 2 cols desktop -->
+      <div
+        class="relative left-1/2 mt-12 grid w-screen max-w-[100vw] -translate-x-1/2 grid-cols-1 gap-4 md:mt-16 md:grid-cols-2 md:gap-5 lg:gap-6"
+      >
         {
-          gallery.map((img, i) => (
-            <figure class="overflow-hidden rounded-2xl border border-jpr2-navy/10 bg-white shadow-[0_6px_28px_rgba(10,15,30,0.08)]">
-              <div class="aspect-[4/3] w-full sm:aspect-[3/2]">
-                <img
-                  src={encodeUrlPath(img.src)}
-                  width={1200}
-                  height={800}
-                  class="h-full w-full object-cover transition-transform duration-500 hover:scale-[1.02]"
-                  alt=""
-                  loading={i === 0 ? 'eager' : 'lazy'}
-                  decoding="async"
-                />
-              </div>
-              <figcaption class="border-t border-jpr2-navy/8 px-4 py-3 text-xs leading-snug text-jpr2-ink/75 md:text-sm">
-                {img.alt}
-              </figcaption>
-            </figure>
-          ))
+          gallery.map((img, i) => {
+            const lastOdd = gallery.length % 2 === 1 && i === gallery.length - 1;
+            return (
+              <figure class:list={['min-w-0 overflow-hidden bg-white', lastOdd && 'md:col-span-2']}>
+                <div
+                  class:list={[
+                    'relative w-full',
+                    lastOdd
+                      ? 'aspect-[4/3] sm:aspect-[3/2] md:aspect-[21/9]'
+                      : 'aspect-[4/3] sm:aspect-[3/2]',
+                  ]}
+                >
+                  {'rotate90' in img && (img as { rotate90?: boolean }).rotate90 ? (
+                    <div class="absolute inset-0 overflow-hidden">
+                      <img
+                        src={encodeUrlPath(img.src)}
+                        width={1600}
+                        height={900}
+                        class="absolute left-1/2 top-1/2 h-[200%] w-[200%] max-w-none -translate-x-1/2 -translate-y-1/2 rotate-90 object-cover object-center transition-transform duration-500 hover:scale-[1.015]"
+                        alt={img.alt}
+                        loading={i === 0 ? 'eager' : 'lazy'}
+                        decoding="async"
+                      />
+                    </div>
+                  ) : (
+                    <img
+                      src={encodeUrlPath(img.src)}
+                      width={1600}
+                      height={900}
+                      class="absolute inset-0 h-full w-full object-cover object-center transition-transform duration-500 hover:scale-[1.015]"
+                      alt={img.alt}
+                      loading={i === 0 ? 'eager' : 'lazy'}
+                      decoding="async"
+                    />
+                  )}
+                </div>
+              </figure>
+            );
+          })
         }
       </div>
     </div>

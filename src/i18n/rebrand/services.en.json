@@ -12,8 +12,9 @@
           "alt": "Steel frame assembly for a multi-tenant industrial building on site."
         },
         {
-          "src": "/images/home-rebrand/casos/daye-hoffsan/IMG_20230926_145238.webp",
-          "alt": "Warehouse structure and mezzanine levels: steel and Losacero decking."
+          "src": "/images/home-rebrand/casos/daye-hoffsan/IMG_20230909_101448.webp",
+          "alt": "Warehouse structure and mezzanine levels: steel and Losacero decking.",
+          "rotate90": true
         }
       ],
       "eyebrow": "Our services",

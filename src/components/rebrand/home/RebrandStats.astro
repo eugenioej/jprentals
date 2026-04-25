@@ -12,15 +12,15 @@ const { copy } = Astro.props;
   class="border-b border-jpr2-navy/10 bg-jpr2-crema -mt-px shadow-[0_1px_0_0_rgba(31,45,78,0.08)]"
   aria-label="Cifras"
 >
-  <div class="container max-w-6xl py-10 md:py-14">
-    <div class="grid grid-cols-1 gap-12 text-center sm:grid-cols-3 sm:gap-10 sm:text-left">
+  <div class="container max-w-6xl py-12 md:py-14">
+    <div class="grid grid-cols-1 justify-items-center gap-14 text-center sm:grid-cols-3 sm:gap-12 sm:gap-y-14">
       {
         copy.stats.items.map((s, i) => (
           <div class="jpr2-fade" style={`transition-delay: ${i * 60}ms`}>
-            <div class="text-4xl font-black tabular-nums tracking-tight text-jpr2-coral sm:text-5xl md:text-6xl">
+            <div class="text-6xl font-black tabular-nums tracking-tight text-jpr2-coral md:text-7xl">
               {s.value}
             </div>
-            <p class="mt-2.5 text-sm font-semibold leading-snug text-jpr2-ink/75 md:text-base">
+            <p class="mt-3 text-xl font-semibold leading-snug text-jpr2-ink/80 md:text-lg">
               {s.label}
             </p>
           </div>

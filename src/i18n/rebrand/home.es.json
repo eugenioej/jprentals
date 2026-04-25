@@ -8,7 +8,7 @@
     "logo": "JP Rentals"
   },
   "nav": {
-    "success": "Éxitos",
+    "success": "Proyectos",
     "offer": "Nuestros servicios",
     "contact": "Contacto",
     "services": "Nuestros servicios",
@@ -27,7 +27,7 @@
   "hero": {
     "eyebrow": "Estructura · Acero",
     "headline": "Estructura y laminado industrial en todo el país",
-    "sub": "Coordinamos suministro, fabricación y montaje con criterio de plazos, calidad y documentación. Casos con naves, cubiertas, fachadas y refuerzo en distintas plantas y estados.",
+    "sub": "Acompañamos cada proyecto desde el diseño hasta el montaje en obra, con responsabilidad técnica, cumplimiento de plazos y la documentación que cada cliente necesita. Naves, cubiertas, fachadas y refuerzo estructural en distintos estados del país.",
     "emailCta": "Escribir por correo",
     "contactAnchor": "Bloque de contacto"
   },
@@ -60,7 +60,7 @@
       "location": "Ubicación",
       "client": "Cliente",
       "area": "Superficie",
-      "steel": "Estructura metálica (aprox.)"
+      "steel": "Estructura metálica"
     },
     "items": [
       {
@@ -145,13 +145,13 @@
         "location": "Salinas Victoria, N.L.",
         "area": "7 950 m²",
         "steel": "332 t",
-        "scope": "Fabricación y montaje de estructura de la nave principal, mesanines de oficinas y losacero 15 en entre pisos.",
+        "scope": "Fabricación y montaje de estructura de la nave principal, mezzanines de oficinas y losacero 15 en entre pisos.",
         "imageAlt": "Parque Industrial Hoffsan Daye: nave y mezzanines",
         "images": [
           "/images/home-rebrand/casos/daye-hoffsan/IMG_20230914_173610.webp",
           "/images/home-rebrand/casos/daye-hoffsan/IMG_20230914_173742.webp",
           "/images/home-rebrand/casos/daye-hoffsan/IMG_20230918_145934.webp",
-          "/images/home-rebrand/casos/daye-hoffsan/IMG_20230926_145238.webp"
+          "/images/home-rebrand/casos/daye-hoffsan/IMG_20230909_101448.webp"
         ]
       },
       {
@@ -194,7 +194,8 @@
     ]
   },
   "cta": {
-    "title": "Construyamos juntos",
+    "title": "Construyamos",
+    "titleAccent": "juntos",
     "intro": "",
     "labels": {
       "phone": "Teléfono",
@@ -256,8 +257,6 @@
   "projectPage": {
     "backToCases": "Volver a proyectos",
     "detailsTitle": "Proyecto",
-    "galleryTitle": "Galería",
-    "galleryHint": "Haz clic en cualquier imagen para verla en grande.",
     "openImageAria": "Abrir imagen {n} en pantalla completa",
     "lightboxAria": "Galería de imágenes en pantalla completa",
     "lightboxClose": "Cerrar galería",
@@ -267,5 +266,149 @@
   },
   "servicePage": {
     "backToOffer": "Volver a nuestros servicios"
+  },
+  "process": {
+    "eyebrow": "Proceso integral",
+    "title": "Cinco etapas, un solo recorrido",
+    "intro": "Llevamos a cabo un proceso integral para cubrir todo el ciclo del proyecto: desde el diseño y la ingeniería hasta el acabado final en obra, con criterio de normativa, seguridad y control de calidad.",
+    "stepsNavAria": "Ir a una etapa del proceso",
+    "stepLabel": "ETAPA {n}",
+    "steps": [
+      {
+        "id": "01",
+        "shortTitle": "Ingeniería",
+        "title": "Ingeniería",
+        "tagline": "Diseño que se construye",
+        "body": "Cada proyecto inicia con un diseño personalizado, elaborado con software Tekla Structures y AutoCAD. Nuestros planos cumplen con las normas de la industria mexicana y estándares internacionales para garantizar la construcción y la seguridad del proyecto.",
+        "bullets": [
+          {
+            "title": "Ingeniería estructural",
+            "text": "Cálculo de cargas, conexiones y elementos."
+          },
+          {
+            "title": "Planos de taller",
+            "text": "Detalles para fabricación precisa."
+          },
+          {
+            "title": "Revisiones técnicas",
+            "text": "Coordinación con arquitectura y MEP."
+          },
+          {
+            "title": "Memorias de cálculo",
+            "text": "Entrega de documentación completa."
+          }
+        ],
+        "image": "/images/home-rebrand/casos/kontar-ii/IMG20250512184521.webp",
+        "imageAlt": "Estructura metálica en montaje, referencia de ingeniería y obra"
+      },
+      {
+        "id": "02",
+        "shortTitle": "Fabricación",
+        "title": "Fabricación",
+        "tagline": "Precisión industrial",
+        "body": "Nuestra planta cuenta con tecnología de punta y personal especializado para transformar el acero en estructuras resistentes y duraderas. Trabajamos con materiales certificados y procesos controlados en cada etapa, desde el trazo hasta el ensamble.",
+        "bullets": [
+          {
+            "title": "Corte y armado",
+            "text": "Oxicorte, plasma y corte láser."
+          },
+          {
+            "title": "Soldadura certificada",
+            "text": "Soldadores con certificación AWS."
+          },
+          {
+            "title": "Control de calidad",
+            "text": "Inspección visual y dimensional."
+          },
+          {
+            "title": "Trazabilidad",
+            "text": "Cada pieza identificada y documentada."
+          }
+        ],
+        "image": "/images/home-rebrand/casos/daye-hoffsan/IMG_20230918_145934.webp",
+        "imageAlt": "Avance de estructura y taller, referencia de fabricación"
+      },
+      {
+        "id": "03",
+        "shortTitle": "Montaje",
+        "title": "Montaje",
+        "tagline": "Instalación segura y precisa",
+        "body": "Nuestro equipo de montaje ejecuta la instalación en sitio con protocolos estrictos de seguridad. Contamos con experiencia en naves industriales, bodegas, mezzanines, edificios de oficinas y estructuras especiales de cualquier dimensión.",
+        "bullets": [
+          {
+            "title": "Naves industriales",
+            "text": "Suministro, fabricación y montaje."
+          },
+          {
+            "title": "Mezzanines y entrepisos",
+            "text": "Soluciones en espacios existentes."
+          },
+          {
+            "title": "Seguridad en obra",
+            "text": "Cumplimiento STPS y protocolos."
+          },
+          {
+            "title": "Coordinación logística",
+            "text": "Programación con el cliente."
+          }
+        ],
+        "image": "/images/home-rebrand/casos/mod-4/IMG20240726104048.webp",
+        "imageAlt": "Montaje de estructura en nave industrial"
+      },
+      {
+        "id": "04",
+        "shortTitle": "Laminación",
+        "title": "Laminación",
+        "tagline": "Cubrimos tu proyecto",
+        "body": "Instalamos todo tipo de lámina metálica para techumbre y fachada, adaptándonos a las condiciones del proyecto y a los requerimientos de iluminación y aislamiento. Trabajamos con las marcas y perfiles más reconocidos del mercado.",
+        "bullets": [
+          {
+            "title": "Lámina KR-18",
+            "text": "Estándar para techumbre industrial."
+          },
+          {
+            "title": "Lámina R-101",
+            "text": "Alternativa de alto desempeño."
+          },
+          {
+            "title": "Lámina traslúcida",
+            "text": "Para iluminación natural."
+          },
+          {
+            "title": "Aislante fibra de vidrio",
+            "text": "Confort térmico y acústico."
+          }
+        ],
+        "image": "/images/home-rebrand/casos/coca-cola/IMG20251220215456.webp",
+        "imageAlt": "Cubierta y cerramiento en lámina sobre estructura"
+      },
+      {
+        "id": "05",
+        "shortTitle": "Pintura",
+        "title": "Pintura",
+        "tagline": "Acabado que protege",
+        "body": "Aplicamos sistemas de pintura anticorrosiva de alta durabilidad para extender la vida útil de la estructura. Cada proyecto recibe el tratamiento adecuado según el ambiente de operación, desde industrial hasta marino.",
+        "bullets": [
+          {
+            "title": "Primer anticorrosivo",
+            "text": "Protección base contra óxido."
+          },
+          {
+            "title": "Acabado de alta duración",
+            "text": "Resistencia UV e intemperie."
+          },
+          {
+            "title": "Colores personalizados",
+            "text": "Según imagen del cliente."
+          },
+          {
+            "title": "Aplicación profesional",
+            "text": "Equipo y ambiente controlados."
+          }
+        ],
+        "image": "/images/home-rebrand/casos/motomex-cedis-1/IMG_20221213_073612.webp",
+        "imageAlt": "Acabado y cerramiento en obra industrial"
+      }
+    ]
   }
 }

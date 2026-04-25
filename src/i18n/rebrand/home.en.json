@@ -27,7 +27,7 @@
   "hero": {
     "eyebrow": "Structure · Steel",
     "headline": "Industrial steel and cladding nationwide",
-    "sub": "We coordinate supply, fabrication, and erection with a focus on schedule, quality, and documentation. References include warehouses, roofs, façades, and structural work across multiple plants and states.",
+    "sub": "We support every project from design through site erection—bringing technical accountability, schedule discipline, and the documentation each client requires. Our work spans warehouses, roofs, façades, and structural upgrades across Mexico.",
     "emailCta": "Email us",
     "contactAnchor": "Contact section"
   },
@@ -60,7 +60,7 @@
       "location": "Location",
       "client": "Client",
       "area": "Floor area",
-      "steel": "Structural steel (approx.)"
+      "steel": "Structural steel"
     },
     "items": [
       {
@@ -151,7 +151,7 @@
           "/images/home-rebrand/casos/daye-hoffsan/IMG_20230914_173610.webp",
           "/images/home-rebrand/casos/daye-hoffsan/IMG_20230914_173742.webp",
           "/images/home-rebrand/casos/daye-hoffsan/IMG_20230918_145934.webp",
-          "/images/home-rebrand/casos/daye-hoffsan/IMG_20230926_145238.webp"
+          "/images/home-rebrand/casos/daye-hoffsan/IMG_20230909_101448.webp"
         ]
       },
       {
@@ -194,7 +194,8 @@
     ]
   },
   "cta": {
-    "title": "Let's build together",
+    "title": "Let's build",
+    "titleAccent": "together",
     "intro": "",
     "labels": {
       "phone": "Phone",
@@ -214,8 +215,12 @@
       }
     ],
     "emails": [
-      { "address": "info@nacionaldeanclas.com" },
-      { "address": "info@nasacero.com" }
+      {
+        "address": "info@nacionaldeanclas.com"
+      },
+      {
+        "address": "info@nasacero.com"
+      }
     ],
     "addressLines": [
       "Anastacio Bustamante 1030 / 1048 Poniente",
@@ -236,7 +241,7 @@
     "eyebrow": "About us",
     "title": "Steel and cladding at national scale",
     "body1": "We deliver projects with business sense, technical precision, and operational discipline. Our approach combines engineering, fabrication, and erection for high-impact work with demanding standards for quality, safety, and schedule.",
-    "body2": "More than a contractor, we are a strategic partner for companies that need solid results on real timelines. Industrial organizations across Mexico rely on JP Rentals for critical structural projects.",
+    "body2": "More than contractors, we are a strategic partner for organizations that need solid results on real timelines. That is why industrial companies across Mexico choose JP Rentals for their most critical structural projects.",
     "imageAlt": "JP Rentals on site for structure and cladding work"
   },
   "group": {
@@ -252,8 +257,6 @@
   "projectPage": {
     "backToCases": "Back to projects",
     "detailsTitle": "Overview",
-    "galleryTitle": "Gallery",
-    "galleryHint": "Click any image to view it full screen.",
     "openImageAria": "Open image {n} full screen",
     "lightboxAria": "Full-screen image gallery",
     "lightboxClose": "Close gallery",
@@ -263,5 +266,149 @@
   },
   "servicePage": {
     "backToOffer": "Back to our services"
+  },
+  "process": {
+    "eyebrow": "End-to-end process",
+    "title": "Five stages, one continuous workflow",
+    "intro": "We run an integrated process that covers the full project lifecycle—from engineering and design through final field finishes—with compliance, safety, and quality control at every step.",
+    "stepsNavAria": "Jump to a process stage",
+    "stepLabel": "STAGE {n}",
+    "steps": [
+      {
+        "id": "01",
+        "shortTitle": "Engineering",
+        "title": "Engineering",
+        "tagline": "Design that gets built",
+        "body": "Every project starts with custom design using Tekla Structures and AutoCAD. Our drawings align with Mexican industry codes and international standards to support safe, buildable execution on site.",
+        "bullets": [
+          {
+            "title": "Structural engineering",
+            "text": "Loads, connections, and member design."
+          },
+          {
+            "title": "Shop drawings",
+            "text": "Detailing for accurate fabrication."
+          },
+          {
+            "title": "Technical reviews",
+            "text": "Coordination with architecture and MEP."
+          },
+          {
+            "title": "Calculation packages",
+            "text": "Complete documentation for delivery."
+          }
+        ],
+        "image": "/images/home-rebrand/casos/kontar-ii/IMG20250512184521.webp",
+        "imageAlt": "Steel frame under erection—engineering and field reference"
+      },
+      {
+        "id": "02",
+        "shortTitle": "Fabrication",
+        "title": "Fabrication",
+        "tagline": "Industrial precision",
+        "body": "Our shop combines advanced equipment with skilled teams to turn steel into durable structures. We use certified materials and controlled processes from layout through fitting and assembly.",
+        "bullets": [
+          {
+            "title": "Cutting and fitting",
+            "text": "Oxy-fuel, plasma, and laser cutting."
+          },
+          {
+            "title": "Certified welding",
+            "text": "AWS-qualified welders."
+          },
+          {
+            "title": "Quality control",
+            "text": "Visual and dimensional inspection."
+          },
+          {
+            "title": "Traceability",
+            "text": "Each piece identified and documented."
+          }
+        ],
+        "image": "/images/home-rebrand/casos/daye-hoffsan/IMG_20230918_145934.webp",
+        "imageAlt": "Structural progress on site—fabrication reference"
+      },
+      {
+        "id": "03",
+        "shortTitle": "Erection",
+        "title": "Erection",
+        "tagline": "Safe, precise installation",
+        "body": "Our erection crews work to strict safety protocols on site. We have experience with industrial buildings, warehouses, mezzanines, office structures, and special steel work at any scale.",
+        "bullets": [
+          {
+            "title": "Industrial buildings",
+            "text": "Supply, fabrication, and erection."
+          },
+          {
+            "title": "Mezzanines and intermediate floors",
+            "text": "Solutions within existing spaces."
+          },
+          {
+            "title": "Site safety",
+            "text": "STPS compliance and field protocols."
+          },
+          {
+            "title": "Logistics coordination",
+            "text": "Scheduling aligned with the client."
+          }
+        ],
+        "image": "/images/home-rebrand/casos/mod-4/IMG20240726104048.webp",
+        "imageAlt": "Steel erection inside an industrial shell"
+      },
+      {
+        "id": "04",
+        "shortTitle": "Cladding",
+        "title": "Cladding",
+        "tagline": "We cover the full envelope",
+        "body": "We install metal roof and wall systems tailored to site conditions and performance needs for daylighting and insulation. We work with leading brands and profiles recognized in the market.",
+        "bullets": [
+          {
+            "title": "KR-18 sheeting",
+            "text": "Common standard for industrial roofs."
+          },
+          {
+            "title": "R-101 panels",
+            "text": "High-performance alternative."
+          },
+          {
+            "title": "Translucent panels",
+            "text": "Natural daylighting where required."
+          },
+          {
+            "title": "Fiberglass insulation",
+            "text": "Thermal and acoustic comfort."
+          }
+        ],
+        "image": "/images/home-rebrand/casos/coca-cola/IMG20251220215456.webp",
+        "imageAlt": "Roof and wall cladding over structural steel"
+      },
+      {
+        "id": "05",
+        "shortTitle": "Painting",
+        "title": "Painting",
+        "tagline": "Finishes that protect",
+        "body": "We apply high-durability anti-corrosion coating systems to extend service life. Each project receives the right treatment for its operating environment—from industrial to coastal exposure.",
+        "bullets": [
+          {
+            "title": "Anti-corrosion primer",
+            "text": "Base protection against rust."
+          },
+          {
+            "title": "Durable topcoats",
+            "text": "UV and weather resistance."
+          },
+          {
+            "title": "Custom colors",
+            "text": "Aligned with the client’s brand."
+          },
+          {
+            "title": "Professional application",
+            "text": "Controlled equipment and conditions."
+          }
+        ],
+        "image": "/images/home-rebrand/casos/motomex-cedis-1/IMG_20221213_073612.webp",
+        "imageAlt": "Industrial building envelope and finishes on site"
+      }
+    ]
   }
 }
