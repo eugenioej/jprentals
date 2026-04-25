@@ -86,7 +86,7 @@
         "title": "Laminación (escamado y empaque)",
         "location": "Carretera a García, N.L.",
         "area": "972 m²",
-        "steel": "79 t",
+        "steel": "435 t",
         "scope": "Fabricación y montaje de estructura metálica; colocación de cubierta KR-18 y lámina R101 en fachadas.",
         "imageAlt": "Kandelium: estructura y laminado en planta, García",
         "images": [
@@ -127,7 +127,7 @@
         "title": "Nave multi-tenant",
         "location": "Guadalupe, N.L.",
         "area": "5 773 m²",
-        "steel": "46 t",
+        "steel": "280 t",
         "scope": "Fabricación y montaje de estructura metálica de nave multi-tenant.",
         "imageAlt": "Nave Mod 4: estructura multi-tenant, Guadalupe",
         "images": [
@@ -144,7 +144,7 @@
         "title": "Nave y mezzanines",
         "location": "Salinas Victoria, N.L.",
         "area": "7 950 m²",
-        "steel": "332 t",
+        "steel": "330 t",
         "scope": "Fabricación y montaje de estructura de la nave principal, mezzanines de oficinas y losacero 15 en entre pisos.",
         "imageAlt": "Parque Industrial Hoffsan Daye: nave y mezzanines",
         "images": [
@@ -161,7 +161,7 @@
         "title": "CEDIS I: estructura y laminado",
         "location": "WTC Parque Industrial La Pila, San Luis Potosí",
         "area": "3 840 m²",
-        "steel": "90 t",
+        "steel": "147 t",
         "scope": "Suministro, fabricación y montaje de estructura, cubierta KR-18 y fachada R101.",
         "imageAlt": "Nave CEDIS I Motomex: estructura y cubierta",
         "images": [
@@ -286,8 +286,8 @@
             "text": "Cálculo de cargas, conexiones y elementos."
           },
           {
-            "title": "Planos de taller",
-            "text": "Detalles para fabricación precisa."
+            "title": "Planos de montaje",
+            "text": "Detalles para instalación y ensamble en obra."
           },
           {
             "title": "Revisiones técnicas",
@@ -377,6 +377,10 @@
           {
             "title": "Aislante fibra de vidrio",
             "text": "Confort térmico y acústico."
+          },
+          {
+            "title": "Losacero",
+            "text": "Sistema de entrepiso estructural."
           }
         ],
         "image": "/images/home-rebrand/casos/coca-cola/IMG20251220215456.webp",
@@ -384,30 +388,30 @@
       },
       {
         "id": "05",
-        "shortTitle": "Pintura",
-        "title": "Pintura",
-        "tagline": "Acabado que protege",
-        "body": "Aplicamos sistemas de pintura anticorrosiva de alta durabilidad para extender la vida útil de la estructura. Cada proyecto recibe el tratamiento adecuado según el ambiente de operación, desde industrial hasta marino.",
+        "shortTitle": "Recubrimiento",
+        "title": "Recubrimiento",
+        "tagline": "Protección que dura",
+        "body": "Aplicamos sistemas de recubrimiento adaptados al ambiente de operación de cada proyecto: desde primer anticorrosivo y pintura de alta duración hasta galvanizado por inmersión y recubrimientos epóxicos o de poliuretano para exposición severa.",
         "bullets": [
           {
             "title": "Primer anticorrosivo",
             "text": "Protección base contra óxido."
           },
           {
-            "title": "Acabado de alta duración",
-            "text": "Resistencia UV e intemperie."
+            "title": "Galvanizado por inmersión",
+            "text": "Cobertura integral para alta exposición."
           },
           {
-            "title": "Colores personalizados",
-            "text": "Según imagen del cliente."
+            "title": "Epóxico y poliuretano",
+            "text": "Resistencia química y UV de larga duración."
           },
           {
-            "title": "Aplicación profesional",
-            "text": "Equipo y ambiente controlados."
+            "title": "Acabado personalizado",
+            "text": "Color y acabado según ambiente y cliente."
           }
         ],
         "image": "/images/home-rebrand/casos/motomex-cedis-1/IMG_20221213_073612.webp",
-        "imageAlt": "Acabado y cerramiento en obra industrial"
+        "imageAlt": "Recubrimiento y cerramiento en obra industrial"
       }
     ]
   }

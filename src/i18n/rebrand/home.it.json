@@ -86,7 +86,7 @@
         "title": "Rivestimento (scaglia e imballo)",
         "location": "Carretera a García, N.L.",
         "area": "972 m²",
-        "steel": "79 t",
+        "steel": "435 t",
         "scope": "Lavorazione e posa strutturale; copertura KR-18 e pannellatura R101.",
         "imageAlt": "Kandelium: struttura, García",
         "images": [
@@ -127,7 +127,7 @@
         "title": "Multi-tenant",
         "location": "Guadalupe, N.L.",
         "area": "5.773 m²",
-        "steel": "46 t",
+        "steel": "280 t",
         "scope": "Fabbricazione e posa strutturale per capannone multi-tenant.",
         "imageAlt": "Nave Mod 4: struttura multi-tenant, Guadalupe",
         "images": [
@@ -144,7 +144,7 @@
         "title": "Nave e soppalchi",
         "location": "Salinas Victoria, N.L.",
         "area": "7.950 m²",
-        "steel": "332 t",
+        "steel": "330 t",
         "scope": "Esecuzione strutturale, soppalchi e Losacero 15 per tra piani.",
         "imageAlt": "Hoffsan Daye: nave e soppalchi",
         "images": [
@@ -161,7 +161,7 @@
         "title": "CEDIS I: struttura e chiusure",
         "location": "WTC parco industriale La Pila, San Luis Potosí",
         "area": "3.840 m²",
-        "steel": "90 t",
+        "steel": "147 t",
         "scope": "Fornitura, fabbricazione, montaggio; KR-18 e R101 in facciata.",
         "imageAlt": "Motomex CEDIS I: struttura e copertura",
         "images": [
@@ -286,8 +286,8 @@
             "text": "Carichi, collegamenti e dimensionamento."
           },
           {
-            "title": "Disegni di officina",
-            "text": "Dettagli per una fabbricazione precisa."
+            "title": "Disegni di montaggio",
+            "text": "Dettagli per l'assemblaggio e il montaggio in cantiere."
           },
           {
             "title": "Revisioni tecniche",
@@ -377,6 +377,10 @@
           {
             "title": "Isolante in fibra di vetro",
             "text": "Comfort termico e acustico."
+          },
+          {
+            "title": "Losacero",
+            "text": "Sistema di solaio strutturale per tra piani."
           }
         ],
         "image": "/images/home-rebrand/casos/coca-cola/IMG20251220215456.webp",
@@ -384,30 +388,30 @@
       },
       {
         "id": "05",
-        "shortTitle": "Verniciatura",
-        "title": "Verniciatura",
-        "tagline": "Finitura che protegge",
-        "body": "Applichiamo cicli anticorrosivi ad alta durata per prolungare la vita utile. Trattamenti adeguati all’ambiente di esercizio, da contesti industriali ad esposizione marina.",
+        "shortTitle": "Rivestimento",
+        "title": "Rivestimento",
+        "tagline": "Protezione che dura",
+        "body": "Applichiamo sistemi di rivestimento adeguati all’ambiente di esercizio di ogni progetto: dal primer anticorrosivo e dalle finiture ad alta durata alla zincatura per immersione e ai cicli epossidici o poliuretanici per esposizioni severe.",
         "bullets": [
           {
             "title": "Primer anticorrosivo",
             "text": "Protezione di base dall’ossidazione."
           },
           {
-            "title": "Finitura ad alta durata",
-            "text": "Resistenza a UV e intemperie."
+            "title": "Zincatura per immersione",
+            "text": "Copertura integrale per alta esposizione."
           },
           {
-            "title": "Colori personalizzati",
-            "text": "Secondo immagine del cliente."
+            "title": "Epossidico e poliuretano",
+            "text": "Resistenza chimica e UV a lunga durata."
           },
           {
-            "title": "Applicazione professionale",
-            "text": "Attrezzature e ambiente controllati."
+            "title": "Finitura personalizzata",
+            "text": "Colore e ciclo secondo ambiente e cliente."
           }
         ],
         "image": "/images/home-rebrand/casos/motomex-cedis-1/IMG_20221213_073612.webp",
-        "imageAlt": "Chiusure e finiture su opera industriale"
+        "imageAlt": "Rivestimento e chiusure su struttura industriale"
       }
     ]
   }

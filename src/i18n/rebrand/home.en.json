@@ -86,7 +86,7 @@
         "title": "Cladding (scaling & packing)",
         "location": "García highway area, N.L.",
         "area": "972 m²",
-        "steel": "79 t",
+        "steel": "435 t",
         "scope": "Fabrication and erection; KR-18 roof and R101 wall panels.",
         "imageAlt": "Kandelium: structure and cladding, García",
         "images": [
@@ -127,7 +127,7 @@
         "title": "Multi-tenant building",
         "location": "Guadalupe, N.L.",
         "area": "5,773 m²",
-        "steel": "46 t",
+        "steel": "280 t",
         "scope": "Fabrication and erection of the multi-tenant warehouse frame.",
         "imageAlt": "Nave Mod 4: multi-tenant structure, Guadalupe",
         "images": [
@@ -144,7 +144,7 @@
         "title": "Warehouse & mezzanines",
         "location": "Salinas Victoria, N.L.",
         "area": "7,950 m²",
-        "steel": "332 t",
+        "steel": "330 t",
         "scope": "Erection of the main building, office mezzanines, and Losacero 15 mezzanine decking.",
         "imageAlt": "Hoffsan Daye: warehouse and mezzanines",
         "images": [
@@ -161,7 +161,7 @@
         "title": "CEDIS I — structure & cladding",
         "location": "WTC La Pila Industrial Park, San Luis Potosí",
         "area": "3,840 m²",
-        "steel": "90 t",
+        "steel": "147 t",
         "scope": "Supply, fabrication, and erection; KR-18 roof and R101 façades.",
         "imageAlt": "Motomex CEDIS I: structure and roof",
         "images": [
@@ -286,8 +286,8 @@
             "text": "Loads, connections, and member design."
           },
           {
-            "title": "Shop drawings",
-            "text": "Detailing for accurate fabrication."
+            "title": "Erection drawings",
+            "text": "Details for on-site assembly and installation."
           },
           {
             "title": "Technical reviews",
@@ -377,6 +377,10 @@
           {
             "title": "Fiberglass insulation",
             "text": "Thermal and acoustic comfort."
+          },
+          {
+            "title": "Losacero",
+            "text": "Structural mezzanine deck system."
           }
         ],
         "image": "/images/home-rebrand/casos/coca-cola/IMG20251220215456.webp",
@@ -384,30 +388,30 @@
       },
       {
         "id": "05",
-        "shortTitle": "Painting",
-        "title": "Painting",
-        "tagline": "Finishes that protect",
-        "body": "We apply high-durability anti-corrosion coating systems to extend service life. Each project receives the right treatment for its operating environment—from industrial to coastal exposure.",
+        "shortTitle": "Coating",
+        "title": "Coating",
+        "tagline": "Protection that lasts",
+        "body": "We apply coating systems matched to each project’s operating environment—from anti-corrosion primer and durable topcoats to hot-dip galvanizing and epoxy or polyurethane systems for severe exposure conditions.",
         "bullets": [
           {
             "title": "Anti-corrosion primer",
             "text": "Base protection against rust."
           },
           {
-            "title": "Durable topcoats",
-            "text": "UV and weather resistance."
+            "title": "Hot-dip galvanizing",
+            "text": "Full coverage for high-exposure conditions."
           },
           {
-            "title": "Custom colors",
-            "text": "Aligned with the client’s brand."
+            "title": "Epoxy and polyurethane",
+            "text": "Chemical and UV resistance for long service life."
           },
           {
-            "title": "Professional application",
-            "text": "Controlled equipment and conditions."
+            "title": "Custom finish",
+            "text": "Color and coating matched to environment and client."
           }
         ],
         "image": "/images/home-rebrand/casos/motomex-cedis-1/IMG_20221213_073612.webp",
-        "imageAlt": "Industrial building envelope and finishes on site"
+        "imageAlt": "Coating and envelope finishes on industrial structure"
       }
     ]
   }
