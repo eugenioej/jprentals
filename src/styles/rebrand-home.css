@@ -250,10 +250,16 @@ html.rebrand-home {
   will-change: opacity, transform;
 }
 
+/* 6 slides × 6s de desfase = 36s: cada una visible ~1/6 del ciclo; 0% en 1 desde el primer frame (evita parpadeo en blanco) */
 @keyframes jpr2HeroBgFade {
-  0%, 12% { opacity: 0; }
-  16%, 28% { opacity: 1; }
-  33%, 100% { opacity: 0; }
+  0%,
+  14% {
+    opacity: 1;
+  }
+  18%,
+  100% {
+    opacity: 0;
+  }
 }
 
 @keyframes jpr2HeroBgDrift {
@@ -282,6 +288,18 @@ html.rebrand-home {
   height: calc(100svh - var(--jpr2-header-h, 7.5rem));
   min-height: calc(100svh - var(--jpr2-header-h, 7.5rem));
   max-height: calc(var(--jpr2-hero-max-h, 61rem) - var(--jpr2-header-h, 7.5rem));
+}
+
+/* Móvil / tablet: hero puede crecer (evita recortar) y la imagen gana altura */
+@media (max-width: 1023px) {
+  .jpr2-hero-frame {
+    height: auto;
+    max-height: none;
+    min-height: min(100svh, 52rem);
+  }
+  .jpr2-hero-image-shell--mobile-tall {
+    min-height: min(64svh, 36rem);
+  }
 }
 
 /* Títulos en mayúsculas; H2 con más peso visual */

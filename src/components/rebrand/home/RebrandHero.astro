@@ -53,7 +53,7 @@ const heroBg = heroBgImages.map(encodeUrlPath);
     </div>
 
     <div
-      class="jpr2-hero-image-shell order-2 relative w-full min-w-0 overflow-hidden border border-jpr2-navy/10 border-r-0 bg-white max-lg:flex-1 max-lg:min-h-[min(50svh,22rem)] sm:max-lg:min-h-[min(46svh,24rem)] sm:mx-4 lg:mx-0 lg:flex-[0_0_50%] lg:h-full lg:min-h-0 lg:w-1/2 lg:max-w-[50%] lg:shrink-0"
+      class="jpr2-hero-image-shell jpr2-hero-image-shell--mobile-tall order-2 relative w-full min-w-0 overflow-hidden border border-jpr2-navy/10 border-r-0 bg-jpr2-mist/50 max-lg:flex-1 sm:mx-4 lg:mx-0 lg:flex-[0_0_50%] lg:h-full lg:min-h-0 lg:w-1/2 lg:max-w-[50%] lg:shrink-0"
     >
       <div
         class="jpr2-hero-bg absolute inset-0 h-full w-full min-h-full min-w-full"
@@ -68,7 +68,7 @@ const heroBg = heroBgImages.map(encodeUrlPath);
               data-src={idx === 0 ? undefined : src}
               loading={idx === 0 ? 'eager' : 'lazy'}
               fetchpriority={idx === 0 ? 'high' : 'low'}
-              decoding={idx === 0 ? 'sync' : 'async'}
+              decoding="async"
               style={`animation-delay: ${idx * 6}s;`}
             />
           ))
