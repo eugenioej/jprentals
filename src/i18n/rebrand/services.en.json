@@ -3,18 +3,17 @@
     {
       "slug": "estructura-metalica",
       "metaTitle": "JP Rentals | Steel structures for industry",
-      "metaDescription": "Assisted design, detailing, fabrication, and erection of steel structures for industrial buildings across Mexico.",
-      "heroImage": "/images/home-rebrand/casos/kontar-ii/IMG20250512184521.webp",
+      "metaDescription": "Assisted design, detailing, fabrication, and erection of steel structures for industrial warehouses and plants across Mexico.",
+      "heroImage": "/images/home-rebrand/casos/daye-hoffsan/jp-rentals-daye-hoffsan-grua-maniobra-2.webp",
       "heroImageAlt": "Industrial warehouse steel frame under erection: trusses and bracing.",
       "gallery": [
         {
-          "src": "/images/home-rebrand/casos/mod-4/IMG20240723152344.webp",
+          "src": "/images/home-rebrand/casos/mod-4/jp-rentals-mod4-flete-industrial-2.webp",
           "alt": "Steel frame assembly for a multi-tenant industrial building on site."
         },
         {
-          "src": "/images/home-rebrand/casos/daye-hoffsan/IMG_20230909_101448.webp",
-          "alt": "Warehouse structure and mezzanine levels: steel and Losacero decking.",
-          "rotate90": true
+          "src": "/images/home-rebrand/casos/daye-hoffsan/jp-rentals-daye-hoffsan-grua-maniobra-1.webp",
+          "alt": "Warehouse structure and mezzanine levels: steel and Losacero decking."
         }
       ],
       "eyebrow": "Our services",
@@ -34,15 +33,15 @@
       "slug": "lamina-acabado-envolvente",
       "metaTitle": "JP Rentals | Roof and envelope cladding",
       "metaDescription": "Roofs, façades, and wall systems in commercial profiles (KR-18, R101, and similar) with field closure for industrial buildings.",
-      "heroImage": "/images/home-rebrand/casos/coca-cola/IMG20251220215456.webp",
+      "heroImage": "/images/home-rebrand/casos/coca-cola/jp-rentals-coca-cola-grua-operacion-2.webp",
       "heroImageAlt": "Metal roof and wall cladding over an industrial steel frame.",
       "gallery": [
         {
-          "src": "/images/home-rebrand/casos/kandelium/IMG20260113180910.webp",
+          "src": "/images/home-rebrand/casos/kandelium/jp-rentals-kandelium-maniobra-industrial-3.webp",
           "alt": "Sheet installation on façades and walls of an industrial plant."
         },
         {
-          "src": "/images/home-rebrand/casos/motomex-cedis-1/IMG_20221213_073612.webp",
+          "src": "/images/home-rebrand/casos/motomex-cedis-1/jp-rentals-motomex-cedis-maniobra-grua-2.webp",
           "alt": "KR-18 roof progress and envelope closure on a distribution center."
         }
       ],
@@ -62,16 +61,16 @@
     {
       "slug": "reparacion-refuerzo-entre-pisos",
       "metaTitle": "JP Rentals | Retrofit, strengthening, and mezzanines",
-      "metaDescription": "Work on existing structures, mezzanines, Losacero, and upgrades with minimal impact on plant operations.",
-      "heroImage": "/images/home-rebrand/casos/mod-4/IMG20240710155435.webp",
+      "metaDescription": "Structural retrofits, mezzanines, Losacero decking, and upgrades on existing industrial buildings with minimal disruption to plant operations.",
+      "heroImage": "/images/home-rebrand/casos/mod-4/jp-rentals-mod4-flete-industrial-1.webp",
       "heroImageAlt": "Structural work inside an existing warehouse shell.",
       "gallery": [
         {
-          "src": "/images/home-rebrand/casos/daye-hoffsan/IMG_20230914_173742.webp",
+          "src": "/images/home-rebrand/casos/daye-hoffsan/jp-rentals-daye-hoffsan-grua-maniobra-3.webp",
           "alt": "Mezzanine structure and Losacero integrated with the main building."
         },
         {
-          "src": "/images/home-rebrand/casos/kontar-ii/IMG20241222144438.webp",
+          "src": "/images/home-rebrand/casos/kontar-ii/jp-rentals-kontar-ii-grua-maniobra-3.webp",
           "alt": "Structural erection and fit-out on a large-footprint facility."
         }
       ],

@@ -20,7 +20,7 @@
     "cta_primary": "Solicitar cotización",
     "cta_secondary": "Ver nuestros equipos",
     "trust_1": "30+ años en la industria",
-    "trust_2": "Parte de Grupo NASA",
+    "trust_2": "Parte de Grupo Nasacero",
     "trust_3": ""
   },
   "services": {
@@ -77,11 +77,11 @@
   "about": {
     "label": "Nosotros",
     "title": "Por qué las empresas confían en JP Rentals",
-    "subtitle": "Somos parte de Grupo NASA, con más de 30 años en la industria del acero y la construcción en Monterrey.",
+    "subtitle": "Somos parte de Grupo Nasacero, con más de 30 años en la industria del acero y la construcción en Monterrey.",
     "items": [
       {
-        "title": "Respaldados por Grupo NASA",
-        "description": "JP Rentals forma parte de Grupo NASA, el mismo grupo detrás de Nasacero y Nacional de Anclas. Más de 30 años sirviendo a la industria pesada en Monterrey.",
+        "title": "Respaldados por Grupo Nasacero",
+        "description": "JP Rentals forma parte de Grupo Nasacero, el mismo grupo detrás de Nasacero y Nacional de Anclas. Más de 30 años sirviendo a la industria pesada en Monterrey.",
         "icon": "building"
       },
       {

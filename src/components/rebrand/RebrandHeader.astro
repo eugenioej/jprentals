@@ -35,6 +35,12 @@ const langMenuLabel: Record<RebrandLang, string> = {
   en: 'Choose language',
   it: 'Seleziona lingua',
 };
+
+const langFlag: Record<RebrandLang, string> = {
+  es: '🇲🇽',
+  en: '🇺🇸',
+  it: '🇮🇹',
+};
 ---
 
 <header
@@ -44,7 +50,7 @@ const langMenuLabel: Record<RebrandLang, string> = {
   <div class="container max-w-6xl flex min-h-[4.75rem] items-center justify-between gap-3 py-2.5 md:gap-4">
     <a href={home} class="flex shrink-0 min-w-0 items-center gap-2.5 text-lg font-extrabold uppercase tracking-tight text-jpr2-navy">
       <img
-        src="/images/home-rebrand/jp%20rentals%20logo.svg"
+        src="/images/home-rebrand/jp-rentals-logo.svg"
         alt=""
         width="88"
         height="24"
@@ -110,28 +116,53 @@ const langMenuLabel: Record<RebrandLang, string> = {
         </div>
       </nav>
 
-      <div
-        class="flex items-center gap-0.5 border-l border-jpr2-navy/15 pl-3"
-        role="navigation"
-        aria-label={copy.nav.language}
-      >
-        {
-          langCodes.map((code) => (
-            <a
-              href={rebrandSwitchPath(pathname, code)}
-              hreflang={code === 'es' ? 'es-MX' : code === 'en' ? 'en' : 'it'}
-              aria-current={code === lang ? 'page' : undefined}
-              class:list={[
-                'rounded-md px-2 py-1 text-xs font-bold tracking-wide transition-colors',
-                code === lang
-                  ? 'bg-jpr2-crema text-jpr2-navy'
-                  : 'text-jpr2-muted hover:bg-jpr2-crema/70 hover:text-jpr2-coral',
-              ]}
-            >
-              {copy.lang[code]}
-            </a>
-          ))
-        }
+      <!-- Desktop language select -->
+      <div class="relative border-l border-jpr2-navy/15 pl-3" role="navigation" aria-label={copy.nav.language}>
+        <button
+          type="button"
+          id="jpr2-lang-desktop-btn"
+          class="flex items-center gap-1.5 rounded-lg border border-jpr2-navy/20 bg-white px-2.5 py-1.5 text-sm font-bold text-jpr2-navy shadow-sm transition-colors hover:border-jpr2-navy/35 hover:bg-jpr2-crema focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-jpr2-mustard/70"
+          aria-expanded="false"
+          aria-haspopup="menu"
+          aria-controls="jpr2-lang-desktop-panel"
+          aria-label={langMenuLabel[lang]}
+        >
+          <span aria-hidden="true" class="text-base leading-none">{langFlag[lang]}</span>
+          <span class="text-xs tracking-wide">{copy.lang[lang]}</span>
+          <svg
+            id="jpr2-lang-desktop-chev"
+            class="h-3.5 w-3.5 shrink-0 text-jpr2-muted transition-transform duration-200 will-change-transform"
+            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"
+          >
+            <path d="m6 9 6 6 6-6" />
+          </svg>
+        </button>
+        <div
+          id="jpr2-lang-desktop-panel"
+          role="menu"
+          aria-label={copy.nav.language}
+          class="absolute right-0 top-full z-[80] mt-1 hidden min-w-[10rem] overflow-hidden rounded-xl border border-jpr2-navy/10 bg-white py-1 shadow-[0_12px_40px_rgba(31,45,78,0.15)]"
+        >
+          {
+            langCodes.map((code) => (
+              <a
+                role="menuitem"
+                href={rebrandSwitchPath(pathname, code)}
+                hreflang={code === 'es' ? 'es-MX' : code === 'en' ? 'en' : 'it'}
+                aria-current={code === lang ? 'page' : undefined}
+                class:list={[
+                  'jpr2-lang-desktop-link flex items-center gap-2.5 px-4 py-2.5 text-sm font-semibold transition-colors',
+                  code === lang
+                    ? 'bg-jpr2-crema text-jpr2-navy'
+                    : 'text-jpr2-ink/90 hover:bg-jpr2-crema/60 hover:text-jpr2-coral',
+                ]}
+              >
+                <span aria-hidden="true" class="text-base leading-none">{langFlag[code]}</span>
+                <span>{copy.lang[code]}</span>
+              </a>
+            ))
+          }
+        </div>
       </div>
 
       <a
@@ -154,14 +185,15 @@ const langMenuLabel: Record<RebrandLang, string> = {
           aria-controls="jpr2-lang-dd-panel"
           aria-label={langMenuLabel[lang]}
         >
-          <span>{copy.lang[lang]}</span>
+          <span aria-hidden="true" class="text-base leading-none">{langFlag[lang]}</span>
+          <span class="text-xs tracking-wide">{copy.lang[lang]}</span>
           <svg
             id="jpr2-lang-dd-chev"
-            class="h-4 w-4 shrink-0 text-jpr2-muted transition-transform duration-200 will-change-transform"
+            class="h-3.5 w-3.5 shrink-0 text-jpr2-muted transition-transform duration-200 will-change-transform"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
-            stroke-width="2"
+            stroke-width="2.5"
             aria-hidden="true"
           >
             <path d="m6 9 6 6 6-6" />
@@ -171,7 +203,7 @@ const langMenuLabel: Record<RebrandLang, string> = {
           id="jpr2-lang-dd-panel"
           role="menu"
           aria-label={copy.nav.language}
-          class="absolute right-0 top-full z-[80] mt-1 hidden min-w-[9.5rem] overflow-hidden rounded-xl border border-jpr2-navy/10 bg-white py-1 shadow-[0_12px_40px_rgba(31,45,78,0.15)]"
+          class="absolute right-0 top-full z-[80] mt-1 hidden min-w-[10rem] overflow-hidden rounded-xl border border-jpr2-navy/10 bg-white py-1 shadow-[0_12px_40px_rgba(31,45,78,0.15)]"
         >
           {
             langCodes.map((code) => (
@@ -181,13 +213,14 @@ const langMenuLabel: Record<RebrandLang, string> = {
                 hreflang={code === 'es' ? 'es-MX' : code === 'en' ? 'en' : 'it'}
                 aria-current={code === lang ? 'page' : undefined}
                 class:list={[
-                  'jpr2-lang-dd-link flex items-center px-4 py-2.5 text-sm font-semibold transition-colors',
+                  'jpr2-lang-dd-link flex items-center gap-2.5 px-4 py-2.5 text-sm font-semibold transition-colors',
                   code === lang
                     ? 'bg-jpr2-crema text-jpr2-navy'
                     : 'text-jpr2-ink/90 hover:bg-jpr2-crema/60 hover:text-jpr2-coral',
                 ]}
               >
-                {copy.lang[code]}
+                <span aria-hidden="true" class="text-base leading-none">{langFlag[code]}</span>
+                <span>{copy.lang[code]}</span>
               </a>
             ))
           }
@@ -276,6 +309,9 @@ const langMenuLabel: Record<RebrandLang, string> = {
   header.jpr2-header #jpr2-lang-dd-btn[aria-expanded='true'] #jpr2-lang-dd-chev {
     transform: rotate(180deg);
   }
+  header.jpr2-header #jpr2-lang-desktop-btn[aria-expanded='true'] #jpr2-lang-desktop-chev {
+    transform: rotate(180deg);
+  }
 </style>
 
 <script>
@@ -285,8 +321,13 @@ const langMenuLabel: Record<RebrandLang, string> = {
   const hamburger = 'M4 6h16M4 12h16M4 18h16';
   const closeIcon = 'M6 18L18 6M6 6l12 12';
 
+  // Mobile lang dropdown
   const langBtn = document.getElementById('jpr2-lang-dd-btn');
   const langPanel = document.getElementById('jpr2-lang-dd-panel');
+
+  // Desktop lang dropdown
+  const desktopLangBtn = document.getElementById('jpr2-lang-desktop-btn');
+  const desktopLangPanel = document.getElementById('jpr2-lang-desktop-panel');
 
   function closeMenu() {
     menu?.classList.add('hidden');
@@ -299,19 +340,37 @@ const langMenuLabel: Record<RebrandLang, string> = {
     langBtn?.setAttribute('aria-expanded', 'false');
   }
 
+  function closeDesktopLangPanel() {
+    desktopLangPanel?.classList.add('hidden');
+    desktopLangBtn?.setAttribute('aria-expanded', 'false');
+  }
+
   function toggleLangPanel() {
     const open = langPanel?.classList.contains('hidden') === false;
     if (open) {
       closeLangPanel();
     } else {
       closeMenu();
+      closeDesktopLangPanel();
       langPanel?.classList.remove('hidden');
       langBtn?.setAttribute('aria-expanded', 'true');
     }
   }
 
+  function toggleDesktopLangPanel() {
+    const open = desktopLangPanel?.classList.contains('hidden') === false;
+    if (open) {
+      closeDesktopLangPanel();
+    } else {
+      closeLangPanel();
+      desktopLangPanel?.classList.remove('hidden');
+      desktopLangBtn?.setAttribute('aria-expanded', 'true');
+    }
+  }
+
   toggle?.addEventListener('click', () => {
     closeLangPanel();
+    closeDesktopLangPanel();
     const willOpen = menu?.classList.contains('hidden');
     menu?.classList.toggle('hidden');
     if (willOpen) {
@@ -328,16 +387,25 @@ const langMenuLabel: Record<RebrandLang, string> = {
     toggleLangPanel();
   });
 
+  desktopLangBtn?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    toggleDesktopLangPanel();
+  });
+
   document.addEventListener('click', (e) => {
     const t = e.target as Node;
     if (langBtn && langPanel && !langBtn.contains(t) && !langPanel.contains(t)) {
       closeLangPanel();
+    }
+    if (desktopLangBtn && desktopLangPanel && !desktopLangBtn.contains(t) && !desktopLangPanel.contains(t)) {
+      closeDesktopLangPanel();
     }
   });
 
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
       closeLangPanel();
+      closeDesktopLangPanel();
       closeMenu();
     }
   });
@@ -349,6 +417,12 @@ const langMenuLabel: Record<RebrandLang, string> = {
   document.querySelectorAll('.jpr2-lang-dd-link').forEach((link) => {
     link.addEventListener('click', () => {
       closeLangPanel();
+    });
+  });
+
+  document.querySelectorAll('.jpr2-lang-desktop-link').forEach((link) => {
+    link.addEventListener('click', () => {
+      closeDesktopLangPanel();
     });
   });
 </script>
